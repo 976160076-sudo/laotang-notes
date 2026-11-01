@@ -36,6 +36,32 @@
   details.author .body{padding:4px 22px 20px;font-size:14px;}
   details.author .body .note{font-size:12.5px;color:var(--mut);background:#f7fafd;border-left:3px solid var(--blue);padding:10px 14px;border-radius:6px;margin:12px 0;}
   .pill{display:inline-block;background:#eef4fb;border:1px solid #cfe0f3;color:#1f3a5f;border-radius:6px;padding:2px 8px;font-size:12px;margin:2px 4px 2px 0;}
+  /* 二级折叠：按书本/文章 */
+  details.sub{margin:14px 0;border:1px solid var(--line);border-radius:8px;background:#fbfdff;overflow:hidden;}
+  details.sub>summary{cursor:pointer;list-style:none;padding:11px 16px;font-size:15px;font-weight:700;color:var(--navy);display:flex;align-items:center;gap:8px;}
+  details.sub>summary::-webkit-details-marker{display:none;}
+  details.sub>summary::before{content:"▸";color:var(--blue);transition:transform .15s;}
+  details.sub[open]>summary::before{content:"▾";}
+  details.sub .subbody{padding:4px 18px 16px;font-size:13.5px;}
+  details.sub h4{color:var(--blue);font-size:14px;margin:15px 0 6px;border-bottom:1px dashed #cfe0f3;padding-bottom:4px;}
+  details.sub h4:first-child{margin-top:6px;}
+  /* 三级折叠：文章主题 */
+  details.sub2{margin:8px 0 8px 4px;border-left:3px solid #cfe0f3;padding-left:10px;}
+  details.sub2>summary{cursor:pointer;list-style:none;font-size:13.5px;font-weight:600;color:#1f3a5f;}
+  details.sub2>summary::-webkit-details-marker{display:none;}
+  details.sub2>summary::before{content:"▸ ";color:var(--mut);}
+  details.sub2[open]>summary::before{content:"▾ ";}
+  details.sub2 .sub2body{padding:4px 0 6px;font-size:13.5px;}
+  /* 表格/公式/金句 */
+  table.tbl{border-collapse:collapse;width:100%;margin:8px 0;font-size:13px;}
+  table.tbl th,table.tbl td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top;}
+  table.tbl th{background:var(--blue);color:#fff;}
+  table.tbl tr:nth-child(even) td{background:#f7fafd;}
+  .formula{background:#eef4fb;border:1px solid #cfe0f3;border-radius:6px;padding:10px 14px;margin:8px 0;font-size:13.5px;}
+  ul.quotes{margin:6px 0;padding-left:0;list-style:none;}
+  ul.quotes li{background:#fef9ef;border-left:3px solid #e0a800;padding:7px 12px;margin:7px 0;border-radius:5px;font-size:13.5px;}
+  ul.quotes li b{color:#b8860b;}
+  code{background:#eef1f5;padding:1px 5px;border-radius:3px;font-size:12.5px;}
   footer{text-align:center;color:var(--mut);font-size:12.5px;padding:24px;border-top:1px solid var(--line);}
   @media print{details.author{break-inside:avoid;} nav.toc{display:none;}}
 </style>
@@ -43,12 +69,12 @@
 <body>
 <header>
   <h1>老唐价投笔记 · 在线版</h1>
-  <div class="sub">一套以"老唐（唐朝）估值体系"为总纲、以巴菲特/芒格思想史为注脚、以散户乙/段永平为对照的价投读书笔记。本页＝汇总核心；下方每位作者可点击展开（折叠内容先放精简速览，长文正文待下一步补全）。</div>
+  <div class="sub">一套以"老唐（唐朝）估值体系"为总纲、以巴菲特/芒格思想史为注脚、以散户乙/段永平为对照的价投读书笔记。本页＝汇总核心；下方每位作者可点击展开。<b>老唐（唐朝）已展开著作与文章全集</b>；巴芒演义 / 散户乙 / 段永平 详细正文待下一步补全。</div>
 </header>
 
 <nav class="toc">
   <a href="#core">📌 汇总核心</a>
-  <a href="#a1">老唐（唐朝）</a>
+  <a href="#a1">老唐（唐朝）· 已展开</a>
   <a href="#a2">巴芒演义（思想史）</a>
   <a href="#a3">散户乙</a>
   <a href="#a4">段永平</a>
@@ -58,8 +84,8 @@
   <h2 class="sec" id="core">📌 汇总核心（主页）</h2>
   <div class="grid">
     <div class="acard">
-      <h3>老唐（唐朝）<span class="tag done">已精读</span></h3>
-      <div class="role">估值体系总纲 · 《价值投资实战手册》+《巴芒演义》</div>
+      <h3>老唐（唐朝）<span class="tag done">已精读·已展开</span></h3>
+      <div class="role">估值体系总纲 · 《价值投资实战手册》+《巴芒演义》+《手把手读财报》</div>
       <ul>
         <li><b>三大前提</b>：利润为真 / 可持续 / 维持盈利无需大资本投入</li>
         <li><b>老唐估值法</b>：三年后合理估值＝第三年预计净利×合理PE（＝1÷无风险利率）；理想买点＝50%</li>
@@ -103,12 +129,171 @@
 
   <h2 class="sec">📂 各位作者（点击展开 / 折叠）</h2>
 
-  <details class="author" id="a1">
-    <summary>老唐（唐朝）· 估值体系总纲</summary>
+  <details class="author" id="a1" open>
+    <summary>老唐（唐朝）· 估值体系总纲 + 著作与文章全集（点击展开）</summary>
     <div class="body">
-      <p><b>一句话</b>：用"三大前提"筛企业，用"三年后估值×50%买点、×150%或50PE卖点"定买卖，中间呆坐。是你茅台/腾讯框架的源头。</p>
-      <span class="pill">三大前提</span><span class="pill">老唐估值法</span><span class="pill">合理PE=1÷无风险利率</span><span class="pill">护城河四问</span><span class="pill">经济商誉</span><span class="pill">农地案例</span>
-      <div class="note">📄 完整详细笔记（含估值公式推导、卖点计算、能力圈/护城河、农地案例全文）见本地文件《老唐资料包_分级读书笔记.html》Tier 1。长文正文按你的要求先不展开输出，下一步可补。</div>
+      <p><b>一句话</b>：用"三大前提"筛企业，用"三年后估值×50%买点、×150%或50PE卖点"定买卖，中间呆坐。是你茅台/腾讯框架的源头，也是《巴芒演义》思想史的方法总纲。</p>
+      <span class="pill">三大前提</span><span class="pill">老唐估值法</span><span class="pill">合理PE=1÷无风险利率</span><span class="pill">护城河四问</span><span class="pill">经济商誉</span><span class="pill">农地案例</span><span class="pill">别瞅傻子瞅地</span><span class="pill">All cash is equal</span>
+      <div class="note">📌 下方按"书本名称 / 文章主题"分层折叠。已含《价值投资实战手册》《手把手教你读财报》及唐书房文章；巴芒演义虽为老唐所著，但其 42 回详细正文归入独立专题（见下"巴芒演义"折叠块，待展开），此处仅列书目。</div>
+
+      <!-- 📘 价值投资实战手册 -->
+      <details class="sub" open>
+        <summary>📘 《价值投资实战手册》（第二辑）· 老唐估值法总纲</summary>
+        <div class="subbody">
+          <h4>一、核心内容</h4>
+          <p><b>1）三大前提</b>（使用任何估值法之前，先过这三关——不能回答＝看不懂＝直接淘汰）：</p>
+          <table class="tbl">
+            <tr><th>前提</th><th>含义</th><th>不过会怎样</th></tr>
+            <tr><td>利润为真</td><td>是真实现金，非应收账款堆积、非变卖资产/重估得来</td><td>用报表净利润会高估价值</td></tr>
+            <tr><td>利润可持续</td><td>护城河够深，三年后还在赚、还赚得到</td><td>估值基于虚假的永续假设</td></tr>
+            <tr><td>维持盈利无需大量资本投入</td><td>折旧摊销基本够填维护性开支，净利润≈自由现金流</td><td>芒格："我恨第二种生意"（赚12%却要把钱全再投回去）</td></tr>
+          </table>
+          <p><b>2）老唐估值法（原书原话）</b></p>
+          <div class="formula">"三年后以 <b>15~25 倍市盈率</b>卖出能够赚 100% 的位置就可以买入，<b>高杠杆企业打七折</b>。"<br>等价于：<b>三年后合理估值 = 第三年预计净利润 × 合理PE；理想买点 = 合理估值 × 50%</b>。</div>
+          <p><b>3）合理 PE 的来历（= 1 ÷ 无风险收益率）</b></p>
+          <table class="tbl">
+            <tr><th>无风险收益率</th><th>合理 PE</th><th>对应场景</th></tr>
+            <tr><td>3% ~ 4%</td><td><b>25 ~ 30 倍</b></td><td>当前低利率环境（工作区间）</td></tr>
+            <tr><td>5% ~ 6%</td><td>15 ~ 20 倍</td><td>利率上行时</td></tr>
+          </table>
+          <ul>
+            <li>高杠杆企业（有息负债/总资产 ≥ 70%）：要求三年后以 <b>10.5 倍（简化10倍）</b>卖出就赚100%才考虑买 → 即打七折。</li>
+            <li>确定性稍差或净利润≠全部自由现金流：用 <b>15~20 倍</b>保守估算。</li>
+            <li>极少数自由现金流长期＞报表净利润的企业，合理PE可上调至 <b>25~30</b>——<b>老唐明确说迄今只对贵州茅台和腾讯两家做过这种上调</b>。</li>
+          </ul>
+          <p><b>4）一年卖点（何时该走）</b></p>
+          <div class="formula">一年内卖点 = <b>min（三年后合理估值 × 150%，当年净利润 × 50 倍 PE）</b>，先到者为准。</div>
+          <p>含义：只有当市场极度乐观、给到 50 倍 PE 或市值超过三年合理估值上限 1.5 倍时，才触发卖出（此时预期回报率已远低于无风险利率）。<b>买点买入、卖点卖出、中间呆坐不动。</b></p>
+
+          <h4>二、详细推导：老唐估值法 = 两段式自由现金流折现（DCF）的极简版</h4>
+          <p>推算示例（原书）：基期净利 100，三年净利 120 / 140 / 180，无风险利率 4%、折现率 8%——</p>
+          <div class="formula">标准两段折现 ≈ 4404.8 → 五折买点 ≈ 2202.4；<br>老唐口算：直接取第三年 180 × 25 = 4500，五折 = <b>2250</b>（≈标准五折，误差极小）。</div>
+          <p>这套简化法同样具备 DCF 的五大特征：① 需三大前提；② 本质是"选股原则/排除工具"而非精确公式；③ 用约 8%~10% 要求回报 + 4%~5% 永续增长假设；④ 长期（≥3年）视角；⑤ 预留安全边际容错。</p>
+
+          <h4>三、能力圈 · 经济商誉 · 护城河（"看懂企业"的标准）</h4>
+          <ul>
+            <li><b>能力圈</b>：把自己限定于能理解的企业。看不懂就排除，哪怕排除所有企业也不硬买。</li>
+            <li><b>经济商誉</b>（巴菲特1983年提出）：ROE 高 ≠ 账面资产神奇，而是"有些能带来收入的东西没记在账上"。公式：<code>(净资产A + 经济商誉G) × N = 净利润 = A × ROE</code> → <code>G = (ROE/N − 1) × A</code>。ROE 是路标，指引去找"高经济商誉 + 低有形资产"的企业。</li>
+            <li><b>护城河四问</b>（老唐版"看懂"）：① 卖什么获利？② 客户为何买它不买别家？③ 资本为何没抢它份额？④ 若同行/巨头挟巨资杀入，它能否守住？能清楚回答 = 看懂。</li>
+            <li>巴菲特偏爱"<b>简单、变量少、未来10~20年优势可确定</b>"的生意（口香糖、可口可乐式"给我100亿也伤不了它"的城堡）。</li>
+          </ul>
+
+          <h4>四、★ 老唐金句（《价值投资实战手册》）</h4>
+          <ul class="quotes">
+            <li>"别瞅傻子，瞅地。"——投资真谛六字，研究企业产出，而非猜测别人报价。</li>
+            <li>"All cash is equal."——金钱都是一样的，比较它们就是了；类现金（国债/货基/理财）也是候选投资品。</li>
+            <li>"财报是用来排除企业的，不是用来给股票估值的。"</li>
+            <li>"市场先生的报价，只为你服务、不能指导你；有用的是他的钱包，不是他的智慧。"</li>
+            <li>"能力圈的大小不重要，知道边界才重要。"</li>
+            <li>"高杠杆企业，三年后以10倍PE卖出赚100%才考虑买（打七折）。"</li>
+            <li>"买点买入、卖点卖出、中间呆坐不动。"</li>
+            <li>"我们只挣能力圈内的钱。"</li>
+          </ul>
+        </div>
+      </details>
+
+      <!-- 📗 手把手教你读财报 -->
+      <details class="sub">
+        <summary>📗 《手把手教你读财报》1&2（银行业）· 财报排雷基本功</summary>
+        <div class="subbody">
+          <h4>一、核心内容</h4>
+          <p>老唐反复强调：<b>财报是用来排除企业的</b>，是落地 Tier1"三大前提"的技术支撑——先证伪、再谈估值。三大报表：</p>
+          <ul>
+            <li><b>资产负债表</b>：某一刻的"快照"，看家底与结构（资产 = 负债 + 所有者权益）。</li>
+            <li><b>利润表</b>：一段时期的"成果"，但含大量会计估计，是"推测"而非事实。</li>
+            <li><b>现金流量表</b>：真金白银的流动，最能戳破利润水分——<b>经营现金流才是事实</b>。</li>
+          </ul>
+          <p><b>重点科目与雷区：</b></p>
+          <table class="tbl">
+            <tr><th>科目</th><th>看什么 / 雷在哪</th></tr>
+            <tr><td>货币资金</td><td>是否受限、被质押、虚构；"<b>存贷双高</b>"（账上巨款同时巨债）要高度警惕。</td></tr>
+            <tr><td>应收票据及账款</td><td>增速长期 &gt; 营收增速 = 放松信用或造假信号。</td></tr>
+            <tr><td>存货</td><td>跌价准备是否充足；突然畸高可能虚增利润（少结转成本）。</td></tr>
+            <tr><td>商誉 / 长期股权投资</td><td>高溢价并购埋商誉地雷，日后大额减值直接吞利润。</td></tr>
+            <tr><td>在建工程 / 固定资产</td><td>延迟费用化、隐藏成本，或虚增产能。</td></tr>
+            <tr><td>经营现金流 vs 净利润</td><td>长期经营现金流 &lt; 净利润 = 利润含金量低。</td></tr>
+          </table>
+          <p><b>银行股（第2册）特殊指标：</b>ROE、不良率、拨备覆盖率、资本充足率、负债成本（低负债成本本身就是护城河）。</p>
+          <p><b>老唐排雷口诀：</b>应收涨过营收、现金流跟不上利润、毛利率异常、大存大贷、商誉高悬、关联交易——任一出现就先画问号。</p>
+          <h4>二、★ 金句</h4>
+          <ul class="quotes">
+            <li>"利润表是推测，现金流量表是事实。"</li>
+            <li>"只买看得懂财报的企业。"</li>
+            <li>"财报是用来排除企业的，不是用来给股票估值的。"</li>
+          </ul>
+        </div>
+      </details>
+
+      <!-- 📙 唐书房 / 唐书院 文章 -->
+      <details class="sub">
+        <summary>📙 唐书房 / 唐书院 经典文章（按主题归集）</summary>
+        <div class="subbody">
+          <details class="sub2">
+            <summary>① 正确面对股价波动（市场先生）</summary>
+            <div class="sub2body">
+              <ul>
+                <li>股票本质 = 企业部分所有权的凭证，不是一串代码；长期收益来源有三：① 企业经营增值 ② 融资（高于净资产融资增厚老股东）③ 市盈率波动。</li>
+                <li><b>市场先生寓言</b>（格雷厄姆→老唐沿用）：每天报价、情绪癫狂（贪婪/恐惧交替），"只为你服务、不能指导你；有用的是他的钱包，不是他的智慧"。</li>
+                <li><b>最简单的投资品 = 宽基指数基金</b>（沪深300等）：站在"先赢"基础上，再求大赢。</li>
+              </ul>
+            </div>
+          </details>
+          <details class="sub2">
+            <summary>② 估值实战：茅台 / 腾讯买点闭环</summary>
+            <div class="sub2body">
+              <ul>
+                <li><b>茅台买点 955~1194 元</b>、<b>腾讯买点 505~606 港元</b>——正是老唐估值法的落地。</li>
+                <li>老唐也只对茅、腾两家给过 PE 上调（自由现金流长期＞报表净利润），与你"核心股 = 老唐顶配样板"完全自洽。</li>
+                <li>框架闭环：三大前提 → 第三年净利预估 → 合理PE（25~30）→ 合理估值 → 50% 买点；反向用 150% / 50PE 定卖点。</li>
+              </ul>
+            </div>
+          </details>
+          <details class="sub2">
+            <summary>③ 能力圈与护城河</summary>
+            <div class="sub2body">
+              <ul>
+                <li>能力圈：限定于能理解的企业，看不懂就排除；边界比大小重要。</li>
+                <li>护城河四问（卖什么 / 客户为何买 / 资本为何不抢 / 巨头杀入能否守）。</li>
+                <li>经济商誉 G = (ROE/N − 1) × A：找"高经济商誉 + 低有形资产"的企业。</li>
+              </ul>
+            </div>
+          </details>
+          <details class="sub2">
+            <summary>④ 农地案例与持有心态</summary>
+            <div class="sub2body">
+              <ul>
+                <li><b>1986 农地案例</b>：28万美元买400英亩，年净回报≈10%；盈亏取决于"地产出"，不取决于隔壁张三的成交价。</li>
+                <li>傻子出 128 万（存银行收益 &gt; 农地）就卖；出 70 万（不如存银行）就让他一边待着；出 14 万 / 7 万惊恐价，只要不借钱、无追加保证金，照样收租甚至低价再买。</li>
+                <li>"<b>别瞅傻子，瞅地</b>"正是你持有茅台/腾讯时对抗波动的心态锚。</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+      </details>
+
+      <!-- 💡 金句合集 -->
+      <details class="sub">
+        <summary>💡 老唐金句合集（速记 · 跨书跨文）</summary>
+        <div class="subbody">
+          <ul class="quotes">
+            <li>"别瞅傻子，瞅地。"</li>
+            <li>"All cash is equal."</li>
+            <li>"财报是用来排除企业的，不是用来给股票估值的。"</li>
+            <li>"市场先生的报价，只为你服务、不能指导你。"</li>
+            <li>"能力圈的大小不重要，知道边界才重要。"</li>
+            <li>"买股票就是买公司。"（股权思维）</li>
+            <li>"买点买入、卖点卖出、中间呆坐不动。"</li>
+            <li>"我们只挣能力圈内的钱。"</li>
+            <li>"高杠杆企业打七折。"</li>
+            <li>"闲钱、长钱、不加杠杆。"</li>
+            <li>"长期持有优质企业，陪伴它成长。"</li>
+            <li>"估值就是比较——所有类现金资产里，选产出更高的。"</li>
+            <li>"分散是对无知的保护，集中是对认知的奖赏。"（老唐：单股≤40%，适度集中）</li>
+          </ul>
+        </div>
+      </details>
+
+      <div class="note">📄 本地完整版（含全部详细笔记、巴芒演义42回、散户乙docx抽取）：《老唐资料包_分级读书笔记.html》。本页按你的要求仅展开老唐本人著作与文章；巴芒演义 / 散户乙 / 段永平 详细正文待下一步补全。</div>
     </div>
   </details>
 
@@ -117,7 +302,7 @@
     <div class="body">
       <p><b>一句话</b>：从格雷厄姆（烟蒂/安全边际）到巴菲特（陪伴优质企业）到芒格（思想升华）到指数基金——是老唐估值法的"思想史注脚"。</p>
       <span class="pill">格雷厄姆烟蒂</span><span class="pill">市场先生</span><span class="pill">喜诗糖果转折</span><span class="pill">华盛顿邮报</span><span class="pill">可口可乐</span><span class="pill">投资正道四条</span><span class="pill">别瞅傻子瞅地</span>
-      <div class="note">📄 完整详细笔记（42回全本精读：9大板块＋真实案例数字）见本地文件《老唐资料包_分级读书笔记.html》Tier 2。长文正文先不展开输出。</div>
+      <div class="note">📄 完整详细笔记（42回全本精读：9大板块＋真实案例数字）见本地文件《老唐资料包_分级读书笔记.html》Tier 2。按你的要求，长文正文先不展开输出，下一步可补。</div>
     </div>
   </details>
 
