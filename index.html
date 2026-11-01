@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>老唐价投笔记 · 在线版（汇总核心 + 可折叠作者）</title>
+<style>
+  :root{--navy:#13315c;--blue:#2f6db5;--ink:#1f2733;--mut:#6b7785;--bg:#f5f7fa;--card:#fff;--line:#e3e8ee;}
+  *{box-sizing:border-box;}
+  body{font-family:"Microsoft YaHei","PingFang SC",sans-serif;background:var(--bg);color:var(--ink);margin:0;line-height:1.7;}
+  header{background:linear-gradient(135deg,#13315c,#2f6db5);color:#fff;padding:34px 28px 26px;}
+  header h1{margin:0 0 6px;font-size:26px;}
+  header .sub{opacity:.9;font-size:14px;max-width:860px;}
+  .wrap{max-width:1080px;margin:0 auto;padding:22px 20px 60px;}
+  nav.toc{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line);padding:10px 20px;display:flex;gap:14px;flex-wrap:wrap;box-shadow:0 1px 4px rgba(0,0,0,.05);}
+  nav.toc a{color:var(--blue);text-decoration:none;font-size:14px;font-weight:600;padding:4px 8px;border-radius:5px;}
+  nav.toc a:hover{background:#eef4fb;}
+  h2.sec{color:var(--navy);font-size:20px;border-left:4px solid var(--blue);padding-left:10px;margin:30px 0 14px;}
+  /* 汇总核心 dashboard */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;}
+  .acard{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;box-shadow:0 1px 3px rgba(0,0,0,.06);}
+  .acard h3{margin:0 0 4px;font-size:16px;color:var(--navy);}
+  .acard .role{font-size:12px;color:var(--mut);margin-bottom:10px;}
+  .acard ul{margin:0;padding-left:18px;font-size:13.5px;}
+  .acard ul li{margin:5px 0;}
+  .tag{display:inline-block;padding:2px 9px;border-radius:20px;font-size:11px;font-weight:700;margin-left:6px;}
+  .tag.done{background:#eafaf1;color:#1e8449;}
+  .tag.part{background:#fef5e7;color:#b8860b;}
+  .tag.wait{background:#eef2f7;color:#7a8694;}
+  /* 折叠作者 */
+  details.author{background:var(--card);border:1px solid var(--line);border-radius:10px;margin:14px 0;box-shadow:0 1px 3px rgba(0,0,0,.06);overflow:hidden;}
+  details.author>summary{cursor:pointer;list-style:none;padding:15px 20px;font-size:17px;font-weight:700;color:var(--navy);display:flex;align-items:center;gap:10px;}
+  details.author>summary::-webkit-details-marker{display:none;}
+  details.author>summary::before{content:"▸";color:var(--blue);font-size:14px;transition:transform .15s;}
+  details.author[open]>summary::before{content:"▾";}
+  details.author .body{padding:4px 22px 20px;font-size:14px;}
+  details.author .body .note{font-size:12.5px;color:var(--mut);background:#f7fafd;border-left:3px solid var(--blue);padding:10px 14px;border-radius:6px;margin:12px 0;}
+  .pill{display:inline-block;background:#eef4fb;border:1px solid #cfe0f3;color:#1f3a5f;border-radius:6px;padding:2px 8px;font-size:12px;margin:2px 4px 2px 0;}
+  footer{text-align:center;color:var(--mut);font-size:12.5px;padding:24px;border-top:1px solid var(--line);}
+  @media print{details.author{break-inside:avoid;} nav.toc{display:none;}}
+</style>
+</head>
+<body>
+<header>
+  <h1>老唐价投笔记 · 在线版</h1>
+  <div class="sub">一套以"老唐（唐朝）估值体系"为总纲、以巴菲特/芒格思想史为注脚、以散户乙/段永平为对照的价投读书笔记。本页＝汇总核心；下方每位作者可点击展开（折叠内容先放精简速览，长文正文待下一步补全）。</div>
+</header>
+
+<nav class="toc">
+  <a href="#core">📌 汇总核心</a>
+  <a href="#a1">老唐（唐朝）</a>
+  <a href="#a2">巴芒演义（思想史）</a>
+  <a href="#a3">散户乙</a>
+  <a href="#a4">段永平</a>
+</nav>
+
+<div class="wrap">
+  <h2 class="sec" id="core">📌 汇总核心（主页）</h2>
+  <div class="grid">
+    <div class="acard">
+      <h3>老唐（唐朝）<span class="tag done">已精读</span></h3>
+      <div class="role">估值体系总纲 · 《价值投资实战手册》+《巴芒演义》</div>
+      <ul>
+        <li><b>三大前提</b>：利润为真 / 可持续 / 维持盈利无需大资本投入</li>
+        <li><b>老唐估值法</b>：三年后合理估值＝第三年预计净利×合理PE（＝1÷无风险利率）；理想买点＝50%</li>
+        <li><b>卖点</b>＝min(合理×150%，当年净利×50PE)；买买卖卖中间呆坐</li>
+        <li>单股≤40%、闲钱、无杠杆；护城河四问＋经济商誉</li>
+        <li>农地案例"别瞅傻子瞅地"；与你：茅台买点955~1194元、腾讯买点505~606港元</li>
+      </ul>
+    </div>
+    <div class="acard">
+      <h3>巴芒演义<span class="tag done">已精读</span></h3>
+      <div class="role">价值投资百年演化史（老唐思想史注脚）</div>
+      <ul>
+        <li>格雷厄姆：烟蒂股 / 安全边际 / 市场先生 / 估值公式 (8.5+2G)×4.4%/RF</li>
+        <li>巴菲特"从猿到人"：喜诗糖果（账面700万→3000万买、净利208万→8200万）开启优质企业路线</li>
+        <li>华盛顿邮报（4亿估值vs1亿市值、40年110倍）；可口可乐（1988买17-19xPE、1998年50xPE没卖的遗憾）</li>
+        <li>投资正道四条；农地案例"别瞅傻子瞅地"</li>
+      </ul>
+    </div>
+    <div class="acard">
+      <h3>散户乙<span class="tag done">已精读</span></h3>
+      <div class="role">"躺着收息＋陪伴优质"派（docx 20万字抽取）</div>
+      <ul>
+        <li>定性重于精确估值（"大胖子350斤还是330斤不重要"）</li>
+        <li>资产四形式比较 ≈ All cash is equal（现金/不动产/国债/有价证券，哪回报高放哪）</li>
+        <li>买入看股息率＋可持续；不关心宏观/庄家；陪伴企业度过低谷</li>
+        <li>反对回购干扰股价；拒杠杆；护城河＝定价权</li>
+        <li>与老唐对照：老唐精确买点卖点，散户乙模糊定性＋几乎不卖</li>
+      </ul>
+    </div>
+    <div class="acard">
+      <h3>段永平<span class="tag wait">PDF精读待补</span></h3>
+      <div class="role">"本分"哲学 · 巴菲特/芒格信徒</div>
+      <ul>
+        <li>买股票就是买公司（ownership 思维）</li>
+        <li>好生意 &gt; 好团队 &gt; 好价格，商业模式第一</li>
+        <li>重仓苹果 / 腾讯（微信生态＋回购注销）/ 茅台</li>
+        <li>现金担保卖 Put；不懂不投、不杠杆、不做空；护城河＝差异化</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 class="sec">📂 各位作者（点击展开 / 折叠）</h2>
+
+  <details class="author" id="a1">
+    <summary>老唐（唐朝）· 估值体系总纲</summary>
+    <div class="body">
+      <p><b>一句话</b>：用"三大前提"筛企业，用"三年后估值×50%买点、×150%或50PE卖点"定买卖，中间呆坐。是你茅台/腾讯框架的源头。</p>
+      <span class="pill">三大前提</span><span class="pill">老唐估值法</span><span class="pill">合理PE=1÷无风险利率</span><span class="pill">护城河四问</span><span class="pill">经济商誉</span><span class="pill">农地案例</span>
+      <div class="note">📄 完整详细笔记（含估值公式推导、卖点计算、能力圈/护城河、农地案例全文）见本地文件《老唐资料包_分级读书笔记.html》Tier 1。长文正文按你的要求先不展开输出，下一步可补。</div>
+    </div>
+  </details>
+
+  <details class="author" id="a2">
+    <summary>巴芒演义 · 价值投资百年演化史</summary>
+    <div class="body">
+      <p><b>一句话</b>：从格雷厄姆（烟蒂/安全边际）到巴菲特（陪伴优质企业）到芒格（思想升华）到指数基金——是老唐估值法的"思想史注脚"。</p>
+      <span class="pill">格雷厄姆烟蒂</span><span class="pill">市场先生</span><span class="pill">喜诗糖果转折</span><span class="pill">华盛顿邮报</span><span class="pill">可口可乐</span><span class="pill">投资正道四条</span><span class="pill">别瞅傻子瞅地</span>
+      <div class="note">📄 完整详细笔记（42回全本精读：9大板块＋真实案例数字）见本地文件《老唐资料包_分级读书笔记.html》Tier 2。长文正文先不展开输出。</div>
+    </div>
+  </details>
+
+  <details class="author" id="a3">
+    <summary>散户乙 · 躺着收息＋陪伴优质</summary>
+    <div class="body">
+      <p><b>一句话</b>：长期重仓老窖/茅台/五粮液，靠高股息再投、不预测宏观、陪伴企业度过低谷，与老唐同源但更"模糊、不折腾"。</p>
+      <span class="pill">定性重于定量</span><span class="pill">资产四形式比较</span><span class="pill">股息率+可持续</span><span class="pill">不关心宏观</span><span class="pill">陪伴低谷</span><span class="pill">拒杠杆</span>
+      <div class="note">📄 精读自 docx《散户乙20万字发言记录》《老窖投资录》抽取原文，8条核心＋原话对照见本地文件《老唐资料包_分级读书笔记.html》Tier 4。长文正文先不展开输出。</div>
+    </div>
+  </details>
+
+  <details class="author" id="a4">
+    <summary>段永平 · 本分哲学</summary>
+    <div class="body">
+      <p><b>一句话</b>：OPPO/vivo 段氏背景的巴菲特/芒格信徒，"买股票就是买公司"＋"好生意第一"＋现金担保卖 Put。</p>
+      <span class="pill">买股票就是买公司</span><span class="pill">好生意>好团队>好价格</span><span class="pill">苹果/腾讯/茅台</span><span class="pill">卖Put</span><span class="pill">不懂不投</span>
+      <div class="note">⏳ 状态：PDF 阅读组件（workbuddy-pdf）当前环境下载未就绪，详细笔记待组件可用后从《段永平语录》《问答录·投资逻辑篇》抽取补全。上方"汇总核心"已列公开核心。</div>
+    </div>
+  </details>
+
+  <footer>
+    本页为方法梳理与读书辅助，<b>非投资建议</b>。任何买卖请自行独立判断。<br>
+    本地完整版（含全部详细笔记）：《老唐资料包_分级读书笔记.html》
+  </footer>
+</div>
+</body>
+</html>
