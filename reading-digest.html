@@ -1,0 +1,1269 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>读书核心提炼 · 51 本结构化笔记与金句</title>
+<style>
+:root{--navy:#13315c;--blue:#185FA5;--ink:#1f2733;--mut:#6b7785;--line:#e3e8ee;--bg:#f5f7fa;--gold:#a86b1c}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Microsoft YaHei","PingFang SC",-apple-system,sans-serif;font-size:14px;line-height:1.75}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 80px}
+header{background:linear-gradient(120deg,#0f2a4a 0%,#185FA5 60%,#a86b1c 140%);color:#fff;padding:38px 26px 30px;margin-bottom:0}
+header .in{max-width:1180px;margin:0 auto}
+h1{margin:0 0 6px;font-size:30px;font-weight:600;letter-spacing:.5px}
+.sub{opacity:.9;font-size:13.5px;margin:0 0 20px}
+.stats{display:flex;gap:12px;flex-wrap:wrap}
+.stats div{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.18);border-radius:10px;padding:10px 18px;min-width:104px}
+.stats b{display:block;font-size:24px;line-height:1.2}
+.stats span{font-size:12px;opacity:.9}
+.toolbar{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line);padding:12px 26px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;box-shadow:0 2px 10px rgba(19,49,92,.06)}
+.toolbar input{flex:1 1 260px;border:1px solid #d7dee7;border-radius:8px;padding:9px 13px;font-size:13.5px;font-family:inherit;outline:none}
+.toolbar input:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(24,95,165,.12)}
+.toolbar button{border:1px solid #d7dee7;background:#fff;color:#33475e;border-radius:20px;padding:6px 14px;font-size:12.5px;cursor:pointer;font-family:inherit;white-space:nowrap}
+.toolbar button.on{background:var(--blue);border-color:var(--blue);color:#fff;font-weight:600}
+.toolbar .cnt{font-size:12px;color:var(--mut);margin-left:auto;white-space:nowrap}
+.section{margin:34px 0 12px;display:flex;align-items:center;gap:12px}
+.section .bar{width:5px;height:24px;border-radius:3px}
+.section h2{margin:0;font-size:19px;color:var(--navy);font-weight:600}
+.section .desc{font-size:12.5px;color:var(--mut);margin-left:6px}
+.section .ln{flex:1;height:1px;background:var(--line)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(228px,1fr));gap:13px;margin-bottom:10px}
+.card{position:relative;display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 16px 14px;transition:.16s;border-top:3px solid var(--blue)}
+.card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(19,49,92,.12);border-color:#9dc0e6}
+.card .num{position:absolute;right:13px;top:11px;font-size:11px;font-weight:700;color:#c3cddb;letter-spacing:1px}
+.card .ctitle{margin:0 26px 3px 0;font-size:16px;font-weight:600;color:var(--navy)}
+.card .cauth{font-size:11.5px;color:var(--mut);margin-bottom:9px;min-height:16px}
+.card .cone{font-size:12.8px;color:#3c4a5a;line-height:1.6;min-height:62px}
+.card .ctags{margin-top:8px}
+.chip{display:inline-block;background:#eef4fb;color:#25517f;border-radius:5px;padding:2px 8px;font-size:10.5px;margin:2px 4px 0 0}
+.chip.q{background:#faf1e3;color:#8a5a10}
+.book{background:#fff;border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:10px;margin:9px 0;overflow:hidden}
+.book[open]{border-left-color:var(--blue);box-shadow:0 3px 14px rgba(19,49,92,.07)}
+book summary{cursor:pointer}
+.book>summary{padding:13px 17px;font-size:14.5px;cursor:pointer;user-select:none;list-style:none;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.book>summary::-webkit-details-marker{display:none}
+.book>summary:before{content:"▸";color:var(--blue);font-size:12px;display:inline-block;width:12px}
+.book[open]>summary:before{content:"▾"}
+.bid{font-size:11px;color:#9aa7b6;font-weight:700;letter-spacing:.5px}
+.dupflag{font-size:11px;color:#8a5a10;background:#faf1e3;border-radius:4px;padding:1px 7px}
+.book .body{padding:2px 20px 20px;border-top:1px solid #eef2f7}
+.meta{font-size:11.5px;color:var(--mut);margin:10px 0 4px}
+.lead{background:#fef9ef;border-left:3px solid #e0a800;border-radius:6px;padding:9px 13px;font-size:13.5px;margin:8px 0 12px}
+.lbl{color:var(--blue);font-size:12.5px;font-weight:600;margin:15px 0 6px;border-bottom:1px dashed #cfe0f3;padding-bottom:4px}
+.book ul{margin:6px 0;padding-left:22px}
+.book li{margin:5px 0;font-size:13.2px;line-height:1.7}
+.book table{border-collapse:collapse;width:100%;font-size:12.8px;margin:6px 0}
+.book th,.book td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+.book th{background:#eef4fb;color:var(--navy)}
+.book tr:nth-child(even) td{background:#fafbfd}
+.quote{background:#fff8ea;border-left:3px solid var(--gold);border-radius:6px;padding:9px 13px;margin:6px 0;font-size:13px;color:#4a3510;line-height:1.65}
+.iface{background:#f4f2fb;border:1px solid #d9d2f0;border-radius:7px;padding:9px 13px;font-size:12.5px;color:#3b2f66;margin-top:12px}
+.src{background:#f2f8f4;border:1px solid #cfe8d8;border-radius:7px;padding:9px 13px;font-size:12.5px;color:#1f5a3a;margin-top:8px}
+.mynote{margin-top:10px;border:1px dashed #c8d3e0;border-radius:7px;padding:9px 12px;font-size:12px;color:#8b98a8;background:#fbfdff}
+.wall{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:11px;margin-top:10px}
+.wall .q{background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:9px;padding:13px 15px;font-size:13px;line-height:1.7;color:#3a2c12}
+.wall .q b{display:block;font-size:11px;color:var(--mut);font-weight:400;margin-top:7px}
+.path{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin:14px 0}
+.path h3{margin:0 0 10px;font-size:15px;color:var(--navy)}
+.path ol{margin:6px 0 0;padding-left:22px}
+.path li{margin:6px 0;font-size:13px;line-height:1.7}
+.toc{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.toc a{color:#fff;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:5px 13px;font-size:12px;text-decoration:none}
+.toc a:hover{background:rgba(255,255,255,.26)}
+footer{text-align:center;color:var(--mut);font-size:12px;padding:26px 0 0;border-top:1px solid var(--line);margin-top:40px}
+.hidden{display:none!important}
+@media(max-width:760px){.grid{grid-template-columns:1fr 1fr}.toolbar{position:static}.stats div{min-width:86px;padding:8px 12px}.stats b{font-size:19px}}
+@media print{header{background:#13315c!important;-webkit-print-color-adjust:exact}.toolbar,.toc{display:none}.book{break-inside:avoid}.book .body{display:block!important}}
+</style></head><body>
+<header><div class="in"><h1>读书核心提炼</h1>
+<p class="sub">51 本书 · 原创结构化笔记与金句 · 与投研 / 交易 / 心性三线挂钩（不含受版权保护的正文）</p>
+<div class="stats"><div><b>51</b><span>本书</span></div><div><b>6</b><span>大主题</span></div><div><b>153</b><span>条金句</span></div><div><b>5</b><span>条核心框架/本</span></div></div>
+<div class="toc"><a href="#th-invest">投资 · 价值与周期</a><a href="#th-trade">交易 · 趋势与系统</a><a href="#th-mind">心性 · 概率与自我</a><a href="#th-biz">商业 · 格局与叙事</a><a href="#th-self">自律 · 成长与行动</a><a href="#th-world">视野 · 历史与文学</a><a href="#wall">金句墙</a><a href="#path">怎么用</a></div>
+</div></header>
+<div class="toolbar"><input id="q" type="search" placeholder="搜索书名 / 作者 / 概念 / 金句…">
+<button class="on" data-t="all">全部</button><button class="" data-t="invest">投资</button><button class="" data-t="trade">交易</button><button class="" data-t="mind">心性</button><button class="" data-t="biz">商业</button><button class="" data-t="self">自律</button><button class="" data-t="world">视野</button>
+<span class="cnt" id="cnt">51 / 51</span></div>
+<div class="wrap">
+<div class="section" id="th-invest"><span class="bar" style="background:#185FA5"></span><h2>投资 · 价值与周期</h2><span class="desc">钱与复利的底层算法，市场在哪个位置</span><span class="ln"></span></div>
+<div class="grid">
+<a class="card" href="#b01" data-theme="invest" data-k="穷查理宝典彼得·考夫曼 编（查理·芒格言论）芒格的“多元思维模型”总装车间：不做预测，只做排除。复利型 · 决策型多元思维模型 lollapalooza 效应 逆向思考 人类误判心理学 能力圈芒格的“多元思维模型”总装车间：不做预测，只做排除。 核心不是选股技巧，而是建立一个跨学科的格栅 逆向思考优先"><div class="num">01</div><div class="ctitle">《穷查理宝典》</div><div class="cauth">彼得·考夫曼 编（查理·芒格言论）</div><div class="cone">芒格的“多元思维模型”总装车间：不做预测，只做排除。</div><div class="ctags"><span class="chip">复利型 · 决策型</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#b02" data-theme="invest" data-k="纳瓦尔宝典埃里克·乔根森 编（纳瓦尔·拉维坎特）财富不是钱，是“睡觉时仍在为你工作的资产”；致富靠专长、杠杆与长期主义。杠杆型 · 复利型特定知识 零边际成本杠杆 复利的一切 时薪定价法财富不是钱，是“睡觉时仍在为你工作的资产”；致富靠专长、杠杆与长期主义。 财富 ≠ 金钱 四种杠杆"><div class="num">02</div><div class="ctitle">《纳瓦尔宝典》</div><div class="cauth">埃里克·乔根森 编（纳瓦尔·拉维坎特）</div><div class="cone">财富不是钱，是“睡觉时仍在为你工作的资产”；致富靠专长、杠杆与长期主义。</div><div class="ctags"><span class="chip">杠杆型 · 复利型</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#b03" data-theme="invest" data-k="小狗钱钱博多·舍费尔理财的第一课不是收益率，是“先养鹅，再花蛋”。习惯型 · 启蒙鹅与金蛋 72 小时法则 成功日记 541 分配理财的第一课不是收益率，是“先养鹅，再花蛋”。 鹅与金蛋 梦想清单 + 梦想储蓄罐"><div class="num">03</div><div class="ctitle">《小狗钱钱》</div><div class="cauth">博多·舍费尔</div><div class="cone">理财的第一课不是收益率，是“先养鹅，再花蛋”。</div><div class="ctags"><span class="chip">习惯型 · 启蒙</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#b04" data-theme="invest" data-k="富爸爸穷爸爸罗伯特·清崎穷人为钱工作，富人让钱为自己工作；先分清资产与负债。观念型 · 启蒙资产/负债再定义 esbi 象限 被动收入覆盖支出穷人为钱工作，富人让钱为自己工作；先分清资产与负债。 资产 vs 负债的定义重构 现金流象限（esbi）"><div class="num">04</div><div class="ctitle">《富爸爸穷爸爸》</div><div class="cauth">罗伯特·清崎</div><div class="cone">穷人为钱工作，富人让钱为自己工作；先分清资产与负债。</div><div class="ctags"><span class="chip">观念型 · 启蒙</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#b05" data-theme="invest" data-k="投资最重要的事霍华德·马克斯投资不是比谁知道得多，而是比谁“想得更深一层”，并管住风险。决策型 · 复利型第二层思维 永久性损失 钟摆与周期 不对称性投资不是比谁知道得多，而是比谁“想得更深一层”，并管住风险。 第二层思维 风险的真实定义"><div class="num">05</div><div class="ctitle">《投资最重要的事》</div><div class="cauth">霍华德·马克斯</div><div class="cone">投资不是比谁知道得多，而是比谁“想得更深一层”，并管住风险。</div><div class="ctags"><span class="chip">决策型 · 复利型</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#t31" data-theme="invest" data-k="原则瑞·达利欧痛苦＋反思＝进步；把原则写下来，让生活和工作像机器一样可迭代。已在主书库 b11痛苦 + 反思 = 进步。逃避痛苦，就等于逃避进步。 做一个有原则的人，意味着你能在事件发生时，用一贯的方式应对。 如果你不反思，你只是在重复自己的错误。"><div class="num">06</div><div class="ctitle">《原则》</div><div class="cauth">瑞·达利欧</div><div class="cone">痛苦＋反思＝进步；把原则写下来，让生活和工作像机器一样可迭代。</div><div class="ctags"><span class="chip">已在主书库 b11</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#t33" data-theme="invest" data-k="聪明的投资者本杰明·格雷厄姆投资是基于详尽分析、承诺本金安全并提供满意回报的行为；不满足这三点就是投机。价值投资圣经市场先生 安全边际 防御型投资者 净流动资产(ncav) 股债平衡投资操作是以深入分析为基础，确保本金安全并获得适当回报；不能满足这些要求的操作就是投机。 市场先生是来服务你的，不是来指导你的。 安全边际是投资的中心概念——它使你对未来的判断不必正确。"><div class="num">07</div><div class="ctitle">《聪明的投资者》</div><div class="cauth">本杰明·格雷厄姆</div><div class="cone">投资是基于详尽分析、承诺本金安全并提供满意回报的行为；不满足这三点就是投机。</div><div class="ctags"><span class="chip">价值投资圣经</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#t38" data-theme="invest" data-k="金融炼金术乔治·索罗斯参与者的偏见会改变基本面，基本面的变化又反过来强化偏见——反身性制造泡沫与崩盘。反身性理论反身性 繁荣-萧条序列 易错性 实时实验 边际不确定性我不是一个预测者，我是一个对自己的判断不断提出质疑的参与者。 市场历史是一个由偏见与现实相互作用的反身性过程。 承认自己的易错性，是获得成功的前提。"><div class="num">08</div><div class="ctitle">《金融炼金术》</div><div class="cauth">乔治·索罗斯</div><div class="cone">参与者的偏见会改变基本面，基本面的变化又反过来强化偏见——反身性制造泡沫与崩盘。</div><div class="ctags"><span class="chip">反身性理论</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#t42" data-theme="invest" data-k="债务危机瑞·达利欧用债务大周期解释国家兴衰：短期债务周期套在长期债务周期里。大周期框架短期债务周期 长期债务周期 去杠杆四工具 和谐去杠杆 储备货币地位债务是今天的消费、明天的负担：你向未来的自己借钱。 短期债务周期由央行主导，长期债务周期由人性主导。 和谐的去杠杆，是让债务占收入比下降，同时不让经济崩溃。"><div class="num">09</div><div class="ctitle">《债务危机》</div><div class="cauth">瑞·达利欧</div><div class="cone">用债务大周期解释国家兴衰：短期债务周期套在长期债务周期里。</div><div class="ctags"><span class="chip">大周期框架</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#t43" data-theme="invest" data-k="指数基金投资从入门到精通（多版本，以封面为准）用最少的时间和费用，获得市场平均回报——指数基金是普通人的默认答案。指数入门宽基指数 估值分位 定投+再平衡 费率侵蚀 核心-卫星买指数基金，本质是买整个国家的经济增长。 费率是投资者唯一能完全控制的变量。 定投的意义不在于摊低成本，而在于让你在市场下跌时仍然在买。"><div class="num">10</div><div class="ctitle">《指数基金投资从入门到精通》</div><div class="cauth">（多版本，以封面为准）</div><div class="cone">用最少的时间和费用，获得市场平均回报——指数基金是普通人的默认答案。</div><div class="ctags"><span class="chip">指数入门</span><span class="chip q">3 金句</span></div></a>
+</div>
+
+<details class="book" id="b01" data-theme="invest">
+ <summary><span class="bid">b01</span>《穷查理宝典》 — 芒格的“多元思维模型”总装车间：不做预测，只做排除。</summary>
+ <div class="body">
+  <div class="meta">彼得·考夫曼 编（查理·芒格言论） · 2005 年 · 复利型 · 决策型 · ★★★☆ 精读+反复查</div>
+  <div class="lead">芒格的“多元思维模型”总装车间：不做预测，只做排除。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li>核心不是选股技巧，而是<b>建立一个跨学科的格栅</b>：把数学、物理、生物、心理、经济的基本模型挂在脑子里，遇事同时调用多个模型交叉验证，避免“手里只有锤子，看什么都是钉子”。</li><li><b>逆向思考</b>优先：先问“怎么会失败/怎么会亏光”，把会导致灾难的因素列出来避开，剩下的自然靠近正确。芒格把这叫“反过来想，总是反过来想”。</li><li><b>Lollapalooza 效应</b>：多个心理倾向同向叠加时，会产生远超线性的极端后果（例如从众+权威+承诺一致+稀缺同时发力，就是泡沫与骗局的标准配方）。看懂它，才看得懂市场为什么疯。</li><li><b>能力圈 + 集中下注</b>：只在真正懂的地方重仓，其余一律“太难，放一边”。芒格的原话精神是：我们不靠分散取胜，靠的是少数几次“几乎确定”的机会。</li><li><b>避免愚蠢比追求聪明更值钱</b>：长期不犯大错，复利自然把你送到前面。这也是伯克希尔真正的秘密。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>多元思维模型</b></td><td>80~90 个来自硬科学和软科学的核心模型，构成判断的“格栅”</td></tr><tr><td><b>Lollapalooza 效应</b></td><td>多因素同向共振导致极端结果（泡沫、传销、群体恐慌）</td></tr><tr><td><b>逆向思考</b></td><td>先避免灾难，再追求成功（“如果我知道会死在哪，我就永远不去那儿”）</td></tr><tr><td><b>人类误判心理学</b></td><td>25 种左右的心理倾向：激励、嫉妒、从众、权威、避免不一致等</td></tr><tr><td><b>能力圈</b></td><td>边界比大小重要；不懂就是不懂，没有中间态</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>签委托生产合同前，用“逆向清单”反向推演：这份合同在什么情况下会让我方承担无限责任/被单方终止/被价格倒挂？把 5 个致命情形逐条写进条款兜底。</li><li>看一个项目/公司，强制自己用 3 个不同学科的模型解释一遍（会计、产业组织、行为心理），解释不通就别做。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"芒格的“多元思维模型”总装车间：不做预测，只做排除。"</div><div class="quote">"核心不是选股技巧，而是建立一个跨学科的格栅"</div><div class="quote">"逆向思考优先"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：与你“不做确定性买卖结论、只做概率与结构”的投研风格同源；也是判断城投/产业链“共识是否已过热”的心理学工具箱。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：微信读书 / 得到 / 京东读书有中文版；英文 Poor Charlie&#x27;s Almanack 官方站可查目录与样章，建议配纸质（表格多、翻查频繁）。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="b02" data-theme="invest">
+ <summary><span class="bid">b02</span>《纳瓦尔宝典》 — 财富不是钱，是“睡觉时仍在为你工作的资产”；致富靠专长、杠杆与长期主义。</summary>
+ <div class="body">
+  <div class="meta">埃里克·乔根森 编（纳瓦尔·拉维坎特） · 2020 年 · 杠杆型 · 复利型 · ★★☆☆ 3~4 小时通读</div>
+  <div class="lead">财富不是钱，是“睡觉时仍在为你工作的资产”；致富靠专长、杠杆与长期主义。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>财富 ≠ 金钱</b>：金钱是转移财富的凭证，财富是能持续产出的资产（股权、代码、内容、品牌、知识产权）。工资是用时间换钱，永远无法致富。</li><li><b>四种杠杆</b>：① 劳动力（雇人，最古老最累）② 资本（钱，需要信用背书）③ 代码 ④ 媒体/内容。后两者是“零边际成本、无需许可”的新杠杆，普通人唯一能凭空拿到的。</li><li><b>专长（specific knowledge）</b>：无法被培训、只能被习得的东西——它常常看起来像“玩”，但别人做不了。专长 + 杠杆 = 复利。</li><li><b>把自己产品化</b>：找到“我独一无二 + 社会愿意付钱”的交集，用可复制的形式（产品/内容/系统）无限放大。</li><li><b>幸福是技能，不是结果</b>：降低欲望基线、活在当下、把“默认状态”调成平静；健康的优先级高于一切。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>特定知识</b></td><td>无法通过学校培训获得、带强烈个人特质的技能组合</td></tr><tr><td><b>零边际成本杠杆</b></td><td>代码与内容：一次生产，无限复制，且不需要别人批准</td></tr><tr><td><b>复利的一切</b></td><td>财富、关系、知识、声誉，都遵守复利；关键是“别中断”</td></tr><tr><td><b>时薪定价法</b></td><td>给自己设一个时薪，低于它的琐事一律外包或不做</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>把你的汽车供应链金融方法论“产品化”：一份可复用的合同风险清单 + 一套估值复核模型，做成模板/文档，让它在你不参与时也产生价值。</li><li>设定个人时薪（如 500 元/小时），凡是低于它的重复劳动，优先交给脚本/自动化（你的 WorkBuddy 定时任务正是这条路）。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"财富不是钱，是“睡觉时仍在为你工作的资产”；致富靠专长、杠杆与长期主义。"</div><div class="quote">"财富 ≠ 金钱"</div><div class="quote">"四种杠杆"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：直接支撑你的自动化推送体系与投研内容沉淀——“代码+内容”双杠杆，是量化研究者最现实的放大器。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：微信读书/得到有中文版；英文原版 The Almanack of Naval Ravikant 官方免费 PDF（navalmanack.com），属作者公开免费发布。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="b03" data-theme="invest">
+ <summary><span class="bid">b03</span>《小狗钱钱》 — 理财的第一课不是收益率，是“先养鹅，再花蛋”。</summary>
+ <div class="body">
+  <div class="meta">博多·舍费尔 · 2000 年 · 习惯型 · 启蒙 · ★☆☆☆ 2 小时，适合当“体检表”</div>
+  <div class="lead">理财的第一课不是收益率，是“先养鹅，再花蛋”。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>鹅与金蛋</b>：本金是鹅，利息是蛋。穷人杀鹅取蛋（有收入先消费），富人养鹅（收入先切一块变成本金）。</li><li><b>梦想清单 + 梦想储蓄罐</b>：把目标可视化、具体化（金额+日期+图片），储蓄才有指向性；模糊的“我要存钱”一定失败。</li><li><b>541 分配（或 50/40/10）</b>：收入的 50% 养鹅、40% 进梦想账户、10% 日常花。核心是强制顺序：先分配，再消费。</li><li><b>72 小时法则</b>：决定做一件事，72 小时内必须迈出第一步，否则大概率永久不做。</li><li><b>写成功日记</b>：每天记 5 件做好的小事，用来对抗“我不行”的自我叙事——这是全书最被低估的一条。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>鹅与金蛋</b></td><td>本金 vs 收益；保护本金优先于追求收益</td></tr><tr><td><b>72 小时法则</b></td><td>决策到行动的窗口期，超时则动力衰减</td></tr><tr><td><b>成功日记</b></td><td>用记录对抗自我怀疑，建立财务自信</td></tr><tr><td><b>541 分配</b></td><td>收入切块：养鹅/梦想/消费</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>给你的现金流做一次“杀鹅检查”：过去 12 个月，股息/利息收入是被再投（养鹅）还是被花掉（杀鹅）？</li><li>给每个投资账户写一张“梦想卡片”（目标金额、用途、期限），贴在交易软件首页，抑制临时起意。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"理财的第一课不是收益率，是“先养鹅，再花蛋”。"</div><div class="quote">"鹅与金蛋"</div><div class="quote">"梦想清单 + 梦想储蓄罐"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：对茅台/腾讯这类“高股息+回购”持仓有直接意义：分红再投就是最朴素的养鹅，与老唐“All cash is equal”同构。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：微信读书/京东读书有中文版（少儿向，成人读也有效）；有声版适合通勤。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="b04" data-theme="invest">
+ <summary><span class="bid">b04</span>《富爸爸穷爸爸》 — 穷人为钱工作，富人让钱为自己工作；先分清资产与负债。</summary>
+ <div class="body">
+  <div class="meta">罗伯特·清崎 · 1997 年 · 观念型 · 启蒙 · ★☆☆☆ 2~3 小时，需批判读</div>
+  <div class="lead">穷人为钱工作，富人让钱为自己工作；先分清资产与负债。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>资产 vs 负债的定义重构</b>：能把钱放进口袋的是资产，把钱从口袋掏走的是负债。按此定义，自住大房子、车贷、消费贷全是负债——这是全书最有杀伤力的一刀。</li><li><b>现金流象限（ESBI）</b>：雇员(E)/自由职业者(S) 在左侧，用时间换钱；企业主(B)/投资者(I) 在右侧，用系统与资本换钱。致富的本质是向右侧迁移。</li><li><b>财务自由 = 被动收入 ≥ 总支出</b>，与资产绝对金额无关，与“支出结构”强相关。</li><li><b>财务知识四支柱</b>：会计（看懂数字）、投资（钱生钱）、市场（供需）、法律（税与结构）。</li><li><b>批判点</b>：书中部分操作（高杠杆房产、激进的税务结构）在中国语境风险极高，且作者本人公司破产记录需注意——学“资产/负债的思维”，不要照搬“加杠杆的做法”。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>资产/负债再定义</b></td><td>以现金流方向而非会计科目判断</td></tr><tr><td><b>ESBI 象限</b></td><td>收入来源的结构，而非金额，决定财务自由度</td></tr><tr><td><b>被动收入覆盖支出</b></td><td>财务自由的唯一定义式</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>把家庭资产负债表按“现金流方向”重排一遍：哪些每月净流出（房贷、车贷、消费分期），哪些净流入（股息、租金、利息）？</li><li>评估一个“投资”时先问：它这个月给我带来正的现金流吗？还是只在等一个更傻的接盘者？（与老唐“生产性资产 vs 无生产力资产”判断同源）</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"穷人为钱工作，富人让钱为自己工作；先分清资产与负债。"</div><div class="quote">"资产 vs 负债的定义重构"</div><div class="quote">"现金流象限（ESBI）"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：与你的三地持仓判断呼应：A股/港股里大量“不产出现金流、只盼接盘”的标的，用这条尺子一量就现形。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：微信读书/京东读书有中文版；建议读原著而非各种“解读版”。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="b05" data-theme="invest">
+ <summary><span class="bid">b05</span>《投资最重要的事》 — 投资不是比谁知道得多，而是比谁“想得更深一层”，并管住风险。</summary>
+ <div class="body">
+  <div class="meta">霍华德·马克斯 · 2011 年 · 决策型 · 复利型 · ★★★★ 精读，值得做笔记</div>
+  <div class="lead">投资不是比谁知道得多，而是比谁“想得更深一层”，并管住风险。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>第二层思维</b>：第一层说“这是好公司，买”；第二层问“大家都知道它好，价格里已经包含了多少乐观？我的预期比市场共识强在哪里？”超额收益只能来自“正确的非共识”。</li><li><b>风险的真实定义</b>：风险不是波动率，而是“永久性资本损失的可能性”。波动是朋友（提供买点），永久损失是敌人。</li><li><b>周期观</b>：钟摆永远在“乐观—悲观”之间过头摆动，从不在中点停留。识别自己处在周期的哪个位置，比预测下一次转向更可行。</li><li><b>防守优先</b>：“避免输家”比“寻找赢家”更能决定长期结果；优秀投资者的标志不是收益最高，而是<b>在坏年份亏得最少</b>。</li><li><b>价格决定一切</b>：没有好资产，只有好价格。“买好的”不如“买得好”。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>第二层思维</b></td><td>超越共识的、更深一层的推理</td></tr><tr><td><b>永久性损失</b></td><td>风险的本体，区别于价格波动</td></tr><tr><td><b>钟摆与周期</b></td><td>市场情绪总在两端过头，从不居中</td></tr><tr><td><b>不对称性</b></td><td>上涨空间 &gt; 下跌空间时才出手（防守型进攻）</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>建仓前写一张“第二层思维卡”：市场共识是什么？我的分歧点是什么？如果我对了赚多少、错了亏多少？（不对称性量化）</li><li>给持仓做“坏年份压力测试”：若明年指数 -30%，我这组合会亏多少？亏损是否可承受、是否需要提前降杠杆？</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"投资不是比谁知道得多，而是比谁“想得更深一层”，并管住风险。"</div><div class="quote">"第二层思维"</div><div class="quote">"风险的真实定义"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：与老唐估值法的“买点/卖点/中间呆坐”是一体两面：马克斯讲“为什么”，老唐给“怎么算”。你的茅台/腾讯买点区间本质就是“价格决定一切”的执行。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：微信读书/得到有中文版；英文 The Most Important Thing 有 Kindle 版。建议与《周期》同读。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="t31" data-theme="invest">
+ <summary><span class="bid">t31</span>《原则》 — 痛苦＋反思＝进步；把原则写下来，让生活和工作像机器一样可迭代。 <span class="dupflag">已在 b11 收录完整笔记</span></summary>
+ <div class="body">
+  <div class="lead">痛苦＋反思＝进步；把原则写下来，让生活和工作像机器一样可迭代。</div>
+  <div class="lbl">金句（核心观点短句提炼）</div>
+  <div class="quote">"痛苦 + 反思 = 进步。逃避痛苦，就等于逃避进步。"</div><div class="quote">"做一个有原则的人，意味着你能在事件发生时，用一贯的方式应对。"</div><div class="quote">"如果你不反思，你只是在重复自己的错误。"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：主书库 b11 已有完整笔记；此处按你的书单保留条目。</div>
+ </div>
+</details>
+
+<details class="book" id="t33" data-theme="invest">
+ <summary><span class="bid">t33</span>《聪明的投资者》 — 投资是基于详尽分析、承诺本金安全并提供满意回报的行为；不满足这三点就是投机。</summary>
+ <div class="body">
+  <div class="meta">本杰明·格雷厄姆 · 1949 年 · 价值投资圣经 · ★★★ 精读</div>
+  <div class="lead">投资是基于详尽分析、承诺本金安全并提供满意回报的行为；不满足这三点就是投机。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>投资 vs 投机的分界</b>：投资必须同时满足「详尽分析＋本金安全＋满意回报」，缺一即投机。这条定义是所有后续纪律的地基。</li><li><b>市场先生寓言</b>：市场每天给你报价，他情绪化、时而狂喜时而绝望。你是他的合伙人不是他的雇员——<b>利用他的报价，不要被他的情绪感染</b>。</li><li><b>安全边际</b>：内在价值与买入价之间的差额，是抵御判断失误、运气不佳和市场波动的唯一缓冲。<b>安全边际不需要精确估值，只需要足够大的折扣</b>。</li><li><b>防御型 vs 进取型投资者</b>：不愿花大量时间研究者选防御型（分散＋定投＋债券平衡），愿深入研究者选进取型（分散度较低＋深度分析）。<b>先认清自己是哪一类，再选策略</b>。</li><li><b>两种估值方法</b>：资产法（净流动资产）与盈利法（市盈率 × 未来盈利），配合「25–35 倍 PE 上限」「资产负债率不过半」等量化护栏。可转债与优先股是格雷厄姆偏爱的中间地带。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>市场先生</b></td><td>情绪化的报价者，为你服务而非指导你</td></tr><tr><td><b>安全边际</b></td><td>价格与内在价值之间的折扣，是容错空间</td></tr><tr><td><b>防御型投资者</b></td><td>不追求超额，用分散和纪律获得市场平均回报</td></tr><tr><td><b>净流动资产(NCAV)</b></td><td>流动资产减全部负债，极端低估的筛选器</td></tr><tr><td><b>股债平衡</b></td><td>50/50 起步，随市场极端做机械再平衡</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>用「市场先生」框架重写你的持仓逻辑：每次想交易时先问「这是基本面变了，还是市场先生今天心情不好？」。</li><li>把「安全边际」翻译成你的买点公式：老唐估值法的「三年后合理估值 ×50%」就是安全边际的本土化实现。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"投资操作是以深入分析为基础，确保本金安全并获得适当回报；不能满足这些要求的操作就是投机。"</div><div class="quote">"市场先生是来服务你的，不是来指导你的。"</div><div class="quote">"安全边际是投资的中心概念——它使你对未来的判断不必正确。"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：老唐估值法与『三大前提』的直接源头；主书库 b01《穷查理宝典》、b05《投资最重要的事》与本书构成价投铁三角。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：微信读书 / 人民邮电出版社正版（丁圣元等译本多种）；公版英文原版可于 Gutenberg 检索 1934 初版部分章节。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="t38" data-theme="invest">
+ <summary><span class="bid">t38</span>《金融炼金术》 — 参与者的偏见会改变基本面，基本面的变化又反过来强化偏见——反身性制造泡沫与崩盘。</summary>
+ <div class="body">
+  <div class="meta">乔治·索罗斯 · 1987 年 · 反身性理论 · ★★ 难读，抓框架</div>
+  <div class="lead">参与者的偏见会改变基本面，基本面的变化又反过来强化偏见——反身性制造泡沫与崩盘。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>反身性（Reflexivity）</b>：投资者不是被动观察现实，其行为会改变现实；<b>偏见→价格→基本面→更强偏见</b>形成反馈环，这是泡沫的本质。</li><li><b>反身性适用的条件</b>：只在「思想与现实存在反馈回路」的领域有效（金融市场、政治），在物理世界不成立——<b>别把反身性当万能公式</b>。</li><li><b>繁荣-萧条序列</b>： unnoticed trend → 加速期 → 考验期 → 真理时刻 → 崩溃期；<b>识别自己处于序列哪一段，比预测终点更实际</b>。</li><li><b>易错性（Fallibility）</b>：所有参与者对世界的理解都是不完整的、有偏见的；<b>承认自己会错，是反身性投资的第一前提</b>。</li><li><b>实时实验与止损</b>：索罗斯用小仓位试探假设，假设被市场验证才加码；<b>被证伪立即撤退，不为理念死扛</b>。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>反身性</b></td><td>认知与现实双向反馈，偏见能自我实现也能自我毁灭</td></tr><tr><td><b>繁荣-萧条序列</b></td><td>泡沫从萌芽到崩溃的五阶段路径</td></tr><tr><td><b>易错性</b></td><td>理解天然不完整，决策必须留纠错空间</td></tr><tr><td><b>实时实验</b></td><td>用小仓位验证投资假设，验证后再放大</td></tr><tr><td><b>边际不确定性</b></td><td>靠近转折点时，小事件可能引发大后果</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>分析 AI 资本开支链（NVDA↔GOOGL）时，用反身性框架：capex 叙事→估值上升→融资更容易→capex 再扩张→叙事强化，识别反馈环何时断裂。</li><li>每次重仓前写一句『如果我错了，最可能因为什么』——把易错性变成检查项。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"我不是一个预测者，我是一个对自己的判断不断提出质疑的参与者。"</div><div class="quote">"市场历史是一个由偏见与现实相互作用的反身性过程。"</div><div class="quote">"承认自己的易错性，是获得成功的前提。"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：与上一轮英伟达/谷歌分析直接呼应：AI capex 链就是典型的反身性反馈环，报告里『同一枚硬币两面』的判断正是此框架的应用。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：微信读书 / 机械工业出版社正版；本书较难读，建议先读索罗斯《开放社会》相关章节铺垫。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="t42" data-theme="invest">
+ <summary><span class="bid">t42</span>《债务危机》 — 用债务大周期解释国家兴衰：短期债务周期套在长期债务周期里。</summary>
+ <div class="body">
+  <div class="meta">瑞·达利欧 · 2019 年 · 大周期框架 · ★★ 框架掌握</div>
+  <div class="lead">用债务大周期解释国家兴衰：短期债务周期套在长期债务周期里。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>债务是未来的消费提前到今天</b>：借债等于向未来的自己借钱；<b>收入增长覆盖不了债务增长时，周期必然反转</b>。</li><li><b>短期债务周期（5-8年）</b>：由央行利率调节，通胀与增长交替， Clinton 式的温和波动。</li><li><b>长期债务周期（约 75 年）</b>：债务占收入比持续上升→利率降到零→债务货币化→通胀/货币贬值→去杠杆→新一轮。<b>我们处在长期周期末段</b>。</li><li><b>去杠杆的四种工具</b>：削减支出、债务重组/违约、财富再分配、印钞贬值；<b>前三种痛苦但有疗效，第四种短期止痛长期有毒</b>。</li><li><b>「和谐的去杠杆」</b>：适度通胀 + 适度紧缩 + 财富转移组合，让债务/收入比下降而经济不至于崩溃——<b>这是政策制定的艺术</b>。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>短期债务周期</b></td><td>利率调节的 5-8 年商业周期</td></tr><tr><td><b>长期债务周期</b></td><td>70-80 年的债务累积与去化大周期</td></tr><tr><td><b>去杠杆四工具</b></td><td>紧缩、违约、再分配、印钞</td></tr><tr><td><b>和谐去杠杆</b></td><td>多工具组合，降低债务而不引发萧条</td></tr><tr><td><b>储备货币地位</b></td><td>债务周期末段的缓冲器，也是特权来源</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>用债务大周期框架给 A 股/港股做自上而下的背景定位：当前全球处于长期债务周期什么阶段，决定你的风险预算总量。</li><li>把它与上一轮你问的『经济周期/货币周期与 OAMV 信号关系』结合，形成『大周期→仓位上限→状态机→具体买卖』的四级决策链。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"债务是今天的消费、明天的负担：你向未来的自己借钱。"</div><div class="quote">"短期债务周期由央行主导，长期债务周期由人性主导。"</div><div class="quote">"和谐的去杠杆，是让债务占收入比下降，同时不让经济崩溃。"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：为你的 OAMV 状态机补上『自上而下』的一层：从债务大周期定风险预算，再从状态机定战术仓位。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：微信读书 / 中信出版社正版；作者免费发布《债务危机》中文精要于其 Linkedin/官网，可对照阅读。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="t43" data-theme="invest">
+ <summary><span class="bid">t43</span>《指数基金投资从入门到精通》 — 用最少的时间和费用，获得市场平均回报——指数基金是普通人的默认答案。</summary>
+ <div class="body">
+  <div class="meta">（多版本，以封面为准） · 2020 年 · 指数入门 · ★★ 工具书</div>
+  <div class="lead">用最少的时间和费用，获得市场平均回报——指数基金是普通人的默认答案。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>为什么选指数</b>：主动基金长期跑输的比例极高，费用与情绪损耗是主因；<b>指数用极低成本买入整个市场的平均回报</b>。</li><li><b>宽基 vs 行业</b>：宽基（沪深300/中证500）风险分散、适合核心仓位；行业/主题波动大、只适合卫星仓——<b>先宽后窄</b>。</li><li><b>估值与定投</b>：看 PE/PB 历史分位决定投入节奏，低估多投、高估少投；<b>定投 + 再平衡</b>是把波动转化为收益的机械方法。</li><li><b>费用是复利的敌人</b>：管理费、托管费、申赎费长期侵蚀显著；<b>同样跟踪效果的指数基金，选费率最低的</b>。</li><li><b>持有周期</b>：指数短期可能长期不涨，但长期的经济增长会反映在指数上；<b>至少以 3-5 年为单位评价</b>。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>宽基指数</b></td><td>覆盖全市场、行业分散的核心配置工具</td></tr><tr><td><b>估值分位</b></td><td>当前估值在历史序列中的位置，定投决策依据</td></tr><tr><td><b>定投+再平衡</b></td><td>用纪律把波动转化为低位多买、高位少买</td></tr><tr><td><b>费率侵蚀</b></td><td>长期复利下，1% 年费可吞噬大量终值</td></tr><tr><td><b>核心-卫星</b></td><td>宽基为核心、行业为卫星的配置结构</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>对照你的『多头买宽基』回测结果：给每个宽基指数加上估值分位过滤，看能否进一步提升收益/回撤比。</li><li>把你关注的 10 个宽基指数按『核心（沪深300/中证A500）—卫星（科创/创业板/中证2000）』重新分层，明确各层仓位上限。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"买指数基金，本质是买整个国家的经济增长。"</div><div class="quote">"费率是投资者唯一能完全控制的变量。"</div><div class="quote">"定投的意义不在于摊低成本，而在于让你在市场下跌时仍然在买。"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：与你的多头区间宽基回测直接对接：本书提供配置层原则，你的回测提供时点层证据。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：正版：微信读书/京东读书检索书名，作者与版本较多，选购时看出版社与最新修订版；经典替代书为约翰·博格《投资稳赚》。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+<div class="section" id="th-trade"><span class="bar" style="background:#A32D2D"></span><h2>交易 · 趋势与系统</h2><span class="desc">进场、出场、仓位、纪律——把直觉拆成规则</span><span class="ln"></span></div>
+<div class="grid">
+<a class="card" href="#t32" data-theme="trade" data-k="周期霍华德·马克斯我们或许永远不知道要去哪里，但最好搞清楚自己正站在哪里。周期定位 · 逆向钟摆/均值回归 周期定位 逆向投资 这次不一样 风险溢价我们或许永远不知道要去哪里，但最好搞清楚自己正站在哪里。 最重要的不是买什么，而是买在周期的什么位置。 当所有人都相信某件事时，那件事往往已经反映在价格里了。"><div class="num">11</div><div class="ctitle">《周期》</div><div class="cauth">霍华德·马克斯</div><div class="cone">我们或许永远不知道要去哪里，但最好搞清楚自己正站在哪里。</div><div class="ctags"><span class="chip">周期定位 · 逆向</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#t34" data-theme="trade" data-k="专业投机原理维克托·斯波朗迪用道氏理论识别趋势，用风险回报比决定下注，把投机变成可重复的流程。趋势+风控风险回报比 2b 法则 趋势三层次 资本保值 expectancy投机的事业中，最重要的不是你判断对了多少次，而是你判断对的时候赚了多少，判断错的时候亏了多少。 市场的短期波动是噪音，长期趋势才是你的朋友。 保护资本是投机者的第一诫。"><div class="num">12</div><div class="ctitle">《专业投机原理》</div><div class="cauth">维克托·斯波朗迪</div><div class="cone">用道氏理论识别趋势，用风险回报比决定下注，把投机变成可重复的流程。</div><div class="ctags"><span class="chip">趋势+风控</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#t35" data-theme="trade" data-k="日本蜡烛图技术史蒂夫·尼森把 k 线从『看图说话』变成有心理学依据的价格行为语言。k线形态影线 吞没形态 窗口(缺口) 位置依赖 多方法互证价格形态反映的是群体的恐惧与贪婪，而不是图表本身的魔法。 一根 k 线不重要，它所处的环境才重要。 任何技术形态都必须有止损与之相伴。"><div class="num">13</div><div class="ctitle">《日本蜡烛图技术》</div><div class="cauth">史蒂夫·尼森</div><div class="cone">把 K 线从『看图说话』变成有心理学依据的价格行为语言。</div><div class="ctags"><span class="chip">K线形态</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#t36" data-theme="trade" data-k="道氏理论查尔斯·道 奠基 / 多版本整理市场有三种趋势，指数必须相互印证，成交量确认趋势——所有技术分析的祖宗。趋势理论源头主要趋势 次要趋势 相互验证 成交量确认 假定持续市场有三种趋势：主要的、次要的、短暂的。只有主要趋势值得投资者关注。 指数必须相互印证，单一指数的信号不足以确认趋势。 道氏理论从不预测市场，它只告诉你趋势已经改变。"><div class="num">14</div><div class="ctitle">《道氏理论》</div><div class="cauth">查尔斯·道 奠基 / 多版本整理</div><div class="cone">市场有三种趋势，指数必须相互印证，成交量确认趋势——所有技术分析的祖宗。</div><div class="ctags"><span class="chip">趋势理论源头</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#t37" data-theme="trade" data-k="股票大作手操盘术杰西·利弗莫尔关键点 + 试探性建仓 + 金字塔加码——利弗莫尔把直觉拆成了流程。趋势交易鼻祖关键点 试探建仓 金字塔加码 最小阻力线 绝不摊平亏损市场只有一边，不是多头的一边，也不是空头的一边，而是正确的一边。 我从不因为价格高而卖出，也不因为价格低而买入。 投机者最主要的敌人，总是由投机者自身而生。"><div class="num">15</div><div class="ctitle">《股票大作手操盘术》</div><div class="cauth">杰西·利弗莫尔</div><div class="cone">关键点 + 试探性建仓 + 金字塔加码——利弗莫尔把直觉拆成了流程。</div><div class="ctags"><span class="chip">趋势交易鼻祖</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#t39" data-theme="trade" data-k="股票大作手回忆录埃德温·勒菲弗（记杰西·利弗莫尔）一位天才交易员用一生验证：市场不变，因为人性不变。交易心理经典坐着等待 顺势 消息陷阱 自我认知 坐享利润市场只有一边，不是多头的一边，也不是空头的一边，而是正确的一边。 投机者最主要的敌人总是由投机者自身而生：希望与恐惧。 钱是坐着等出来的，不是靠频繁交易赚出来的。"><div class="num">16</div><div class="ctitle">《股票大作手回忆录》</div><div class="cauth">埃德温·勒菲弗（记杰西·利弗莫尔）</div><div class="cone">一位天才交易员用一生验证：市场不变，因为人性不变。</div><div class="ctags"><span class="chip">交易心理经典</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#t40" data-theme="trade" data-k="缠论缠中说禅用分型、笔、线段、中枢把走势完全分类，在任何走势里都有确定的应对策略。结构化走势分型/笔/线段 中枢 三类买卖点 背驰 走势终完美走势终完美。市场没有秘密，只有分类和应对。 不要预测市场，要让市场告诉你它是什么走势。 买点买，卖点卖，中间什么都不做。"><div class="num">17</div><div class="ctitle">《缠论》</div><div class="cauth">缠中说禅</div><div class="cone">用分型、笔、线段、中枢把走势完全分类，在任何走势里都有确定的应对策略。</div><div class="ctags"><span class="chip">结构化走势</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#t41" data-theme="trade" data-k="股票大作手风云录逍遥刘强（刘强）一个天才交易员的真实崩塌：懂所有道理，却败给了自己的性格。中国版利弗莫尔多点共振 生存优先 知行合一 杠杆放大器 性格弱点期货比的不是谁赚得多，而是比谁活得最长。 做投机是为了赚钱，赚钱是为了更好的生活，好的生活是为了让自己开心。做人和做期货一样，千万不要方向做反了。 期货的杠杆效应放大了我们的性格弱点，让我们比一般人更清晰地体会到自己的不足。"><div class="num">18</div><div class="ctitle">《股票大作手风云录》</div><div class="cauth">逍遥刘强（刘强）</div><div class="cone">一个天才交易员的真实崩塌：懂所有道理，却败给了自己的性格。</div><div class="ctags"><span class="chip">中国版利弗莫尔</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#t44" data-theme="trade" data-k="艾略特波浪理论拉尔夫·艾略特 奠基 / 普莱切特 整理市场以五浪推动、三浪调整的节律前进——在结构上，价格运动有可识别的模式。波浪结构推动浪/调整浪 三大铁律 斐波那契回撤 级别嵌套 数浪主观性市场按其自身的节律运动，这种节律反映了群体心理的周期性。 当存在两种以上合理数法时，正确的做法是什么都不做。 3 浪永远不是最短的一浪——这是数浪的铁律。"><div class="num">19</div><div class="ctitle">《艾略特波浪理论》</div><div class="cauth">拉尔夫·艾略特 奠基 / 普莱切特 整理</div><div class="cone">市场以五浪推动、三浪调整的节律前进——在结构上，价格运动有可识别的模式。</div><div class="ctags"><span class="chip">波浪结构</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#t46" data-theme="trade" data-k="飞上天的猪：玩转a股主题投资胡浩把主题投资当季节：春天观察、夏天买入、秋天卖出、冬天观望。a股主题投资主题四季 价值投机 概念炒作 多重共振 题材退潮经济好的时候使劲吹业绩，经济差的时候玩命炒概念。 只要站在风口，猪都能飞起来——但风停了，猪也会摔下来。 春天潜心观察，夏天果断买入，秋天逐步卖出，冬天默默观望。"><div class="num">20</div><div class="ctitle">《飞上天的猪：玩转A股主题投资》</div><div class="cauth">胡浩</div><div class="cone">把主题投资当季节：春天观察、夏天买入、秋天卖出、冬天观望。</div><div class="ctags"><span class="chip">A股主题投资</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#t47" data-theme="trade" data-k="期货多空逻辑jerry ma把期货多空还原成供需存量的结构变化，而不是猜价格方向。供需逻辑库存拐点 存量/流量 产业链传导 预期差 风险限额期货交易的本质不是猜方向，而是判断供需存量的变化。 库存拐点往往领先于价格拐点。 市场一致预期已经在价格里，你要交易的是预期差。"><div class="num">21</div><div class="ctitle">《期货多空逻辑》</div><div class="cauth">Jerry Ma</div><div class="cone">把期货多空还原成供需存量的结构变化，而不是猜价格方向。</div><div class="ctags"><span class="chip">供需逻辑</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#t49" data-theme="trade" data-k="以交易为生（原书第2版）亚历山大·埃尔德心理＋方法＋资金管理三角缺一不可——把交易当作一门严肃生意来经营。三维分析三重滤网 2%/6% 规则 市场广度 三重维度 交易日志交易是一门生意，而不是一场赌博：要用经营企业的态度对待它。 市场不会因为你亏损而怜悯你，也不会因为你盈利而奖励你。 2% 规则不是建议，是生存条件。"><div class="num">22</div><div class="ctitle">《以交易为生（原书第2版）》</div><div class="cauth">亚历山大·埃尔德</div><div class="cone">心理＋方法＋资金管理三角缺一不可——把交易当作一门严肃生意来经营。</div><div class="ctags"><span class="chip">三维分析</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#t50" data-theme="trade" data-k="以交易为生 ii：卖出的艺术亚历山大·埃尔德会买是徒弟，会卖是师傅——把出场从『情绪反应』变成『预设规则』。出场系统三类出场 追踪止损 分批减仓 出场前置 逻辑失效会买的是徒弟，会卖的是师傅。 出场规则必须在入场之前写好；临场决定的出场，几乎总是错的。 让利润奔跑，但用止损牵着它。"><div class="num">23</div><div class="ctitle">《以交易为生 II：卖出的艺术》</div><div class="cauth">亚历山大·埃尔德</div><div class="cone">会买是徒弟，会卖是师傅——把出场从『情绪反应』变成『预设规则』。</div><div class="ctags"><span class="chip">出场系统</span><span class="chip q">3 金句</span></div></a>
+</div>
+
+<details class="book" id="t32" data-theme="trade">
+ <summary><span class="bid">t32</span>《周期》 — 我们或许永远不知道要去哪里，但最好搞清楚自己正站在哪里。</summary>
+ <div class="body">
+  <div class="meta">霍华德·马克斯 · 2018 年 · 周期定位 · 逆向 · ★★★ 精读+常翻</div>
+  <div class="lead">我们或许永远不知道要去哪里，但最好搞清楚自己正站在哪里。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>周期不是事件，是摆动的钟摆</b>：市场在极度乐观与极度悲观之间摆动，均值回归是铁律，但<b>摆到极端需要多长时间无法预测</b>——所以只做「位置判断」不做「时机预测」。</li><li><b>钟摆位置 = 温度计</b>：估值和情绪同时极端时（人人说「这次不一样」/「再也不碰股票」），就是风险最大或机会最大的区域。你自己的 OAMV 活跃市值状态机，本质就是给 A 股情绪做温度计的同类工具。</li><li><b>成功本身是周期的一部分</b>：连续顺利会滋生自满与杠杆，而这恰恰是下一轮脆弱的来源。繁荣孕育衰退，衰退孕育繁荣。</li><li><b>逆向投资的三层</b>：第一层「别人贪婪我恐惧」是态度；第二层是「在别人被迫卖出时你有现金」；第三层是「知道自己在周期哪一段，并提前定好加减仓规则」。</li><li><b>过程 vs 结果</b>：好过程可能短期坏结果，坏过程（靠运气）可能短期好结果。<b>用过程质量而非短期收益评价决策</b>，才不会被周期裹挟。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>钟摆/均值回归</b></td><td>价格围绕价值摆动，极端状态不可持续但持续时间未知</td></tr><tr><td><b>周期定位</b></td><td>不问「会涨到哪」，只问「现在处于历史的哪个位置」</td></tr><tr><td><b>逆向投资</b></td><td>在情绪极端时反向下注，但需要现金与纪律支撑</td></tr><tr><td><b>这次不一样</b></td><td>泡沫最常出现的五个字，历史押韵而非重复</td></tr><tr><td><b>风险溢价</b></td><td>承担风险应得的补偿；市场乐观时补偿被压到极低</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>每个季度给持仓做一次「马克斯式体温表」：估值分位、情绪指标（你的 OAMV 状态）、融资余额、新基金发行量——四项同向极端时启动减仓/加仓规则。</li><li>复盘时把「赚了多少」和「当时决策过程对不对」分开打分，禁止用结果倒推过程。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"我们或许永远不知道要去哪里，但最好搞清楚自己正站在哪里。"</div><div class="quote">"最重要的不是买什么，而是买在周期的什么位置。"</div><div class="quote">"当所有人都相信某件事时，那件事往往已经反映在价格里了。"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：与你的 OAMV 多空状态机完全同构：状态机统计的是「市场情绪温度」，马克斯给的是「如何用温度做仓位决策」。上一轮 27 年复盘里「信号次数与波动率相关 +0.682」正是周期定位的量化印证。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：微信读书 / 中信出版社《周期》正版电子书；作者另一本《投资最重要的事》已在主书库 b05。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="t34" data-theme="trade">
+ <summary><span class="bid">t34</span>《专业投机原理》 — 用道氏理论识别趋势，用风险回报比决定下注，把投机变成可重复的流程。</summary>
+ <div class="body">
+  <div class="meta">维克托·斯波朗迪 · 1990 年 · 趋势+风控 · ★★ 通读+查</div>
+  <div class="lead">用道氏理论识别趋势，用风险回报比决定下注，把投机变成可重复的流程。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>投机的第一行是风险管理</b>：斯波朗迪把「资本保值」放在收益之前，核心工具是<b>风险/回报比</b>——只有潜在回报至少是风险的 3 倍才出手。</li><li><b>道氏理论现代化</b>：用「2B 法则」「 abandonment（背离）法则」识别趋势反转，把抽象道氏原则转成可操作的买卖信号。</li><li><b>趋势的三级结构</b>：长期（潮汐）、中期（波浪）、短期（涟漪），只交易与长期趋势一致的中期波动，避免被日内噪音洗出。</li><li><b>经济周期与资产轮动</b>：债券→股票→商品→现金的轮动顺序，配合利率与通胀判断大类资产所处阶段。</li><li><b>一致性执行</b>：建立明确的入场、止损、加仓、出场规则；<b>盈亏随机分布，但纪律必须确定</b>，长期靠正期望值取胜。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>风险回报比</b></td><td>每笔交易事前量化最大亏损与潜在盈利，低于 3:1 放弃</td></tr><tr><td><b>2B 法则</b></td><td>价格创新高但指标/幅度未确认，视为假突破的反转信号</td></tr><tr><td><b>趋势三层次</b></td><td>长期/中期/短期，交易方向与主趋势一致</td></tr><tr><td><b>资本保值</b></td><td>先不亏大钱，再谈赚钱；复利最怕大幅回撤</td></tr><tr><td><b>Expectancy</b></td><td>正期望值 = 胜率×平均盈利 − 败率×平均亏损</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>把每笔计划交易写成一张卡片：入场价、止损价、目标价、风险回报比——低于 3:1 直接划掉。</li><li>用「趋势三层次」改造你的 OAMV 区间交易：只做年线趋势与状态机信号同向的多头区间。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"投机的事业中，最重要的不是你判断对了多少次，而是你判断对的时候赚了多少，判断错的时候亏了多少。"</div><div class="quote">"市场的短期波动是噪音，长期趋势才是你的朋友。"</div><div class="quote">"保护资本是投机者的第一诫。"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：与你已有的「多头区间买宽基」回测框架同构：给每段区间加风险回报比过滤，可显著降低尾部亏损。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：微信读书 / 机械工业出版社正版电子书；英文原版 Speculation 各平台有售。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="t35" data-theme="trade">
+ <summary><span class="bid">t35</span>《日本蜡烛图技术》 — 把 K 线从『看图说话』变成有心理学依据的价格行为语言。</summary>
+ <div class="body">
+  <div class="meta">史蒂夫·尼森 · 1991 年 · K线形态 · ★★ 工具书查</div>
+  <div class="lead">把 K 线从『看图说话』变成有心理学依据的价格行为语言。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>K 线是群体心理的图形化</b>：影线代表试探失败，实体代表多空共识强度——<b>每根 K 线都是一场微型战役的战报</b>。</li><li><b>单根信号强弱分级</b>：锤子线、上吊线、吞没、乌云盖顶、刺透、十字星各有位置依赖，<b>同一形态在趋势顶部与底部的含义完全相反</b>。</li><li><b>组合形态的三要素</b>：位置（趋势末端还是中途）、确认（次日验证）、量能配合——三者缺一信号可信度骤降。</li><li><b>与西方技术分析互证</b>：把支撑阻力、趋势线、移动平均与 K 线叠加，<b>多个独立方法给出同一结论时胜率最高</b>（与芒格栅格同理）。</li><li><b>不要迷信单一形态</b>：书中的形态是概率工具不是预言，必须配合止损；任何形态都会失效，失效时立即认错。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>影线</b></td><td>价格试探后被否决的区域，越长代表反杀越剧烈</td></tr><tr><td><b>吞没形态</b></td><td>后一根实体完全包住前一根，趋势反转的经典候选</td></tr><tr><td><b>窗口(缺口)</b></td><td>跳空区域，常成为后续支撑/阻力</td></tr><tr><td><b>位置依赖</b></td><td>同一 K 线在不同趋势阶段含义相反</td></tr><tr><td><b>多方法互证</b></td><td>K线+趋势线+量能独立确认，提高信号质量</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>给你 688318 顶背离实测那类项目加一层 K 线确认：MACD 背离 + 高位吞没/长上影同时出现，才算高置信卖出信号。</li><li>把常用形态做成检查清单（位置/实体/影线/量能/次日确认），避免凭印象「看图说话」。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"价格形态反映的是群体的恐惧与贪婪，而不是图表本身的魔法。"</div><div class="quote">"一根 K 线不重要，它所处的环境才重要。"</div><div class="quote">"任何技术形态都必须有止损与之相伴。"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：直接服务于你已有的自定义 K 线信号样式与 MACD/BIAS 公式适配——把形态确认写成通达信/同花顺条件。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：微信读书 / 地震出版社正版（丁圣元译）；英文 Japanese Candlestick Charting Techniques 各平台有售。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="t36" data-theme="trade">
+ <summary><span class="bid">t36</span>《道氏理论》 — 市场有三种趋势，指数必须相互印证，成交量确认趋势——所有技术分析的祖宗。</summary>
+ <div class="body">
+  <div class="meta">查尔斯·道 奠基 / 多版本整理 · 1902 年 · 趋势理论源头 · ★★ 原理掌握</div>
+  <div class="lead">市场有三种趋势，指数必须相互印证，成交量确认趋势——所有技术分析的祖宗。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>三种趋势同时存在</b>：主要趋势（数年）、次要趋势（数周至数月）、短暂趋势（数日）。<b>只做主要趋势，次要趋势是诱人的陷阱</b>。</li><li><b>三种趋势的三个阶段</b>：牛市=积累期→公众参与期→派发期；熊市反之。识别阶段比预测点位更重要。</li><li><b>指数相互验证</b>：工业与运输（today 可理解为宽基与领先行业）必须同向创新高，趋势确认才成立——<b>单一指数创新高不算数</b>。</li><li><b>成交量确认趋势</b>：趋势方向上的成交量应放大，回调时缩量；量价背离是趋势衰竭的早期警报。</li><li><b>道氏理论不是预测工具</b>：它只确认「趋势已经发生」，不预测「趋势将要发生」；<b>确认的代价是放弃鱼头和鱼尾</b>。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>主要趋势</b></td><td>市场长期方向，投资者唯一值得跟随的对象</td></tr><tr><td><b>次要趋势</b></td><td>对主要趋势的回撤，常持续数周至数月，1/3~2/3 回撤为经典区间</td></tr><tr><td><b>相互验证</b></td><td>两个相关指数同向确认，过滤假信号</td></tr><tr><td><b>成交量确认</b></td><td>量在价先，趋势需量能配合</td></tr><tr><td><b>假定持续</b></td><td>趋势在出现明确反转信号前，假定继续</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>把你的 OAMV 状态机与宽基指数互证：绿/黄状态需上证50与中证1000至少一个同步确认，减少假信号。</li><li>做多空区间回测时增加「主要趋势过滤」：只在年线之上的多头区间买入。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"市场有三种趋势：主要的、次要的、短暂的。只有主要趋势值得投资者关注。"</div><div class="quote">"指数必须相互印证，单一指数的信号不足以确认趋势。"</div><div class="quote">"道氏理论从不预测市场，它只告诉你趋势已经改变。"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：与你 27 年 OAMV 复盘的『状态机分组器』思路一致：都是先定义状态，再在状态内行动，而非预测下一刻。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：公版：查尔斯·道原始论述多已进入公有领域，网络有整理版；中文整理本各出版社版本众多，建议选含原文注释的版本。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="t37" data-theme="trade">
+ <summary><span class="bid">t37</span>《股票大作手操盘术》 — 关键点 + 试探性建仓 + 金字塔加码——利弗莫尔把直觉拆成了流程。</summary>
+ <div class="body">
+  <div class="meta">杰西·利弗莫尔 · 1940 年 · 趋势交易鼻祖 · ★★ 精读</div>
+  <div class="lead">关键点 + 试探性建仓 + 金字塔加码——利弗莫尔把直觉拆成了流程。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>关键点（Pivotal Point）</b>：价格突破历史高点或关键整数位时，是最值得下注的时点——<b>突破确认了市场的最小阻力方向</b>。</li><li><b>试探性建仓</b>：永远先买 1/5 仓位试探，确认盈利后才加码；<b>用盈利加仓而不是用亏损摊平</b>。</li><li><b>金字塔加码规则</b>：每次加仓量小于前一次，越涨买得越少，保护平均成本不被推高。</li><li><b>不猜顶不摸底</b>：利弗莫尔明确说「我从不因为价格高而卖出，也不因为价格低而买入」——<b>趋势是你的朋友，直到它反转</b>。</li><li><b>耐心等待关键点</b>：一年可能只有几次真正的机会；<b>现金是仓位，等待是能力</b>。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>关键点</b></td><td>突破前高/整数关口的确认点，最小阻力方向明确的时刻</td></tr><tr><td><b>试探建仓</b></td><td>先小仓验证判断，正确后才扩大战果</td></tr><tr><td><b>金字塔加码</b></td><td>加仓量递减，保护成本优势</td></tr><tr><td><b>最小阻力线</b></td><td>价格沿阻力最小的方向运动，趋势即阻力最小方向</td></tr><tr><td><b>绝不摊平亏损</b></td><td>亏损说明判断错了，加仓只会放大错误</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>把你的『绿日尾盘买入』策略加一层利弗莫尔过滤：只在突破前期高点且量能放大时建首仓，后续用盈利加仓。</li><li>给自己定死规则：任何一笔交易亏损超过预设，绝不加仓摊平——写进交易日志。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"市场只有一边，不是多头的一边，也不是空头的一边，而是正确的一边。"</div><div class="quote">"我从不因为价格高而卖出，也不因为价格低而买入。"</div><div class="quote">"投机者最主要的敌人，总是由投机者自身而生。"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：与你已有的板块主线『突破确认』逻辑同源；可作为多头区间入场信号的加强过滤器。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：微信读书 / 丁圣元译本（人民邮电等）正版；《股票大作手回忆录》为主书库外传记，见本单 39 号。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="t39" data-theme="trade">
+ <summary><span class="bid">t39</span>《股票大作手回忆录》 — 一位天才交易员用一生验证：市场不变，因为人性不变。</summary>
+ <div class="body">
+  <div class="meta">埃德温·勒菲弗（记杰西·利弗莫尔） · 1923 年 · 交易心理经典 · ★★★ 精读</div>
+  <div class="lead">一位天才交易员用一生验证：市场不变，因为人性不变。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>「等待」是最被低估的能力</b>：利弗莫尔多次强调「钱是坐着等出来的，不是靠频繁交易赚来的」；<b>一年只有四五次值得出手的机会</b>。</li><li><b>不要和大盘争辩</b>：顺势而为，逆势的刚强是愚蠢；<b>市场永远是对的，判断错了就立刻改</b>。</li><li><b>不要轻信内幕消息</b>：消息经过太多人传播已失真，且「真相不可能出自知情人士之口」——<b>价格消化一切信息</b>。</li><li><b>勇气是执行判断的决心</b>：知道该做什么不难，难的是在孤独和压力下坚持自己的判断。</li><li><b>人性的弱点是最大的敌人</b>：希望让你在亏损时死扛，恐惧让你在盈利时过早离场；<b>与自己的天性作战是终身任务</b>。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>坐着等待</b></td><td>机会稀少，空仓等待是主动策略</td></tr><tr><td><b>顺势</b></td><td>不逆势加仓，不和趋势辩论</td></tr><tr><td><b>消息陷阱</b></td><td>内幕消息天然不可靠，价格才是最终裁判</td></tr><tr><td><b>自我认知</b></td><td>最大的敌人是自己的情绪</td></tr><tr><td><b>坐享利润</b></td><td>让盈利奔跑，别用恐惧过早兑现</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>对照你自己的多空区间交易统计：是否也在『黄色→红色』区间里过度交易、把盈利单拿成了亏损单。</li><li>给自己定「一年只做 N 次高确信交易」的约束，强制过滤噪音。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"市场只有一边，不是多头的一边，也不是空头的一边，而是正确的一边。"</div><div class="quote">"投机者最主要的敌人总是由投机者自身而生：希望与恐惧。"</div><div class="quote">"钱是坐着等出来的，不是靠频繁交易赚出来的。"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：与主书库 b11《原则》的『痛苦+反思』呼应；本书是交易心理的第一手样本，比任何教科书都真实。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：微信读书 / 人民邮电出版社丁圣元译本正版；公版英文原版可于 Gutenberg 检索。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="t40" data-theme="trade">
+ <summary><span class="bid">t40</span>《缠论》 — 用分型、笔、线段、中枢把走势完全分类，在任何走势里都有确定的应对策略。</summary>
+ <div class="body">
+  <div class="meta">缠中说禅 · 2008 年 · 结构化走势 · ★★ 体系庞大，择要</div>
+  <div class="lead">用分型、笔、线段、中枢把走势完全分类，在任何走势里都有确定的应对策略。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>走势终完美</b>：任何级别的走势最终都会完成；<b>不预测，只对当前走势分类并给出应对</b>——这和你「不给确定性结论」的原则一致。</li><li><b>完全分类</b>：上涨、下跌、盘整三类走势穷尽所有可能，<b>分类完备 = 没有意外，只有应对</b>。</li><li><b>中枢是核心</b>：三段重叠区间构成中枢，价格围绕中枢震荡；<b>离开中枢后的第三类买卖点</b>是最重要信号。</li><li><b>级别递归</b>：1分钟到年线，各级别自相似；<b>大级别决定方向，小级别决定入场点</b>。</li><li><b>背驰判据</b>：趋势创新高但力度（MACD 面积等）衰减，构成背驰——这正是你一直在研究的 MACD 背离的结构化版本。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>分型/笔/线段</b></td><td>走势的最小结构单元，逐层递归构成级别</td></tr><tr><td><b>中枢</b></td><td>三段次级别走势重叠区间，多空争夺的核心区域</td></tr><tr><td><b>三类买卖点</b></td><td>中枢形成前/中/后的三类确定性介入位置</td></tr><tr><td><b>背驰</b></td><td>价格新高但力度衰减，趋势衰竭的信号</td></tr><tr><td><b>走势终完美</b></td><td>任何走势都会完成，应对优于预测</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>把你 688318 的『30分钟顶背离实测』与缠论背驰判据对照，看两种背离定义在同一标的上的信号重合度。</li><li>用中枢概念改造你的 OAMV 多头区间：区间内若形成中枢，价格离开中枢后的第三段才是更好的入场点。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"走势终完美。市场没有秘密，只有分类和应对。"</div><div class="quote">"不要预测市场，要让市场告诉你它是什么走势。"</div><div class="quote">"买点买，卖点卖，中间什么都不做。"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：与你已做的 MACD 背离公式审查、顶底背离示意图高度相关——缠论给了背离一个结构化的判定框架。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：缠论原文散见于原博客（多已失效），建议选正规出版社整理版；注意甄别二次演绎版本，回归原文定义。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="t41" data-theme="trade">
+ <summary><span class="bid">t41</span>《股票大作手风云录》 — 一个天才交易员的真实崩塌：懂所有道理，却败给了自己的性格。</summary>
+ <div class="body">
+  <div class="meta">逍遥刘强（刘强） · 2015 年 · 中国版利弗莫尔 · ★★ 警示读物</div>
+  <div class="lead">一个天才交易员的真实崩塌：懂所有道理，却败给了自己的性格。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>体验比技巧重要</b>：作者以自身经历写期货实战，强调「盘感来自大量真实交易与复盘」，不是读书能替代的。</li><li><b>多品种共振</b>：只在多个独立条件同时满足时入场，单一信号不出手——与你『多因子确认』思路一致。</li><li><b>期货比的不是谁赚得多，而是谁活得最长</b>：杠杆放大性格弱点，<b>生存优先于收益</b>。</li><li><b>系统的价值在于执行</b>：作者自创系统完备，但 2015 年股灾中仍然违规重仓、硬扛不止损——<b>知道 ≠ 做到</b>。</li><li><b>反面教材意义</b>：本书最大的价值不是方法，而是完整记录了一位「懂所有道理的人」如何违反自己的系统走向毁灭。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>多点共振</b></td><td>多个独立条件同时满足才入场，提高胜率</td></tr><tr><td><b>生存优先</b></td><td>期货/杠杆市场里，活得久比赚得快重要</td></tr><tr><td><b>知行合一</b></td><td>系统与执行的差距，才是真正的风险来源</td></tr><tr><td><b>杠杆放大器</b></td><td>杠杆放大收益也放大性格缺陷</td></tr><tr><td><b>性格弱点</b></td><td>止损困难、扛单、重仓，都是心理问题不是技术问题</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>把这本书当『反面清单』：每次想违反自己系统时，想想 2015 年那个『认为政府会救市所以硬扛』的瞬间。</li><li>给你所有杠杆类仓位设一条硬规则：系统任何一部分不支持入场时，坚决不进——写死，不给自己解释空间。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"期货比的不是谁赚得多，而是比谁活得最长。"</div><div class="quote">"做投机是为了赚钱，赚钱是为了更好的生活，好的生活是为了让自己开心。做人和做期货一样，千万不要方向做反了。"</div><div class="quote">"期货的杠杆效应放大了我们的性格弱点，让我们比一般人更清晰地体会到自己的不足。"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：与你的 OAMV 纪律框架形成正反两面：状态机是『系统』，本书提醒你『执行系统』才是真正的胜负手。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：正版渠道：当当/京东/微信读书检索书名；作者另有《期货大作手风云录》版本，购买时注意分辨。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="t44" data-theme="trade">
+ <summary><span class="bid">t44</span>《艾略特波浪理论》 — 市场以五浪推动、三浪调整的节律前进——在结构上，价格运动有可识别的模式。</summary>
+ <div class="body">
+  <div class="meta">拉尔夫·艾略特 奠基 / 普莱切特 整理 · 1938 年 · 波浪结构 · ★★ 了解框架</div>
+  <div class="lead">市场以五浪推动、三浪调整的节律前进——在结构上，价格运动有可识别的模式。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>基本结构</b>：推动浪 5 浪（1-2-3-4-5）+ 调整浪 3 浪（A-B-C），构成一个完整循环；<b>8 浪循环在不同级别上自相似</b>。</li><li><b>三大铁律</b>：2 浪不回撤 1 浪全部；3 浪永远不是最短的推动浪；4 浪低点不进入 1 浪价格区间。<b>违反即数浪错误</b>。</li><li><b>斐波那契工具</b>：回撤比例（0.382/0.5/0.618）与时间窗口是波浪理论的量化骨架，<b>用比例约束主观数浪</b>。</li><li><b>数浪的主观性</b>：同一走势可能有多种合理数法；<b>坚持「有多种数法时不做」原则是保命的关键</b>。</li><li><b>与道氏/缠论的比较</b>：波浪强在结构完整与时间维度，弱在主观性高——<b>把它当情景框架而非精确预测器</b>。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>推动浪/调整浪</b></td><td>5 浪顺势、3 浪逆势的基本节律</td></tr><tr><td><b>三大铁律</b></td><td>约束数浪客观性的硬性规则</td></tr><tr><td><b>斐波那契回撤</b></td><td>0.382/0.5/0.618，量化调整目标位</td></tr><tr><td><b>级别嵌套</b></td><td>大浪套小浪，结构自相似</td></tr><tr><td><b>数浪主观性</b></td><td>多解时放弃交易，是纪律不是缺陷</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>和你的缠论学习笔记对照：波浪的 5-3 结构与缠论的『走势终完美』可以互为参照，但不要混用规则体系。</li><li>在任何MACD背离信号上叠加斐波那契回撤位：背离 + 0.618 回撤 + 关键支撑三重共振时，可信度显著提高。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"市场按其自身的节律运动，这种节律反映了群体心理的周期性。"</div><div class="quote">"当存在两种以上合理数法时，正确的做法是什么都不做。"</div><div class="quote">"3 浪永远不是最短的一浪——这是数浪的铁律。"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：为你已有的 MACD/BIAS 公式与缠论背驰框架提供第三种结构视角；三者取交集信号最可靠。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：正版：微信读书/机械工业出版社普莱切特著作；原著《波浪原理》公版内容可在网上检索，注意版本差异。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="t46" data-theme="trade">
+ <summary><span class="bid">t46</span>《飞上天的猪：玩转A股主题投资》 — 把主题投资当季节：春天观察、夏天买入、秋天卖出、冬天观望。</summary>
+ <div class="body">
+  <div class="meta">胡浩 · 2016 年 · A股主题投资 · ★★ 实操</div>
+  <div class="lead">把主题投资当季节：春天观察、夏天买入、秋天卖出、冬天观望。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>主题投资是 A 股的固有生态</b>：不是无厘头炒作，而是中国式投机文化（凑热闹、信朋友、红眼病）在股市的映射——<b>理解生态比道德评判更有用</b>。</li><li><b>主题四季法</b>：春天（潜伏观察，验证逻辑）→夏天（趋势确认，果断买入）→秋天（情绪高潮，逐步卖出）→冬天（主题退潮，空仓观望）。</li><li><b>经济好炒业绩，经济差炒概念</b>：牛市中的『价值投机』与熊市中的『概念炒作』是两套不同的玩法，<b>先判断宏观语境再选打法</b>。</li><li><b>共振产生大主题</b>：真正的主题行情需要政策、产业、资金三重共振；<b>单一催化只能产生短脉冲</b>。</li><li><b>量化思维做主题</b>：作者强调以量化验证主题热度与资金持续性，避免纯讲故事——<b>与你 OAMV 资金代理口径思路一致</b>。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>主题四季</b></td><td>潜伏—买入—卖出—观望的四阶段节奏</td></tr><tr><td><b>价值投机</b></td><td>业绩驱动的主题，牛市主旋律</td></tr><tr><td><b>概念炒作</b></td><td>无业绩支撑的主题，熊市/震荡市常见</td></tr><tr><td><b>多重共振</b></td><td>政策+产业+资金同时发力才有大行情</td></tr><tr><td><b>题材退潮</b></td><td>主题失效后的资金撤离，冬天必须空仓</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>把它与你的『绿日资金流入前三板块』策略对照：观察每年强势主题是否呈现四季节奏，识别夏天（最佳入场）的量价特征。</li><li>给你的主题交易加一条『冬天规则』：主题退潮信号出现后强制空仓，不参与反弹。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"经济好的时候使劲吹业绩，经济差的时候玩命炒概念。"</div><div class="quote">"只要站在风口，猪都能飞起来——但风停了，猪也会摔下来。"</div><div class="quote">"春天潜心观察，夏天果断买入，秋天逐步卖出，冬天默默观望。"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：与你的板块主线策略直接对应：本书提供主题生命周期框架，你的 OAMV 状态机提供入场时点，两者可合成完整交易系统。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：正版：中国人民大学出版社（胡浩著，2016）；当当/京东/微信读书可检索。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="t47" data-theme="trade">
+ <summary><span class="bid">t47</span>《期货多空逻辑》 — 把期货多空还原成供需存量的结构变化，而不是猜价格方向。</summary>
+ <div class="body">
+  <div class="meta">Jerry Ma · 2020 年 · 供需逻辑 · ★★ 实操</div>
+  <div class="lead">把期货多空还原成供需存量的结构变化，而不是猜价格方向。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>多空来自库存预期</b>：期货价格变化的本质是市场对未来供需缺口的重新定价；<b>库存变化是最直接的验证指标</b>。</li><li><b>存量 vs 流量</b>：产量、消费是流量，库存是存量；<b>流量边际变化首先体现在存量上</b>，库存拐点往往领先价格拐点。</li><li><b>产业周期与利润传导</b>：上游利润→中游开工→下游补库，产业链各环节有固定时滞；<b>找到链条中最薄弱的一环下手</b>。</li><li><b>预期差交易</b>：市场一致预期已在价格中，交易的是「实际数据 vs 预期」的偏差——<b>不是看好就做多，而是比市场更准确</b>。</li><li><b>风控优先</b>：期货杠杆天然放大错误，<b>单笔风险必须限额</b>，逻辑再好也要给意外留空间。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>库存拐点</b></td><td>供需边际变化最先在库存上体现，领先价格</td></tr><tr><td><b>存量/流量</b></td><td>库存是存量，产需是流量，流量变化先冲击存量</td></tr><tr><td><b>产业链传导</b></td><td>上下游利润与开工率的时滞关系</td></tr><tr><td><b>预期差</b></td><td>价格反映一致预期，交易偏差而非方向</td></tr><tr><td><b>风险限额</b></td><td>杠杆交易的生命线，逻辑正确也不能重仓</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>把『库存拐点领先价格』的思路迁移到你的板块研究：用行业库存/渠道数据作为板块景气度领先指标。</li><li>在多头区间板块策略里加一层『预期差』过滤：资金流入前三且基本面数据超预期时才入场。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"期货交易的本质不是猜方向，而是判断供需存量的变化。"</div><div class="quote">"库存拐点往往领先于价格拐点。"</div><div class="quote">"市场一致预期已经在价格里，你要交易的是预期差。"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：为你的板块资金流策略补上『基本面验证』维度：资金流是情绪，库存/供需是基本面，二者共振才可靠。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：正版：清华大学出版社（Jerry Ma 著，2020）；当当/京东可检索。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="t49" data-theme="trade">
+ <summary><span class="bid">t49</span>《以交易为生（原书第2版）》 — 心理＋方法＋资金管理三角缺一不可——把交易当作一门严肃生意来经营。</summary>
+ <div class="body">
+  <div class="meta">亚历山大·埃尔德 · 1993 年 · 三维分析 · ★★★ 精读</div>
+  <div class="lead">心理＋方法＋资金管理三角缺一不可——把交易当作一门严肃生意来经营。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>三维分析框架</b>：心理（自我管理）＋技术分析（时机）＋资金管理（生存），<b>三者同等重要，缺一不可</b>。</li><li><b>「三重滤网」交易系统</b>：周线定方向（顺势）、日线找反转（逆向）、分时定入场（细调）——<b>多周期过滤是本书最实用的贡献</b>。</li><li><b>新价值线（New High-New Low Index）</b>：用创新高家数减创新低家数衡量市场广度，<b>判断趋势健康度而非只看指数</b>。</li><li><b>2% 规则与 6% 规则</b>：单笔风险不超过账户 2%，单月累计亏损达 6% 立即停止交易——<b>把生存写成硬数字</b>。</li><li><b>交易日志与自我观察</b>：记录每笔的决策依据、情绪状态、执行质量，<b>用数据而非记忆评价自己</b>。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>三重滤网</b></td><td>大周期定方向、中周期找时机、小周期定入场</td></tr><tr><td><b>2%/6% 规则</b></td><td>单笔与单月最大亏损的硬约束</td></tr><tr><td><b>市场广度</b></td><td>创新高/新低家数，趋势健康度的独立验证</td></tr><tr><td><b>三重维度</b></td><td>心理、方法、资金管理缺一不可</td></tr><tr><td><b>交易日志</b></td><td>用记录对抗记忆偏差与情绪化复盘</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>把你的 OAMV 状态机改造成『三重滤网』：年线定方向 → OAMV 状态定时机 → K线形态定入场，形成三级过滤。</li><li>立刻给策略加 2%/6% 硬规则：单笔最大亏损 2%、单月累计 6% 强制停手——这是你回测里缺失的资金管理层。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"交易是一门生意，而不是一场赌博：要用经营企业的态度对待它。"</div><div class="quote">"市场不会因为你亏损而怜悯你，也不会因为你盈利而奖励你。"</div><div class="quote">"2% 规则不是建议，是生存条件。"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：为你的『绿日买入/红日卖出』策略补上最缺的资金管理层（2%/6% 硬规则）和多周期过滤（三重滤网）。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：微信读书 / 机械工业出版社正版（原书第2版）；同系列《以交易为生 II：卖出的艺术》见下一本。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="t50" data-theme="trade">
+ <summary><span class="bid">t50</span>《以交易为生 II：卖出的艺术》 — 会买是徒弟，会卖是师傅——把出场从『情绪反应』变成『预设规则』。</summary>
+ <div class="body">
+  <div class="meta">亚历山大·埃尔德 · 2015 年 · 出场系统 · ★★ 精读</div>
+  <div class="lead">会买是徒弟，会卖是师傅——把出场从『情绪反应』变成『预设规则』。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>出场比入场更难</b>：入场有明确信号，出场要在『恐惧失去利润』与『希望回本』之间做决策，<b>心理压力更大</b>。</li><li><b>三种出场类型</b>：止损出场（认错）、止盈出场（兑现）、时间出场（逻辑失效）——<b>每种都需预设条件</b>，不临场发挥。</li><li><b>移动止损（追踪止损）</b>：随盈利增长上移止损位，<b>让利润奔跑的同时锁定底线</b>——平衡『拿不住』与『坐过山车』。</li><li><b>分批出场</b>：在目标位分批减仓，<b>既兑现部分利润又保留趋势敞口</b>——避免全买全卖的二元决策压力。</li><li><b>退出是系统的一部分</b>：出场规则必须在入场前就写好，<b>临场决定的出场几乎总是情绪化的</b>。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>三类出场</b></td><td>止损/止盈/时间，各有预设触发条件</td></tr><tr><td><b>追踪止损</b></td><td>随盈利上移保护线，让利润奔跑</td></tr><tr><td><b>分批减仓</b></td><td>目标位分段兑现，保留趋势敞口</td></tr><tr><td><b>出场前置</b></td><td>入场前写死出场规则，杜绝临场情绪</td></tr><tr><td><b>逻辑失效</b></td><td>最初买入理由消失即出场，不等价格</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>为你的每一个多头区间预设三种出场：跌破区间下沿止损、达到目标收益止盈、超过最长持有天数时间出场。</li><li>对照『绿色→黄色→白色→红色』状态机，把『红色出现』写成强制出场信号，避免人为犹豫。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"会买的是徒弟，会卖的是师傅。"</div><div class="quote">"出场规则必须在入场之前写好；临场决定的出场，几乎总是错的。"</div><div class="quote">"让利润奔跑，但用止损牵着它。"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：与你的状态机红/绿信号天然对接：把『红日卖出』升级为预设的三种出场规则，减少主观判断。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：微信读书 / 机械工业出版社正版；英文 The New Trading for a Living 各平台有售。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+<div class="section" id="th-mind"><span class="bar" style="background:#534AB7"></span><h2>心性 · 概率与自我</h2><span class="desc">对抗运气错觉与自我毁灭，评价决策而非结果</span><span class="ln"></span></div>
+<div class="grid">
+<a class="card" href="#b06" data-theme="mind" data-k="思考，快与慢丹尼尔·卡尼曼大脑有两套系统：快的直觉（系统1）与慢的推理（系统2），几乎所有系统性错误都来自系统1越权。认知型 · 决策型系统1/系统2 锚定效应 损失厌恶 可得性/代表性 峰终定律大脑有两套系统：快的直觉（系统1）与慢的推理（系统2），几乎所有系统性错误都来自系统1越权。 系统1 / 系统2 锚定效应"><div class="num">24</div><div class="ctitle">《思考，快与慢》</div><div class="cauth">丹尼尔·卡尼曼</div><div class="cone">大脑有两套系统：快的直觉（系统1）与慢的推理（系统2），几乎所有系统性错误都来自系统1越权。</div><div class="ctags"><span class="chip">认知型 · 决策型</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#b07" data-theme="mind" data-k="模型思维斯科特·佩奇单个模型必然错，多模型交叉才能逼近真相；聪明 = 模型的数量与调用能力。认知型 · 结构化幂律 vs 正态 存量-流量 路径依赖 网络幂律单个模型必然错，多模型交叉才能逼近真相；聪明 = 模型的数量与调用能力。 多模型思维（many-model thinking） 模型分类"><div class="num">25</div><div class="ctitle">《模型思维》</div><div class="cauth">斯科特·佩奇</div><div class="cone">单个模型必然错，多模型交叉才能逼近真相；聪明 = 模型的数量与调用能力。</div><div class="ctags"><span class="chip">认知型 · 结构化</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#b08" data-theme="mind" data-k="事实汉斯·罗斯林世界比你以为的好得多；你的直觉被 10 种本能系统性带偏。认知型 · 世界观四级收入阶梯 负面本能 直线本能 分母思维世界比你以为的好得多；你的直觉被 10 种本能系统性带偏。 四个收入等级 十个戏剧化本能（会扭曲判断）"><div class="num">26</div><div class="ctitle">《事实》</div><div class="cauth">汉斯·罗斯林</div><div class="cone">世界比你以为的好得多；你的直觉被 10 种本能系统性带偏。</div><div class="ctags"><span class="chip">认知型 · 世界观</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#b09" data-theme="mind" data-k="人类简史尤瓦尔·赫拉利智人赢在“能相信共同的虚构故事”，从而大规模协作。世界观 · 叙事认知革命 想象的秩序 农业革命陷阱 科学-帝国-资本回路智人赢在“能相信共同的虚构故事”，从而大规模协作。 认知革命 农业革命是“史上最大骗局”"><div class="num">27</div><div class="ctitle">《人类简史》</div><div class="cauth">尤瓦尔·赫拉利</div><div class="cone">智人赢在“能相信共同的虚构故事”，从而大规模协作。</div><div class="ctags"><span class="chip">世界观 · 叙事</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#b10" data-theme="mind" data-k="有限与无限的游戏詹姆斯·卡斯有限游戏为赢而玩，无限游戏为“继续玩下去”而玩。世界观 · 哲学有限游戏 无限游戏 惊奇（surprise）有限游戏为赢而玩，无限游戏为“继续玩下去”而玩。 两种游戏 规则的关系"><div class="num">28</div><div class="ctitle">《有限与无限的游戏》</div><div class="cauth">詹姆斯·卡斯</div><div class="cone">有限游戏为赢而玩，无限游戏为“继续玩下去”而玩。</div><div class="ctags"><span class="chip">世界观 · 哲学</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#b21" data-theme="mind" data-k="如何阅读一本书莫提默·艾德勒 / 查尔斯·范多伦阅读分四层：基础、检视、分析、主题；读得多不等于读得懂。方法论 · 元技能检视阅读 分析阅读 主题阅读 主动阅读阅读分四层：基础、检视、分析、主题；读得多不等于读得懂。 四个层次（递进） 分析阅读的四个必答问题"><div class="num">29</div><div class="ctitle">《如何阅读一本书》</div><div class="cauth">莫提默·艾德勒 / 查尔斯·范多伦</div><div class="cone">阅读分四层：基础、检视、分析、主题；读得多不等于读得懂。</div><div class="ctags"><span class="chip">方法论 · 元技能</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#b22" data-theme="mind" data-k="人性的弱点戴尔·卡耐基不批评、真诚欣赏、记住名字、让对方多说——人际关系的低成本高回报操作。关系型 · 实践重要性渴望 避免争论 具体赞美 苏格拉底式提问不批评、真诚欣赏、记住名字、让对方多说——人际关系的低成本高回报操作。 三个不 激发对方的“重要性渴望”"><div class="num">30</div><div class="ctitle">《人性的弱点》</div><div class="cauth">戴尔·卡耐基</div><div class="cone">不批评、真诚欣赏、记住名字、让对方多说——人际关系的低成本高回报操作。</div><div class="ctags"><span class="chip">关系型 · 实践</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#b23" data-theme="mind" data-k="少有人走的路m·斯科特·派克人生本就艰难；心智成熟是一条少有人走的路，自律与爱是唯一的交通工具。心性 · 成长延迟满足 忠于事实 真正的爱 懒惰/熵人生本就艰难；心智成熟是一条少有人走的路，自律与爱是唯一的交通工具。 “人生苦难重重” 自律四原则"><div class="num">31</div><div class="ctitle">《少有人走的路》</div><div class="cauth">M·斯科特·派克</div><div class="cone">人生本就艰难；心智成熟是一条少有人走的路，自律与爱是唯一的交通工具。</div><div class="ctags"><span class="chip">心性 · 成长</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#b24" data-theme="mind" data-k="当下的力量埃克哈特·托利痛苦来自“心理时间”：对过去的反刍与对未来的投射；回到当下，痛苦之身失去供养。心性 · 冥想心理时间 小我 痛苦之身 临在/臣服痛苦来自“心理时间”：对过去的反刍与对未来的投射；回到当下，痛苦之身失去供养。 “小我”（ego） 痛苦之身（pain-body）"><div class="num">32</div><div class="ctitle">《当下的力量》</div><div class="cauth">埃克哈特·托利</div><div class="cone">痛苦来自“心理时间”：对过去的反刍与对未来的投射；回到当下，痛苦之身失去供养。</div><div class="ctags"><span class="chip">心性 · 冥想</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#b25" data-theme="mind" data-k="沉思录马可·奥勒留罗马皇帝的自我对话：只控制自己能控制的，其余交给自然。心性 · 斯多葛控制二分法 宇宙视角 memento mori 内在城堡罗马皇帝的自我对话：只控制自己能控制的，其余交给自然。 控制二分法 宇宙视角"><div class="num">33</div><div class="ctitle">《沉思录》</div><div class="cauth">马可·奥勒留</div><div class="cone">罗马皇帝的自我对话：只控制自己能控制的，其余交给自然。</div><div class="ctags"><span class="chip">心性 · 斯多葛</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#t45" data-theme="mind" data-k="随机漫步的傻瓜纳西姆·塔勒布把运气误认为技能，是人类最贵的认知错误——尤其在金融市场。概率与运气幸存者偏差 噪音/信号 厚尾分布 遍历性 存活偏差检验随机性之所以危险，是因为它伪装成技能。 你看到的只是幸存者，墓地里的交易员用的是同样的方法。 只要有可能归零，再高的期望值也不值得下注。"><div class="num">34</div><div class="ctitle">《随机漫步的傻瓜》</div><div class="cauth">纳西姆·塔勒布</div><div class="cone">把运气误认为技能，是人类最贵的认知错误——尤其在金融市场。</div><div class="ctags"><span class="chip">概率与运气</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#t48" data-theme="mind" data-k="交易心理分析马克·道格拉斯交易失败不是方法问题，是你和『不确定性』的关系出了问题。交易心理五条基本真相 概率思维 按优势行动 当下心态 自我毁灭模式你可以对市场有信心，但不能确定任何一笔交易的结果。 优秀的交易者接受风险，失败的交易者希望风险消失。 交易中最难的不是分析市场，而是分析自己。"><div class="num">35</div><div class="ctitle">《交易心理分析》</div><div class="cauth">马克·道格拉斯</div><div class="cone">交易失败不是方法问题，是你和『不确定性』的关系出了问题。</div><div class="ctags"><span class="chip">交易心理</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#t51" data-theme="mind" data-k="海龟交易法则柯蒂斯·费思把交易规则写死到可以教给陌生人执行——系统化是纪律的最高形式。趋势跟随系统唐奇安通道 头寸单位 atr 加码规则 系统坚持一个好的交易系统，应该是可以写在纸上交给陌生人执行的。 不要问这个交易会不会赚钱，要问它是否符合系统。 海龟实验的真正发现是：纪律比天赋更重要。"><div class="num">36</div><div class="ctitle">《海龟交易法则》</div><div class="cauth">柯蒂斯·费思</div><div class="cone">把交易规则写死到可以教给陌生人执行——系统化是纪律的最高形式。</div><div class="ctags"><span class="chip">趋势跟随系统</span><span class="chip q">3 金句</span></div></a>
+</div>
+
+<details class="book" id="b06" data-theme="mind">
+ <summary><span class="bid">b06</span>《思考，快与慢》 — 大脑有两套系统：快的直觉（系统1）与慢的推理（系统2），几乎所有系统性错误都来自系统1越权。</summary>
+ <div class="body">
+  <div class="meta">丹尼尔·卡尼曼 · 2011 年 · 认知型 · 决策型 · ★★★★★ 硬书，分三段读</div>
+  <div class="lead">大脑有两套系统：快的直觉（系统1）与慢的推理（系统2），几乎所有系统性错误都来自系统1越权。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>系统1 / 系统2</b>：系统1自动、快速、省力、情绪化；系统2缓慢、费力、逻辑化。系统2很懒，多数时间给系统1背书——这就是偏误的根源。</li><li><b>锚定效应</b>：先出现的数字会污染后续判断，哪怕它毫无信息量（谈判首次报价、股票的历史高点都是锚）。</li><li><b>前景理论</b>：人对损失的痛感约为同等收益快感的 2 倍；因此倾向于“在盈利时过早卖出、在亏损时死扛”——这正是散户亏钱的标准姿势。</li><li><b>可得性与代表性</b>：容易想起来的（新闻热点）被高估概率；像某个典型故事的被高估概率（“这公司像下一个茅台”）。</li><li><b>峰终定律与记忆自我</b>：人只记得“峰值”和“结尾”，不记得过程平均。所以体验设计、复盘记录都要注意“结尾”。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>系统1/系统2</b></td><td>快直觉 vs 慢推理；系统2的懒惰是偏误温床</td></tr><tr><td><b>锚定效应</b></td><td>无关数字对判断的污染</td></tr><tr><td><b>损失厌恶</b></td><td>亏损痛感≈收益快感的 2 倍，导致处置效应</td></tr><tr><td><b>可得性/代表性</b></td><td>以易得性和故事相似度替代概率</td></tr><tr><td><b>峰终定律</b></td><td>记忆由峰值与结尾决定</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>把“决策前置”：任何超过 5% 仓位的买入，必须先写下 5 行理由+3 个反面证据，隔 24 小时再执行——强制启动系统2。</li><li>谈判中永远让对方先报价（避免被锚定）；若必须我方先报，就用区间+条件把锚定变成对我有利的框。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"大脑有两套系统：快的直觉（系统1）与慢的推理（系统2），几乎所有系统性错误都来自系统1越权。"</div><div class="quote">"系统1 / 系统2"</div><div class="quote">"锚定效应"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：你的“结论前置、事实与推演分开”写作规范，本质就是给系统1加装刹车；量化回测的意义也在于用规则替代直觉。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：微信读书/得到有中文版；英文 Thinking, Fast and Slow 各平台有售。阅读建议：先读第 1、2 部分与“两个自我”，其余按需。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="b07" data-theme="mind">
+ <summary><span class="bid">b07</span>《模型思维》 — 单个模型必然错，多模型交叉才能逼近真相；聪明 = 模型的数量与调用能力。</summary>
+ <div class="body">
+  <div class="meta">斯科特·佩奇 · 2018 年 · 认知型 · 结构化 · ★★★★ 大部头，当工具书</div>
+  <div class="lead">单个模型必然错，多模型交叉才能逼近真相；聪明 = 模型的数量与调用能力。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>多模型思维（many-model thinking）</b>：一个模型是一个“被刻意简化的世界”。用多个模型对同一现象给出不同解释，取交集与差异，比任何单一模型的结论都可靠。</li><li><b>模型分类</b>：① 正态分布 vs 幂律（决定该用平均值还是看尾部）② 马尔可夫过程（状态转移）③ 随机游走 ④ 网络模型（六度、幂律网络、小世界）⑤ 博弈论（囚徒困境、协调博弈）⑥ 路径依赖与临界点 ⑦ 系统动力学（存量-流量、反馈回路）。</li><li><b>用错的代价</b>：把幂律世界当正态世界，会系统性低估尾部风险（金融危机、黑天鹅）；把正态世界当幂律世界，会过度保守错过机会。</li><li><b>模型的价值在于“拆解与重组”</b>：把现实抽象成主体（agents）、规则、状态、交互，再推演——这就是量化建模的思维底座。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>幂律 vs 正态</b></td><td>决定是看均值还是看极端值（风险管理的分水岭）</td></tr><tr><td><b>存量-流量</b></td><td>系统里“积累”与“速率”的区别，解释为什么政策常滞后</td></tr><tr><td><b>路径依赖</b></td><td>早期偶然事件锁定长期结构（技术标准、城市格局）</td></tr><tr><td><b>网络幂律</b></td><td>少数节点拥有绝大多数连接（流量、资本、信息）</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>做产业链研究时，先判断这条链是“正态”还是“幂律”：若是幂律，重点盯头部 3 家的动作，而不是全行业平均值。</li><li>给每个持仓公司做一个“存量-流量”草图：订单存量、产能存量、现金流存量，与各自的流入/流出速率，判断拐点在存量还是速率上。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"单个模型必然错，多模型交叉才能逼近真相；聪明 = 模型的数量与调用能力。"</div><div class="quote">"多模型思维（many-model thinking）"</div><div class="quote">"模型分类"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：与你的量化研究直接对接：模型库越全，越不容易把“一次幸存”当成“一个规律”。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：微信读书/得到有中文版；英文 The Model Thinker 有 Kindle。配套 coursera/作者公开课可辅助。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="b08" data-theme="mind">
+ <summary><span class="bid">b08</span>《事实》 — 世界比你以为的好得多；你的直觉被 10 种本能系统性带偏。</summary>
+ <div class="body">
+  <div class="meta">汉斯·罗斯林 · 2018 年 · 认知型 · 世界观 · ★★☆☆ 4~5 小时</div>
+  <div class="lead">世界比你以为的好得多；你的直觉被 10 种本能系统性带偏。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>四个收入等级</b>：用 Level 1~4（日均收入 2/8/32 美元以上）替代“发达/发展中”二分法，才能看到真实分布——绝大多数人处在中间两级。</li><li><b>十个戏剧化本能</b>（会扭曲判断）：鸿沟（非黑即白）、负面（只报坏消息）、直线（以为趋势永远直线）、恐惧（风险被放大）、规模（单个数字失去比例感）、以偏概全、宿命、单一视角、归咎、急迫（“现在就得做”）。</li><li><b>用数据校准直觉</b>：绝大多数“世界在崩坏”的印象来自信息选择机制（新闻只报道异常），而非事实。</li><li><b>实践方法</b>：遇到惊人数字先问“分母是多少”“和什么比”“五年趋势如何”，三问能过滤掉大半噪音。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>四级收入阶梯</b></td><td>替代二元世界观的分层框架</td></tr><tr><td><b>负面本能</b></td><td>坏消息的传播优势带来系统性悲观</td></tr><tr><td><b>直线本能</b></td><td>误把非线性趋势外推（人口、增长、渗透率）</td></tr><tr><td><b>分母思维</b></td><td>任何比例都要先确认基数</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>看宏观数据/行业渗透率时，强制写出“分子/分母/时间窗/口径”四项，避免被标题党式的增速误导。</li><li>写投研笔记时，把“结论+数据+口径”三件套固定下来——这也是你现有“事实与推演分开”的延伸。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"世界比你以为的好得多；你的直觉被 10 种本能系统性带偏。"</div><div class="quote">"四个收入等级"</div><div class="quote">"十个戏剧化本能（会扭曲判断）"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：对城投估值、产业链景气度判断尤其有用：多数“崩塌叙事”在分母校正后只是回归常态。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：微信读书/得到有中文版；英文 Factfulness 有 Kindle，作者 TED 演讲可先看 20 分钟版。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="b09" data-theme="mind">
+ <summary><span class="bid">b09</span>《人类简史》 — 智人赢在“能相信共同的虚构故事”，从而大规模协作。</summary>
+ <div class="body">
+  <div class="meta">尤瓦尔·赫拉利 · 2011 年 · 世界观 · 叙事 · ★★★☆ 一周读完</div>
+  <div class="lead">智人赢在“能相信共同的虚构故事”，从而大规模协作。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>认知革命</b>：语言让智人能谈论“不存在的东西”（神、国家、公司、货币），虚构故事带来几百人以上的大规模灵活协作——这是智人淘汰其他人种的关键。</li><li><b>农业革命是“史上最大骗局”</b>：食物总量增加，但个体营养与自由度下降，人口膨胀把人类锁进更辛苦的循环。教训：<b>物种层面的成功 ≠ 个体层面的幸福</b>。</li><li><b>想象的秩序</b>：货币、帝国、宗教是三大“普世虚构”，它们让陌生人之间可以合作。它们的威力来自“大家都信”，而非客观存在。</li><li><b>科学革命 = 承认无知</b>：欧洲人发现“我们不知道”，于是把资源投入探索，与帝国、资本形成正反馈回路。</li><li><b>读法提醒</b>：本书是“宏大叙事”而非严谨史学，许多论断有争议；价值在于提供一套“用叙事解释协作”的视角，不必当史实教科书。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>认知革命</b></td><td>虚构故事 → 大规模灵活协作</td></tr><tr><td><b>想象的秩序</b></td><td>货币/国家/公司/法律都是共同想象的产物</td></tr><tr><td><b>农业革命陷阱</b></td><td>整体繁荣与个体处境的背离</td></tr><tr><td><b>科学-帝国-资本回路</b></td><td>承认无知 + 逐利探索的正反馈</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>分析一家公司的“叙事资产”：它的品牌、牌照、渠道信仰，哪些是客观产能、哪些是共同想象？后者的崩塌速度远快于前者。</li><li>看行业时区分“物种成功”与“个体处境”：行业规模翻倍，未必等于产业链上每家公司都赚钱（面板、光伏都是例证）。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"智人赢在“能相信共同的虚构故事”，从而大规模协作。"</div><div class="quote">"认知革命"</div><div class="quote">"农业革命是“史上最大骗局”"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：与你产业链研究的“叙事 vs 现金流”分野高度契合；也是理解茅台“信仰溢价”、腾讯“生态叙事”的底层框架。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：微信读书/得到有中文版；英文 Sapiens 各平台有售，有声版质量不错。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="b10" data-theme="mind">
+ <summary><span class="bid">b10</span>《有限与无限的游戏》 — 有限游戏为赢而玩，无限游戏为“继续玩下去”而玩。</summary>
+ <div class="body">
+  <div class="meta">詹姆斯·卡斯 · 1986 年 · 世界观 · 哲学 · ★★★★ 薄书硬读，需慢</div>
+  <div class="lead">有限游戏为赢而玩，无限游戏为“继续玩下去”而玩。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>两种游戏</b>：有限游戏有明确边界、规则、胜负与终点（比赛、考试、战争、KPI）；无限游戏没有终点，目的是让游戏继续（友谊、文化、商业生态、生命）。</li><li><b>规则的关系</b>：有限游戏的参与者为赢而玩，规则不可变；无限游戏的参与者为继续而玩，规则会被不断改写。</li><li><b>把商业当无限游戏</b>：追求“赢过对手”会耗尽资源；追求“让生态继续、让自己留在牌桌上”，才活得久。亚马逊/腾讯的生态逻辑是典型无限游戏。</li><li><b>“视界”与“惊奇”</b>：无限游戏玩家主动拥抱惊奇（意外），有限游戏玩家恐惧意外。这直接决定你面对黑天鹅的姿态。</li><li><b>翻译提示</b>：本书原文极抽象，中译本可读性一般。建议先读 30 页判断是否合口味；不合就只取“有限/无限”这一对概念，也够用。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>有限游戏</b></td><td>有边界、有胜负、以赢为目的</td></tr><tr><td><b>无限游戏</b></td><td>无边界、无终局、以延续为目的</td></tr><tr><td><b>惊奇（surprise）</b></td><td>无限游戏者欢迎意外，有限游戏者恐惧意外</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>评估一笔投资时问：这家公司在玩有限游戏（抢份额、拼价格）还是无限游戏（养生态、攒信任）？前者看周期，后者看存续。</li><li>给自己的人生/职业定调：哪些领域你要赢（有限），哪些领域你只想一直玩下去（无限，如阅读、写作、投研体系）——两者混用会非常痛苦。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"有限游戏为赢而玩，无限游戏为“继续玩下去”而玩。"</div><div class="quote">"两种游戏"</div><div class="quote">"规则的关系"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：与你的长期主义取向一致：WorkBuddy 自动化体系、投研笔记库都是“无限游戏”资产，价值随参与时间增长。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：微信读书有中文版（华东师大版）；英文 Finite and Infinite Games 有免费 PDF 在作者纪念站流通，纸质已绝版，图书馆可借。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="b21" data-theme="mind">
+ <summary><span class="bid">b21</span>《如何阅读一本书》 — 阅读分四层：基础、检视、分析、主题；读得多不等于读得懂。</summary>
+ <div class="body">
+  <div class="meta">莫提默·艾德勒 / 查尔斯·范多伦 · 1940 年 · 方法论 · 元技能 · ★★★★ 工具书，先读第二篇</div>
+  <div class="lead">阅读分四层：基础、检视、分析、主题；读得多不等于读得懂。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>四个层次（递进）</b>：① 基础阅读（识字）② 检视阅读（系统略读，15~30 分钟判断“这本书讲什么、值不值得细读”）③ 分析阅读（完整咀嚼一本书，回答四个问题）④ 主题阅读（围绕一个问题读多本，比较、建立自己的框架）。</li><li><b>分析阅读的四个必答问题</b>：① 整体在谈什么？② 作者细部说了什么、怎么说的？③ 说得有道理吗（全部/部分）？④ 这本书跟我有什么关系？</li><li><b>主动阅读=提问+批注</b>：手里有笔，边读边写“赞同/反对/疑问”；不批注的阅读等于没读。</li><li><b>主题阅读法（最高层）</b>：先定问题，再列书单，用“中立词汇”把不同作者拉到同一张桌上比较，最后形成自己的结论——这正是你写投研专题的方式。</li><li><b>对“难书”的建议</b>：先读一遍不求甚解（检视），再读第二遍精读；不要在第一章卡死。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>检视阅读</b></td><td>限时略读：目录、序、结论、关键章节</td></tr><tr><td><b>分析阅读</b></td><td>四问法 + 批注 + 与作者对话</td></tr><tr><td><b>主题阅读</b></td><td>围绕问题跨书比较，建立自己的框架</td></tr><tr><td><b>主动阅读</b></td><td>越主动，读得越好；提问是主动的核心</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>给本页 30 本书排一个“检视阅读周”：每本 30 分钟，只读目录+序+结论，先筛出真正要精读的 8 本。</li><li>每读完一本，强制输出一页 A4：核心论点 / 关键证据 / 我的分歧 / 可执行动作——这就是你的书库笔记模板。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"阅读分四层：基础、检视、分析、主题；读得多不等于读得懂。"</div><div class="quote">"四个层次（递进）"</div><div class="quote">"分析阅读的四个必答问题"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：这本书是你“读书专家”角色的元技能；你的投研专题（如城投估值对比）本质就是主题阅读的产物。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：微信读书/得到有中文版（商务印书馆版经典）；英文 How to Read a Book 各平台有售。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="b22" data-theme="mind">
+ <summary><span class="bid">b22</span>《人性的弱点》 — 不批评、真诚欣赏、记住名字、让对方多说——人际关系的低成本高回报操作。</summary>
+ <div class="body">
+  <div class="meta">戴尔·卡耐基 · 1936 年 · 关系型 · 实践 · ★★☆☆ 快读，当行为手册</div>
+  <div class="lead">不批评、真诚欣赏、记住名字、让对方多说——人际关系的低成本高回报操作。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>三个不</b>：不批评、不指责、不抱怨（批评会触发防御，且几乎不改变行为）。</li><li><b>激发对方的“重要性渴望”</b>：人最深的需求是“被重视”。真诚的具体赞美（针对事，不针对人）是成本最低的影响力。</li><li><b>记住名字</b>：对本人而言，名字是全世界最动听的声音。这条在商务场合的回报率极高。</li><li><b>争论无赢家</b>：赢了道理，输了关系。避免正面冲突，先找共同点，再引出分歧。</li><li><b>让对方觉得“这是他自己的想法”</b>：把你的方案变成对方的结论，执行力会完全不同。</li><li><b>批判性提示</b>：部分内容带有 1930 年代的销售话术色彩与性别刻板印象，取其“人性观察”，弃其“操纵技巧”。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>重要性渴望</b></td><td>人的核心心理需求，比物质激励更持久</td></tr><tr><td><b>避免争论</b></td><td>争论的收益远小于关系损失</td></tr><tr><td><b>具体赞美</b></td><td>针对具体行为，而非泛泛的人格评价</td></tr><tr><td><b>苏格拉底式提问</b></td><td>让对方在回答“是”的过程中自己得出结论</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>与主机厂/供应商谈判前，先写下对方三个“真正在意的东西”（KPI、上级压力、历史包袱），开场先谈这些。</li><li>跨部门协调时，把“我要你做”改成“你觉得这样是否可行”，让对方成为方案的共同作者。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"不批评、真诚欣赏、记住名字、让对方多说——人际关系的低成本高回报操作。"</div><div class="quote">"三个不"</div><div class="quote">"激发对方的“重要性渴望”"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：你在商务仲裁中的“中立理性”需要这本书的润滑：道理要硬，话要软。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：微信读书/京东读书有中文版；英文 How to Win Friends and Influence People 已进入多国公版讨论区，注意选正版译本。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="b23" data-theme="mind">
+ <summary><span class="bid">b23</span>《少有人走的路》 — 人生本就艰难；心智成熟是一条少有人走的路，自律与爱是唯一的交通工具。</summary>
+ <div class="body">
+  <div class="meta">M·斯科特·派克 · 1978 年 · 心性 · 成长 · ★★★★ 慢读，适合人生阶段节点</div>
+  <div class="lead">人生本就艰难；心智成熟是一条少有人走的路，自律与爱是唯一的交通工具。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>“人生苦难重重”</b>：接受这句话，就不再抱怨“为什么是我”。这是全书的地基。</li><li><b>自律四原则</b>：① 延迟满足 ② 承担责任 ③ 忠于事实 ④ 保持平衡（在“放弃”与“坚持”之间动态调整，含“弹性”）。</li><li><b>爱的定义</b>：爱是“为了促进自己和他人心智成熟，而不断拓展自我界限的意愿”。不是依赖、不是占有、不是自我牺牲。</li><li><b>“懒惰”是原罪</b>：派克认为人的核心问题是懒惰（entropy 的心理版本）——逃避成长的痛苦，用各种成瘾与借口替代。</li><li><b>恩典（Grace）</b>：承认有些成长不完全由自己努力解释，保持谦卑与开放。这一部分宗教色彩浓，可取其“接受不可控”的态度。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>延迟满足</b></td><td>先苦后甜的能力，是成熟的核心指标</td></tr><tr><td><b>忠于事实</b></td><td>不断修订自己的“人生地图”，而非否认新信息</td></tr><tr><td><b>真正的爱</b></td><td>以促进双方心智成熟为目的的意愿与行动</td></tr><tr><td><b>懒惰/熵</b></td><td>回避成长痛苦的自然倾向</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>给重要决策做“地图更新”：我现在的判断基于几年前的哪张地图？有哪些新事实被我刻意忽略了？</li><li>区分“依赖”与“爱”：在关系里检查自己是“需要对方”还是“共同成长”。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"人生本就艰难；心智成熟是一条少有人走的路，自律与爱是唯一的交通工具。"</div><div class="quote">"“人生苦难重重”"</div><div class="quote">"自律四原则"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：与你近年的丧亲、健康焦虑、亲密关系议题直接相关；它是“心性层”的长期陪伴书，不必一次读完。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：微信读书有中文版（吉林文史/中国商业版）；英文 The Road Less Traveled 各平台有售。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="b24" data-theme="mind">
+ <summary><span class="bid">b24</span>《当下的力量》 — 痛苦来自“心理时间”：对过去的反刍与对未来的投射；回到当下，痛苦之身失去供养。</summary>
+ <div class="body">
+  <div class="meta">埃克哈特·托利 · 1997 年 · 心性 · 冥想 · ★★★★ 体验型，读不进就听音频</div>
+  <div class="lead">痛苦来自“心理时间”：对过去的反刍与对未来的投射；回到当下，痛苦之身失去供养。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>“小我”（ego）</b>：由思维与身份认同构成，靠“问题、抱怨、比较”维持存在感。它需要过去与未来，所以抗拒当下。</li><li><b>痛苦之身（pain-body）</b>：累积的旧情绪形成的能量场，会周期性被激活并要求更多痛苦（找茬、翻旧账、自我攻击）。觉察即是切断供养。</li><li><b>临在（presence）</b>：把注意力放在此刻的身体感受、呼吸、环境上；不是“不想事”，而是“不被念头拖走”。</li><li><b>“臣服”（surrender）</b>：不是认命，而是不再对已发生的事实做内心对抗——对抗消耗的能量远大于问题本身。</li><li><b>读法</b>：不必追求“读懂全书”，读到某一段让你安静下来，就停在那里。它更像练习手册，不是知识书。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>心理时间</b></td><td>沉浸于过去/未来的思维惯性</td></tr><tr><td><b>小我</b></td><td>靠问题与认同维持的自我结构</td></tr><tr><td><b>痛苦之身</b></td><td>累积情绪的周期性反扑</td></tr><tr><td><b>临在/臣服</b></td><td>回到当下，停止对事实的内心对抗</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>睡前 10 分钟做“身体扫描”：从脚趾到头顶逐段感受，不评价，只觉察——这是对你“夜尿频繁+睡眠质量差”最直接的干预（配合作息与就医）。</li><li>情绪上头时先做“三次长呼气”，把注意力放到脚底触地感，再决定要不要说话。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"痛苦来自“心理时间”：对过去的反刍与对未来的投射；回到当下，痛苦之身失去供养。"</div><div class="quote">"“小我”（ego）"</div><div class="quote">"痛苦之身（pain-body）"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：你的眼睑跳动、睡眠困扰有生理因素，也有焦虑放大因素；本书用于“降噪”，不能替代就医。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：微信读书/得到有中文版；英文 The Power of Now 各平台有售，作者官方有免费引导冥想音频。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="b25" data-theme="mind">
+ <summary><span class="bid">b25</span>《沉思录》 — 罗马皇帝的自我对话：只控制自己能控制的，其余交给自然。</summary>
+ <div class="body">
+  <div class="meta">马可·奥勒留 · 心性 · 斯多葛 · ★★★☆ 碎片读，每天 2 页</div>
+  <div class="lead">罗马皇帝的自我对话：只控制自己能控制的，其余交给自然。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>控制二分法</b>：你的判断、意愿、行动在你掌控内；身体、名誉、他人、结果不在。痛苦几乎全部来自试图控制后者。</li><li><b>宇宙视角</b>：把自己放进时间与空间的大尺度里看——烦恼会缩小到应有的比例（“想想那些曾经愤怒的事，如今还剩什么”）。</li><li><b>责任与共同体</b>：人是社会性动物，做事要对共同体有益；这也是他身为皇帝的自省标准。</li><li><b>死亡冥想（memento mori）</b>：常念“我可能今天就会死”，用来校准优先级，而非用来恐吓自己。</li><li><b>读法</b>：这是私人札记，不是体系著作，无需通读，随手翻、逐条咀嚼。公版书，免费全文易得，适合每天晨读 2 页。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>控制二分法</b></td><td>区分可控/不可控，只在前者用力</td></tr><tr><td><b>宇宙视角</b></td><td>以时空尺度重估烦恼的重要性</td></tr><tr><td><b>memento mori</b></td><td>以死亡校准优先级</td></tr><tr><td><b>内在城堡</b></td><td>外部无法侵入的心灵自由区</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>每天早晨读 2 页 + 写一行“今天我只控制什么”。连续 30 天，焦虑的“可操作部分”会明显浮现。</li><li>遇到不可控冲击（政策突变、股价暴跌）时，写下：事实 / 我的判断 / 我能做的下一步——三层分离。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"罗马皇帝的自我对话：只控制自己能控制的，其余交给自然。"</div><div class="quote">"控制二分法"</div><div class="quote">"宇宙视角"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：与你“不给确定性买卖结论”的克制一脉相承；也是面对持仓波动与家庭变故的心性底盘。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：公版书：中文免费全文见维基文库/中国哲学书电子化计划；英译见 Project Gutenberg、Wikisource；纸质推荐何怀宏译本。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="t45" data-theme="mind">
+ <summary><span class="bid">t45</span>《随机漫步的傻瓜》 — 把运气误认为技能，是人类最贵的认知错误——尤其在金融市场。</summary>
+ <div class="body">
+  <div class="meta">纳西姆·塔勒布 · 2001 年 · 概率与运气 · ★★★ 精读</div>
+  <div class="lead">把运气误认为技能，是人类最贵的认知错误——尤其在金融市场。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>幸存者偏差</b>：你看到的成功交易员只是活下来的那批，<b>看不到的是同一套方法爆仓出局的人</b>——评价策略必须看完整样本。</li><li><b>随机性伪装成技能</b>：短期高收益最可能来自运气；<b>样本越小，运气的解释力越强</b>，所以需要长周期、大样本验证。</li><li><b>噪音 vs 信号</b>：日常波动绝大多数是噪音；<b>盯盘越勤，越容易被噪音驱动做出错误决策</b>。</li><li><b>分布比平均数重要</b>：金融市场是厚尾分布，均值几乎无意义；<b>真正决定生死的是尾部事件</b>，所以先活下来。</li><li><b>避免『 ruin 』</b>：只要存在归零可能，再高的期望收益都不值得赌——<b>遍历性（ergodicity）要求你先确保能一直玩下去</b>。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>幸存者偏差</b></td><td>只看到赢家，忽略用同样方法死掉的样本</td></tr><tr><td><b>噪音/信号</b></td><td>大部分短期波动无信息含量</td></tr><tr><td><b>厚尾分布</b></td><td>极端事件概率远高于正态分布假设</td></tr><tr><td><b>遍历性</b></td><td>一旦归零就无法继续，因此避免毁灭优先于最大化收益</td></tr><tr><td><b>存活偏差检验</b></td><td>回测必须包含失败的样本与时间段</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>你 27 年全样本回测的价值正在于此：用大样本区分技能与运气；每次看到亮眼策略先问『样本外还成立吗？』</li><li>对你的板块主线策略『剔除 Top10 后 +227% vs 全样本 +8031%』做塔勒布式解读：极端收益高度集中于少数样本，稳健性存疑。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"随机性之所以危险，是因为它伪装成技能。"</div><div class="quote">"你看到的只是幸存者，墓地里的交易员用的是同样的方法。"</div><div class="quote">"只要有可能归零，再高的期望值也不值得下注。"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：为你的回测方法论提供哲学地基：全样本、样本外、剔除极端值后的稳健性，都是对抗『随机漫步的傻瓜』的武器。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：微信读书 / 中信出版社正版；同作者《黑天鹅》《反脆弱》为进阶，主书库未收录。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="t48" data-theme="mind">
+ <summary><span class="bid">t48</span>《交易心理分析》 — 交易失败不是方法问题，是你和『不确定性』的关系出了问题。</summary>
+ <div class="body">
+  <div class="meta">马克·道格拉斯 · 2000 年 · 交易心理 · ★★★ 精读</div>
+  <div class="lead">交易失败不是方法问题，是你和『不确定性』的关系出了问题。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>交易的五条基本真相</b>：①任何事都可能发生 ②赚钱不需要每次都对 ③优势只是概率 ④市场此刻就是它本来的样子 ⑤市场永远在变化。<b>接受这五条，才能停止和市场较劲</b>。</li><li><b>「不犯错」的错误目标</b>：追求每笔都正确会让你过早止盈、死扛亏损；<b>正确目标是「按优势行动」，结果交给概率</b>。</li><li><b>概率思维重建</b>：把每笔交易看成系列中的一次，<b>关注决策质量而非单笔结果</b>——这是从赌徒到投资者的分水岭。</li><li><b>自我毁灭的四种模式</b>：不愿止损、随意逆势、选择性接受信号、因盈利而过度自信。<b>逐一识别并写成禁令</b>。</li><li><b>当下心态</b>：交易时只关注『此刻市场在告诉我什么』，不被上次盈亏的情绪污染；<b>每一笔都是全新的、独立的</b>。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>五条基本真相</b></td><td>接受不确定性是交易心理的地基</td></tr><tr><td><b>概率思维</b></td><td>单笔结果随机，只追踪决策质量与长期期望</td></tr><tr><td><b>按优势行动</b></td><td>执行系统比预测结果重要</td></tr><tr><td><b>当下心态</b></td><td>不让历史盈亏污染当前决策</td></tr><tr><td><b>自我毁灭模式</b></td><td>四种典型心理陷阱，必须显性化并禁止</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>给你每一笔交易做『决策质量评分』（是否按信号、是否止损、是否过度仓位），与盈亏分开记录，月底对比两者相关性。</li><li>把『五条基本真相』打印贴在交易屏幕旁，尤其在连续亏损或连续盈利后重读。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"你可以对市场有信心，但不能确定任何一笔交易的结果。"</div><div class="quote">"优秀的交易者接受风险，失败的交易者希望风险消失。"</div><div class="quote">"交易中最难的不是分析市场，而是分析自己。"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：与《股票大作手回忆录》互为表里：利弗莫尔用经历展示心理陷阱，道格拉斯给出系统的心理训练方法。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：微信读书 / 机械工业出版社正版；英文 Trading in the Zone 各平台有售。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="t51" data-theme="mind">
+ <summary><span class="bid">t51</span>《海龟交易法则》 — 把交易规则写死到可以教给陌生人执行——系统化是纪律的最高形式。</summary>
+ <div class="body">
+  <div class="meta">柯蒂斯·费思 · 2007 年 · 趋势跟随系统 · ★★★ 精读</div>
+  <div class="lead">把交易规则写死到可以教给陌生人执行——系统化是纪律的最高形式。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>规则可教即可复制</b>：海龟实验证明，普通人在明确规则下能执行出专业水平；<b>系统的价值在于消除临场判断</b>。</li><li><b>唐奇安通道入场</b>：价格突破 20 日新高入市，突破 10 日新低离场——<b>简单规则 + 严格执行的威力</b>。</li><li><b>头寸单位（Unit）</b>：按账户 1% 风险和 ATR（真实波幅）计算头寸，<b>波动越大仓位越小</b>——这是风险平价的朴素实现。</li><li><b>加码与止损</b>：每上涨 0.5 ATR 加一个单位，最多 4 个；跌破 2 ATR 止损——<b>用规则替代直觉</b>。</li><li><b>系统 lost 的心理成本</b>：海龟中多数人未能坚持到底；<b>执行系统的难点不是理解，而是在连续亏损时仍然相信它</b>。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>唐奇安通道</b></td><td>20日突破入场、10日反向突破离场的趋势系统</td></tr><tr><td><b>头寸单位</b></td><td>按 1% 风险/ATR 计算仓位，波动大则仓位小</td></tr><tr><td><b>ATR</b></td><td>平均真实波幅，衡量标的波动性与仓位大小</td></tr><tr><td><b>加码规则</b></td><td>每 0.5 ATR 加一单位，最多四个</td></tr><tr><td><b>系统坚持</b></td><td>连续亏损期仍执行，是海龟实验最大的筛子</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>把你的多头区间策略改造成『ATR 定仓位』：波动大的中证2000 减仓、波动小的上证50 加仓，看能否改善回撤。</li><li>给每个策略写一份『陌生人也能执行』的规则文档——写不清楚，说明规则还不够明确。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"一个好的交易系统，应该是可以写在纸上交给陌生人执行的。"</div><div class="quote">"不要问这个交易会不会赚钱，要问它是否符合系统。"</div><div class="quote">"海龟实验的真正发现是：纪律比天赋更重要。"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：为你的 OAMV 状态机补上『仓位大小』这一层：状态机决定方向，ATR 决定每次下注多少——这是你现有回测最缺的一块。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：微信读书 / 机械工业出版社正版；英文 The Turtle Traders 相关原著与实验记录各平台有售。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+<div class="section" id="th-biz"><span class="bar" style="background:#0F6E56"></span><h2>商业 · 格局与叙事</h2><span class="desc">决策、竞争、权力、把复杂讲清楚</span><span class="ln"></span></div>
+<div class="grid">
+<a class="card" href="#b11" data-theme="biz" data-k="原则瑞·达利欧把人生与组织变成一台“不断迭代的机器”，用原则替代临场反应。决策型 · 组织五步流程 痛苦+反思=进步 可信度加权 极度透明把人生与组织变成一台“不断迭代的机器”，用原则替代临场反应。 极度求真 + 极度透明 五步流程"><div class="num">37</div><div class="ctitle">《原则》</div><div class="cauth">瑞·达利欧</div><div class="cone">把人生与组织变成一台“不断迭代的机器”，用原则替代临场反应。</div><div class="ctags"><span class="chip">决策型 · 组织</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#b12" data-theme="biz" data-k="竞争战略迈克尔·波特行业结构决定利润池，战略的本质是“选择不做什么”。结构化 · 行业分析五力模型 通用战略 价值链 进入/退出壁垒行业结构决定利润池，战略的本质是“选择不做什么”。 五力模型 三种通用战略"><div class="num">38</div><div class="ctitle">《竞争战略》</div><div class="cauth">迈克尔·波特</div><div class="cone">行业结构决定利润池，战略的本质是“选择不做什么”。</div><div class="ctags"><span class="chip">结构化 · 行业分析</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#b13" data-theme="biz" data-k="影响力罗伯特·西奥迪尼人不是被道理说服的，是被六种自动反应机制说服的。关系型 · 说服互惠 承诺一致 社会认同 稀缺人不是被道理说服的，是被六种自动反应机制说服的。 六大原则 影响力的双面性"><div class="num">39</div><div class="ctitle">《影响力》</div><div class="cauth">罗伯特·西奥迪尼</div><div class="cone">人不是被道理说服的，是被六种自动反应机制说服的。</div><div class="ctags"><span class="chip">关系型 · 说服</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#b14" data-theme="biz" data-k="关键对话科里·帕特森 等当“后果重大 + 意见分歧 + 情绪激烈”同时出现时，决定命运的是安全感。关系型 · 沟通安全感（safety） state 五步 沉默/暴力 共享观点库当“后果重大 + 意见分歧 + 情绪激烈”同时出现时，决定命运的是安全感。 什么是关键对话 从“内容”转向“安全感”"><div class="num">40</div><div class="ctitle">《关键对话》</div><div class="cauth">科里·帕特森 等</div><div class="cone">当“后果重大 + 意见分歧 + 情绪激烈”同时出现时，决定命运的是安全感。</div><div class="ctags"><span class="chip">关系型 · 沟通</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#b15" data-theme="biz" data-k="非暴力沟通马歇尔·卢森堡把“评判”换成“观察+感受+需要+请求”，冲突就失去燃料。关系型 · 心性观察 vs 评价 感受 vs 想法 需要 请求把“评判”换成“观察+感受+需要+请求”，冲突就失去燃料。 四要素 区分观察与评价"><div class="num">41</div><div class="ctitle">《非暴力沟通》</div><div class="cauth">马歇尔·卢森堡</div><div class="cone">把“评判”换成“观察+感受+需要+请求”，冲突就失去燃料。</div><div class="ctags"><span class="chip">关系型 · 心性</span><span class="chip q">3 金句</span></div></a>
+</div>
+
+<details class="book" id="b11" data-theme="biz">
+ <summary><span class="bid">b11</span>《原则》 — 把人生与组织变成一台“不断迭代的机器”，用原则替代临场反应。</summary>
+ <div class="body">
+  <div class="meta">瑞·达利欧 · 2017 年 · 决策型 · 组织 · ★★★★ 挑读，前半精读</div>
+  <div class="lead">把人生与组织变成一台“不断迭代的机器”，用原则替代临场反应。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>极度求真 + 极度透明</b>：让真实信息在组织内高速流动（包括对上级的批评），以此换取更快的纠错速度。代价是情绪摩擦，收益是决策质量。</li><li><b>五步流程</b>：① 设定清晰目标 ② 识别阻碍目标的问题 ③ 诊断问题根因（是能力问题还是设计问题）④ 设计方案 ⑤ 坚决执行。多数人卡在②与③——不愿承认问题、不肯深挖根因。</li><li><b>痛苦 + 反思 = 进步</b>：痛苦是信号，不是终点。每次痛苦后必须提炼一条“原则”写下来，下次直接调用。</li><li><b>可信度加权</b>：不是一人一票，也不是老板独断，而是按“在该问题上的历史胜率”加权——这是桥水最被低估的制度设计。</li><li><b>机器观</b>：把组织看成由“人+流程+工具”组成的机器，出问题时先改机器设计，而不是先换人。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>五步流程</b></td><td>目标→问题→诊断→方案→执行</td></tr><tr><td><b>痛苦+反思=进步</b></td><td>把情绪事件转化为可复用原则</td></tr><tr><td><b>可信度加权</b></td><td>按历史胜率分配话语权</td></tr><tr><td><b>极度透明</b></td><td>信息流动速度 = 纠错速度</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>给委托生产合同的风险管理建一份“原则清单”：每踩一个坑，写一条可执行的原则（触发条件+动作+责任人），半年后你就有了一套自己的风控算法。</li><li>团队里推行“诊断会”：只讨论根因，不讨论态度；根因不明就散会重来，避免把会议开成情绪会。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"把人生与组织变成一台“不断迭代的机器”，用原则替代临场反应。"</div><div class="quote">"极度求真 + 极度透明"</div><div class="quote">"五步流程"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：与你“结构化梳理合同 + 风险管控 + 商务仲裁”的岗位职责高度匹配：仲裁的本质就是回溯“哪条原则缺失”。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：微信读书/得到有中文版；作者官网 principles.com 提供免费的原则摘要与工作表，可直接下载。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="b12" data-theme="biz">
+ <summary><span class="bid">b12</span>《竞争战略》 — 行业结构决定利润池，战略的本质是“选择不做什么”。</summary>
+ <div class="body">
+  <div class="meta">迈克尔·波特 · 1980 年 · 结构化 · 行业分析 · ★★★★★ 教科书级，需啃</div>
+  <div class="lead">行业结构决定利润池，战略的本质是“选择不做什么”。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>五力模型</b>：现有竞争强度、新进入者威胁、替代品威胁、供应商议价能力、买方议价能力。五力共同决定行业平均利润率——<b>结构比努力更重要</b>。</li><li><b>三种通用战略</b>：① 成本领先 ② 差异化 ③ 聚焦（细分市场）。最危险的是“夹在中间”——既没有成本优势也没有差异化，注定被两端挤压。</li><li><b>价值链</b>：把企业拆成研发、采购、生产、物流、营销、服务等环节，找出真正创造超额价值的环节并加固，其余可外包。</li><li><b>进入壁垒与退出壁垒</b>：高进入+低退出=好行业；低进入+高退出=灾难（产能过剩、价格战）。中国很多制造业的痛点在“退出壁垒太高”（设备、就业、地方保护）。</li><li><b>战略不是运营效率</b>：把每件事做得更好是运营效率，选择“做不同的事”才是战略。二者混淆，是多数企业衰落的起点。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>五力模型</b></td><td>行业利润率的五个结构性来源</td></tr><tr><td><b>通用战略</b></td><td>成本领先/差异化/聚焦，夹在中间最危险</td></tr><tr><td><b>价值链</b></td><td>拆环节找超额价值点</td></tr><tr><td><b>进入/退出壁垒</b></td><td>不对称的壁垒结构决定行业周期形态</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>给你的汽车产业链做一次五力打分（1~5 分×5 项），画出雷达图：哪两力最弱，就是议价权最容易被剥夺的地方（通常是供应商集中+主机厂强势）。</li><li>评估合作方时看它选的是哪条通用战略：若它宣称“既便宜又高端”，大概率在补贴换份额，不可持续。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"行业结构决定利润池，战略的本质是“选择不做什么”。"</div><div class="quote">"五力模型"</div><div class="quote">"三种通用战略"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：你做委托生产合同谈判时，五力就是你的“筹码地图”：谁替代谁、谁离不开谁，决定了条款能谈到多硬。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：微信读书有中文版；英文 Competitive Strategy 经典版各平台有售。华夏出版社版翻译较旧但可用。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="b13" data-theme="biz">
+ <summary><span class="bid">b13</span>《影响力》 — 人不是被道理说服的，是被六种自动反应机制说服的。</summary>
+ <div class="body">
+  <div class="meta">罗伯特·西奥迪尼 · 1984 年 · 关系型 · 说服 · ★★★☆ 快读，重在对照自查</div>
+  <div class="lead">人不是被道理说服的，是被六种自动反应机制说服的。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>六大原则</b>：① 互惠（先给小惠，对方产生亏欠感）② 承诺与一致（先让对方向小承诺，后续行为会被拉齐）③ 社会认同（不确定时看别人怎么做）④ 喜好（熟悉+相似+赞美+关联）⑤ 权威（头衔、制服、专业符号）⑥ 稀缺（数量/时间/独家）。</li><li><b>影响力的双面性</b>：这六条既是说服工具，也是被操纵的漏洞。学会识别“人为制造的稀缺与权威”能省下大量冤枉钱。</li><li><b>本书新增第七原则：联盟/ unity</b>（后来的版本）——“我们是一伙的”身份认同，比单纯喜好更强。</li><li><b>防御策略</b>：当感到“被推着走”的快感时，立刻暂停；把“这个价格/这个机会”放 24 小时再决定，自动反应就失效了。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>互惠</b></td><td>先给予制造亏欠，回报往往大于所得</td></tr><tr><td><b>承诺一致</b></td><td>小承诺是后续大承诺的锚</td></tr><tr><td><b>社会认同</b></td><td>不确定情境下的从众捷径（销量榜、排队效应）</td></tr><tr><td><b>稀缺</b></td><td>损失框架比收益框架更能驱动行动</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>合同谈判中反向使用：先在小条款上让对方点头（承诺一致），再推到核心条款；同时警惕对方用“限时优惠”制造稀缺压迫你决策。</li><li>识别“伪权威”：看对方头衔是否与议题相关，而不是头衔大小。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"人不是被道理说服的，是被六种自动反应机制说服的。"</div><div class="quote">"六大原则"</div><div class="quote">"影响力的双面性"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：商务仲裁与合同谈判的实战手册；也解释了你观察到的“追涨杀跌”为什么是群体性的（社会认同+稀缺）。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：微信读书/得到有中文版；英文 Influence 新版各平台有售。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="b14" data-theme="biz">
+ <summary><span class="bid">b14</span>《关键对话》 — 当“后果重大 + 意见分歧 + 情绪激烈”同时出现时，决定命运的是安全感。</summary>
+ <div class="body">
+  <div class="meta">科里·帕特森 等 · 2002 年 · 关系型 · 沟通 · ★★★☆ 工具书，边读边练</div>
+  <div class="lead">当“后果重大 + 意见分歧 + 情绪激烈”同时出现时，决定命运的是安全感。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>什么是关键对话</b>：高风险、有分歧、情绪化的对话（谈薪、追责、分手、仲裁调解）。人在这种场景下会退化为“战斗或逃跑”，而不是理性沟通。</li><li><b>从“内容”转向“安全感”</b>：对话失控时不要再讲道理，先修复安全感——“我们共同的目标是什么？我对你应有的尊重是什么？”</li><li><b>STATE 表达法</b>：陈述事实（Share facts）→ 说出想法（Tell story）→ 征询对方观点（Ask）→ 试探性表述（Talk tentatively）→ 鼓励尝试（Encourage testing）。</li><li><b>识别“沉默”与“暴力”</b>：沉默=掩饰/逃避/退缩，暴力=控制/贴标签/攻击。二者都是安全感缺失的信号。</li><li><b>把观点与事实分开</b>：先说可验证的事实，再说自己的解读——这条能消解 80% 的争吵。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>安全感（safety）</b></td><td>对话的底层前提：共同目的 + 相互尊重</td></tr><tr><td><b>STATE 五步</b></td><td>事实→想法→征询→试探→鼓励</td></tr><tr><td><b>沉默/暴力</b></td><td>安全感缺失的两种退化形态</td></tr><tr><td><b>共享观点库</b></td><td>对话的目标是扩大共同信息池，而非说服</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>仲裁/调解前先写“事实清单”与“我的解读”两栏，谈判中只读事实栏——这是你岗位的核心技术动作。</li><li>与供应商谈价格崩局时，先抛“共同目标”（长期稳定供货），再谈分歧，比直接压价成交率高得多。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"当“后果重大 + 意见分歧 + 情绪激烈”同时出现时，决定命运的是安全感。"</div><div class="quote">"什么是关键对话"</div><div class="quote">"从“内容”转向“安全感”"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：你“遇冲突保持中立理性”的风格，本书给了可操作的句式；也适配家庭/亲密关系里的高难度对话。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：微信读书/京东读书有中文版；英文 Crucial Conversations 各平台有售（新版内容有更新）。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="b15" data-theme="biz">
+ <summary><span class="bid">b15</span>《非暴力沟通》 — 把“评判”换成“观察+感受+需要+请求”，冲突就失去燃料。</summary>
+ <div class="body">
+  <div class="meta">马歇尔·卢森堡 · 1999 年 · 关系型 · 心性 · ★★☆☆ 快读，重练习</div>
+  <div class="lead">把“评判”换成“观察+感受+需要+请求”，冲突就失去燃料。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>四要素</b>：① 观察（不带评价的事实）② 感受（我的情绪，不是“你让我…”）③ 需要（情绪背后的需要）④ 请求（具体、可执行、允许对方说不）。</li><li><b>区分观察与评价</b>：“你总是拖延”是评价，“这周有三次会议纪要超期”是观察。评价会触发防御，观察不会。</li><li><b>区分请求与命令</b>：对方拒绝时你会不会惩罚/冷暴力？会，那就是命令。</li><li><b>自我同理优先</b>：先接住自己的情绪（“我现在很焦虑，因为我需要确定性”），才有余力接住别人。</li><li><b>异化沟通的四种模式</b>：道德评判、比较、回避责任（“我也是没办法”）、强人所难。日常语言里到处都是。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>观察 vs 评价</b></td><td>事实描述才能避免触发防御</td></tr><tr><td><b>感受 vs 想法</b></td><td>“我觉得被忽视”是判断，“我感到失落”是感受</td></tr><tr><td><b>需要</b></td><td>所有情绪背后都是未被满足的普遍需要</td></tr><tr><td><b>请求</b></td><td>具体、正向、可拒绝</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>在跨部门/对供应商的沟通里，把“你们总是不按时”改成“本月两次交付延后 3 天，我方产线需停线待料，我需要提前 7 天的排产确认，可以吗？”</li><li>与自己对话时也用四要素：焦虑出现 → 观察事实 → 说出需要 → 给自己一个具体请求（如“今晚 11 点前关屏”）。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"把“评判”换成“观察+感受+需要+请求”，冲突就失去燃料。"</div><div class="quote">"四要素"</div><div class="quote">"区分观察与评价"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：与你“中立理性沟通”的目标完全同频；对家庭关系与自我情绪管理同样适用。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：微信读书/得到有中文版；英文 Nonviolent Communication 各平台有售，有声版适合通勤。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+<div class="section" id="th-self"><span class="bar" style="background:#BA7517"></span><h2>自律 · 成长与行动</h2><span class="desc">习惯、深度、勇气——把知识变成产出</span><span class="ln"></span></div>
+<div class="grid">
+<a class="card" href="#b16" data-theme="self" data-k="原子习惯詹姆斯·克利尔每天改进 1%，一年是 37 倍；改变结果不如改变身份。习惯型 · 复利型1% 复利 身份认同 两分钟法则 环境设计每天改进 1%，一年是 37 倍；改变结果不如改变身份。 1% 复利 身份优先于目标"><div class="num">42</div><div class="ctitle">《原子习惯》</div><div class="cauth">詹姆斯·克利尔</div><div class="cone">每天改进 1%，一年是 37 倍；改变结果不如改变身份。</div><div class="ctags"><span class="chip">习惯型 · 复利型</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#b17" data-theme="self" data-k="高效能人士的七个习惯史蒂芬·柯维从依赖到独立再到互赖：品德 &gt; 技巧，原则 &gt; 权谋。结构化 · 心性影响圈/关注圈 以终为始 第二象限 双赢思维从依赖到独立再到互赖：品德 &gt; 技巧，原则 &gt; 权谋。 成熟模式图 影响圈 / 关注圈"><div class="num">43</div><div class="ctitle">《高效能人士的七个习惯》</div><div class="cauth">史蒂芬·柯维</div><div class="cone">从依赖到独立再到互赖：品德 &gt; 技巧，原则 &gt; 权谋。</div><div class="ctags"><span class="chip">结构化 · 心性</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#b18" data-theme="self" data-k="深度工作卡尔·纽波特在注意力稀缺的时代，能长时间专注的人获得全部溢价。执行型 · 复利型注意力残留 节奏式深度 固定日程 浮浅预算在注意力稀缺的时代，能长时间专注的人获得全部溢价。 深度工作 vs 浮浅工作 注意力残留"><div class="num">44</div><div class="ctitle">《深度工作》</div><div class="cauth">卡尔·纽波特</div><div class="cone">在注意力稀缺的时代，能长时间专注的人获得全部溢价。</div><div class="ctags"><span class="chip">执行型 · 复利型</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#b19" data-theme="self" data-k="拖延心理学简·博克 / 莱诺拉·袁拖延不是懒，是“用回避来保护自我价值感”的情绪调节策略。心理型 · 自我认知情绪调节视角 适应不良型完美主义 行为目标 15 分钟启动拖延不是懒，是“用回避来保护自我价值感”的情绪调节策略。 拖延的根不是时间管理，是情绪管理 完美主义的两种形态"><div class="num">45</div><div class="ctitle">《拖延心理学》</div><div class="cauth">简·博克 / 莱诺拉·袁</div><div class="cone">拖延不是懒，是“用回避来保护自我价值感”的情绪调节策略。</div><div class="ctags"><span class="chip">心理型 · 自我认知</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#b20" data-theme="self" data-k="被讨厌的勇气岸见一郎 / 古贺史健阿德勒心理学：一切烦恼都是人际关系的烦恼，自由就是被讨厌的勇气。心性 · 关系目的论 课题分离 横向关系 贡献感阿德勒心理学：一切烦恼都是人际关系的烦恼，自由就是被讨厌的勇气。 目的论 vs 原因论 课题分离"><div class="num">46</div><div class="ctitle">《被讨厌的勇气》</div><div class="cauth">岸见一郎 / 古贺史健</div><div class="cone">阿德勒心理学：一切烦恼都是人际关系的烦恼，自由就是被讨厌的勇气。</div><div class="ctags"><span class="chip">心性 · 关系</span><span class="chip q">3 金句</span></div></a>
+</div>
+
+<details class="book" id="b16" data-theme="self">
+ <summary><span class="bid">b16</span>《原子习惯》 — 每天改进 1%，一年是 37 倍；改变结果不如改变身份。</summary>
+ <div class="body">
+  <div class="meta">詹姆斯·克利尔 · 2018 年 · 习惯型 · 复利型 · ★★★☆ 最好上手的执行书</div>
+  <div class="lead">每天改进 1%，一年是 37 倍；改变结果不如改变身份。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>1% 复利</b>：1.01^365 ≈ 37.8，0.99^365 ≈ 0.03。习惯的威力在累积，不在单次强度。</li><li><b>身份优先于目标</b>：目标是你想要的结果，身份是你想成为的人。“我要跑马拉松”是目标，“我是每天跑步的人”是身份——后者才持久。</li><li><b>四大定律</b>（建立好习惯）：① 让它显而易见（环境设计、执行意图）② 让它有吸引力（诱惑捆绑）③ 让它简便易行（两分钟法则、降低摩擦）④ 让它令人愉悦（即时奖励）。戒除坏习惯则全部反过来。</li><li><b>习惯叠加</b>：把新习惯挂在旧习惯之后（“倒完咖啡后，写下今天最重要的 3 件事”）。</li><li><b>平台期法则</b>：结果滞后于努力，前期的“看不出变化”正是复利在积累——多数人在这里放弃。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>1% 复利</b></td><td>微小改进的指数效应</td></tr><tr><td><b>身份认同</b></td><td>从“我要做到”转向“我是什么样的人”</td></tr><tr><td><b>两分钟法则</b></td><td>新习惯起步版本必须 2 分钟内可完成</td></tr><tr><td><b>环境设计</b></td><td>让好习惯的摩擦最小、坏习惯的摩擦最大</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>把“每天看财报”改成两分钟版：打开自选股页面，只读一家公司的 3 个关键数字。先建立触发，再谈深度。</li><li>设计交易纪律的“环境”：把下单软件从手机首屏移走，把复盘模板放桌面——摩擦方向决定行为方向。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"每天改进 1%，一年是 37 倍；改变结果不如改变身份。"</div><div class="quote">"1% 复利"</div><div class="quote">"身份优先于目标"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：你的 7 个定时推送、每日复盘，本质就是“环境设计 + 习惯叠加”的自动化版本。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：微信读书/得到有中文版；英文 Atomic Habits 各平台有售，作者官网有免费习惯清单/模板下载。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="b17" data-theme="self">
+ <summary><span class="bid">b17</span>《高效能人士的七个习惯》 — 从依赖到独立再到互赖：品德 &gt; 技巧，原则 &gt; 权谋。</summary>
+ <div class="body">
+  <div class="meta">史蒂芬·柯维 · 1989 年 · 结构化 · 心性 · ★★★★ 慢读，做练习</div>
+  <div class="lead">从依赖到独立再到互赖：品德 &gt; 技巧，原则 &gt; 权谋。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>成熟模式图</b>：依赖 → 独立 → 互赖。前三个习惯（主动积极、以终为始、要事第一）建立“个人成功”，后三个（双赢思维、知彼解己、统合综效）建立“公众成功”，第七个（不断更新）是循环供能。</li><li><b>影响圈 / 关注圈</b>：把精力放在自己能影响的事上，关注圈（宏观、他人评价、市场噪音）会自然缩小。这是全书最实用的一把刀。</li><li><b>要事第一（时间管理四象限）</b>：重点不是“紧急”，是“重要不紧急”（第二象限）——健康、关系、学习、体系建设。多数人一生被第一象限（救火）吞掉。</li><li><b>知彼解己</b>：先求理解，再求被理解。诊断先于开方——这条对谈判与尽调同样成立。</li><li><b>不断更新（Sharpen the Saw）</b>：身体、精神、心智、社会情感四个维度，缺一不可持续。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>影响圈/关注圈</b></td><td>把能量投向可影响区域</td></tr><tr><td><b>以终为始</b></td><td>先写“使命宣言”，再排日程</td></tr><tr><td><b>第二象限</b></td><td>重要不紧急，是长期复利的唯一来源</td></tr><tr><td><b>双赢思维</b></td><td>把蛋糕做大而非争夺存量</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>每周做一次“第二象限审计”：本周花在健康/学习/体系建设的时间占比多少？低于 20% 就要调结构。</li><li>把“关注圈”具体化：写下最近让你焦虑但无法影响的 5 件事，逐条标注“可影响/不可影响”，前者行动，后者划掉。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"从依赖到独立再到互赖：品德 &gt; 技巧，原则 &gt; 权谋。"</div><div class="quote">"成熟模式图"</div><div class="quote">"影响圈 / 关注圈"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：你同时管合同谈判、投研、自动化系统、健康议题——“第二象限”是避免被事务吞没的唯一解。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：微信读书/得到有中文版；英文 7 Habits 各平台有售。建议读 30 周年版（作者补充了案例）。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="b18" data-theme="self">
+ <summary><span class="bid">b18</span>《深度工作》 — 在注意力稀缺的时代，能长时间专注的人获得全部溢价。</summary>
+ <div class="body">
+  <div class="meta">卡尔·纽波特 · 2016 年 · 执行型 · 复利型 · ★★★☆ 快读+立刻改作息</div>
+  <div class="lead">在注意力稀缺的时代，能长时间专注的人获得全部溢价。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>深度工作 vs 浮浅工作</b>：深度=无干扰的高认知强度工作，能创造新价值、难以复制；浮浅=事务性、可被替代。经济学上，深度工作的稀缺性正在快速升值。</li><li><b>注意力残留</b>：从 A 任务切到 B 任务，大脑仍有一部分停留在 A，切换越频繁，残留越多，有效智力越低。这就是“一直很忙却没什么产出”的机制。</li><li><b>四种深度哲学</b>：① 禁欲式（彻底断联）② 双峰式（按天/周切分）③ 节奏式（每天固定时段，最适合上班族）④ 记者式（随时插入，需强训练）。</li><li><b>固定日程生产力</b>：设定硬性下班时间，倒逼自己砍掉浮浅事务——用约束换专注。</li><li><b>拥抱无聊</b>：训练大脑忍受无刺激状态（不刷手机排队），否则专注力肌肉会萎缩。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>注意力残留</b></td><td>任务切换的隐性成本</td></tr><tr><td><b>节奏式深度</b></td><td>每天固定 2~4 小时无干扰块</td></tr><tr><td><b>固定日程</b></td><td>用时间上限逼出优先级</td></tr><tr><td><b>浮浅预算</b></td><td>给琐事设定固定配额（如每天 1 小时）</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>把每天 7:30-9:30 设为“深度块”：只做估值建模/合同条款推演，手机静音放另一个房间；邮件与消息集中到 10:00 后处理。</li><li>给浮浅事务设“配额”：每天固定 60 分钟处理消息与行政，超时就顺延，训练他人适应你的节奏。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"在注意力稀缺的时代，能长时间专注的人获得全部溢价。"</div><div class="quote">"深度工作 vs 浮浅工作"</div><div class="quote">"注意力残留"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：你的量化研究、合同结构化梳理，都是典型深度工作——产出质量的差异几乎全在这里。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：微信读书/得到有中文版；英文 Deep Work 各平台有售。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="b19" data-theme="self">
+ <summary><span class="bid">b19</span>《拖延心理学》 — 拖延不是懒，是“用回避来保护自我价值感”的情绪调节策略。</summary>
+ <div class="body">
+  <div class="meta">简·博克 / 莱诺拉·袁 · 1983 年 · 心理型 · 自我认知 · ★★★☆ 慢读，对症读</div>
+  <div class="lead">拖延不是懒，是“用回避来保护自我价值感”的情绪调节策略。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>拖延的根不是时间管理，是情绪管理</b>：害怕失败（“不做就不会失败”）、害怕成功（怕被期待更多）、完美主义（“要么完美要么不做”）、对抗控制（用拖延夺回自主权）。</li><li><b>完美主义的两种形态</b>：适应型（高标准+可接受不完美）与适应不良型（标准高到不可能达成→干脆不动）。后者是拖延主因。</li><li><b>时间感知扭曲</b>：拖延者常活在“非现在”的时间感里——要么觉得时间还很多，要么觉得已经太晚，难以锚定“现在”。</li><li><b>可操作工具</b>：① 行为目标（具体、可观察、分步）② 15 分钟启动法（只承诺做 15 分钟）③ 非评判式自我对话（把“我怎么这么废”换成“我现在有阻力，先做最小一步”）④ 暴露练习（刻意做不完美版本并交出去）。</li><li><b>与神经科学结合</b>：拖延时大脑在回避“被激活的焦虑”，所以降低启动门槛比增强意志力更有效。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>情绪调节视角</b></td><td>拖延是回避不适，而非时间分配失误</td></tr><tr><td><b>适应不良型完美主义</b></td><td>高标准导致瘫痪</td></tr><tr><td><b>行为目标</b></td><td>可观察、分步、有截止的具体动作</td></tr><tr><td><b>15 分钟启动</b></td><td>以极低门槛绕过焦虑</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>遇到难写的报告/难谈的合同，先做“最丑版本”：只要求列出标题与小标题，允许它很烂。启动之后修订远比启动容易。</li><li>给自己建“拖延日志”：记录每次拖延时的情绪（怕失败？怕被评价？），两周后就能看到自己的固定触发点。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"拖延不是懒，是“用回避来保护自我价值感”的情绪调节策略。"</div><div class="quote">"拖延的根不是时间管理，是情绪管理"</div><div class="quote">"完美主义的两种形态"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：与你“洁癖 + 高自我要求”的倾向需要留意：完美主义型拖延最容易出现在“要交付给上级/对方”的材料上。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：微信读书有中文版（中国人民大学出版社）；英文 Procrastination 有新版。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="b20" data-theme="self">
+ <summary><span class="bid">b20</span>《被讨厌的勇气》 — 阿德勒心理学：一切烦恼都是人际关系的烦恼，自由就是被讨厌的勇气。</summary>
+ <div class="body">
+  <div class="meta">岸见一郎 / 古贺史健 · 2013 年 · 心性 · 关系 · ★★★☆ 对话体，好读但扎人</div>
+  <div class="lead">阿德勒心理学：一切烦恼都是人际关系的烦恼，自由就是被讨厌的勇气。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>目的论 vs 原因论</b>：不是“过去的创伤导致现在的我”，而是“现在的我为了某个目的，动用了过去的记忆”。这把“受害者叙事”换成了“选择叙事”。</li><li><b>课题分离</b>：分清“这是谁的课题”——后果由谁承担，就是谁的课题。别人怎么评价你，是别人的课题；你怎么活，是你的课题。</li><li><b>横向关系</b>：不评价、不比较、不居高临下（也不仰视）。用“谢谢”替代“你真棒”，因为评价隐含上下位。</li><li><b>共同体感觉</b>：把“自我中心”转为“对他人的贡献感”，幸福感来自“我对某人有价值”，而非“我被认可”。</li><li><b>甘于平凡的勇气</b>：不必“特别优秀”才算有价值，“普通地活着”本身就可以是答案。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>目的论</b></td><td>行为服务于当下目的，而非被过去决定</td></tr><tr><td><b>课题分离</b></td><td>只对自己的课题负责，不干涉他人课题</td></tr><tr><td><b>横向关系</b></td><td>不评价、不比较的平等关系</td></tr><tr><td><b>贡献感</b></td><td>幸福来自“我对共同体有用”</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>面对不合理要求时先做课题分离：这件事的后果谁承担？若是对方，允许他承担，不必替他焦虑。</li><li>把“被认可”从目标里删除，改成“我是否做了自己认为对的事”——这条能显著降低内耗。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"阿德勒心理学：一切烦恼都是人际关系的烦恼，自由就是被讨厌的勇气。"</div><div class="quote">"目的论 vs 原因论"</div><div class="quote">"课题分离"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：对“35 岁未婚、独居、家人期待”这类现实压力，本书提供了一种不撕裂也不妥协的处理框架。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：微信读书/得到有中文版；日文原版与台版均可查。建议读纸质（对话体翻页快）。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+<div class="section" id="th-world"><span class="bar" style="background:#6b5b95"></span><h2>视野 · 历史与文学</h2><span class="desc">看世界的坐标，投研写作的语感来源</span><span class="ln"></span></div>
+<div class="grid">
+<a class="card" href="#b26" data-theme="world" data-k="遥远的救世主豆豆“文化属性”决定命运：强势文化按规律办事，弱势文化指望救世主。世界观 · 文化文化属性 强势/弱势文化 认知差 自在“文化属性”决定命运：强势文化按规律办事，弱势文化指望救世主。 强势文化 vs 弱势文化 “神即道，道法自然，如来”"><div class="num">47</div><div class="ctitle">《遥远的救世主》</div><div class="cauth">豆豆</div><div class="cone">“文化属性”决定命运：强势文化按规律办事，弱势文化指望救世主。</div><div class="ctags"><span class="chip">世界观 · 文化</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#b27" data-theme="world" data-k="活出生命的意义维克多·弗兰克尔人可以被剥夺一切，除了“选择如何回应处境”的自由。心性 · 意义意义意志 三种价值 态度的自由 存在之空虚人可以被剥夺一切，除了“选择如何回应处境”的自由。 意义疗法（logotherapy） 三种意义来源"><div class="num">48</div><div class="ctitle">《活出生命的意义》</div><div class="cauth">维克多·弗兰克尔</div><div class="cone">人可以被剥夺一切，除了“选择如何回应处境”的自由。</div><div class="ctags"><span class="chip">心性 · 意义</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#b28" data-theme="world" data-k="君主论尼科洛·马基雅维利第一部把政治从道德里剥出来的书：看权力如何实际运作，而非应该如何运作。权力 · 现实主义virtù fortuna 被畏惧优于被爱 狮狐并用第一部把政治从道德里剥出来的书：看权力如何实际运作，而非应该如何运作。 现实主义方法 德性（virtù）与命运（fortuna）"><div class="num">49</div><div class="ctitle">《君主论》</div><div class="cauth">尼科洛·马基雅维利</div><div class="cone">第一部把政治从道德里剥出来的书：看权力如何实际运作，而非应该如何运作。</div><div class="ctags"><span class="chip">权力 · 现实主义</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#b29" data-theme="world" data-k="战争论卡尔·冯·克劳塞维茨战争是政治的延续；一切战略都受“摩擦、迷雾、重心”三件事支配。结构化 · 战略政治延续 摩擦 战争迷雾 重心战争是政治的延续；一切战略都受“摩擦、迷雾、重心”三件事支配。 战争是政治的延续 摩擦（friction）"><div class="num">50</div><div class="ctitle">《战争论》</div><div class="cauth">卡尔·冯·克劳塞维茨</div><div class="cone">战争是政治的延续；一切战略都受“摩擦、迷雾、重心”三件事支配。</div><div class="ctags"><span class="chip">结构化 · 战略</span><span class="chip q">3 金句</span></div></a>
+<a class="card" href="#b30" data-theme="world" data-k="百年孤独加西亚·马尔克斯布恩迪亚家族七代人的循环：人注定孤独，而孤独可以被书写成史诗。审美 · 叙事循环时间 魔幻现实主义 孤独 集体失忆布恩迪亚家族七代人的循环：人注定孤独，而孤独可以被书写成史诗。 循环时间观 魔幻现实主义"><div class="num">51</div><div class="ctitle">《百年孤独》</div><div class="cauth">加西亚·马尔克斯</div><div class="cone">布恩迪亚家族七代人的循环：人注定孤独，而孤独可以被书写成史诗。</div><div class="ctags"><span class="chip">审美 · 叙事</span><span class="chip q">3 金句</span></div></a>
+</div>
+
+<details class="book" id="b26" data-theme="world">
+ <summary><span class="bid">b26</span>《遥远的救世主》 — “文化属性”决定命运：强势文化按规律办事，弱势文化指望救世主。</summary>
+ <div class="body">
+  <div class="meta">豆豆 · 2005 年 · 世界观 · 文化 · ★★★☆ 小说体，读得很快</div>
+  <div class="lead">“文化属性”决定命运：强势文化按规律办事，弱势文化指望救世主。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>强势文化 vs 弱势文化</b>：强势文化=遵循事物规律，靠自己；弱势文化=期望“破格获取”，靠救主、靠关系、靠运气。全书所有人物命运都是这两个字的展开。</li><li><b>“神即道，道法自然，如来”</b>：把儒释道与市场规律压缩成一句——规律不因人的期待而改变。</li><li><b>丁元英的“杀富济贫”实验</b>：用市场化手段（成本、渠道、诉讼）在贫困村做音响产业，证明“给资源不如给规则”，也证明“认知差”才是真正的贫富差。</li><li><b>芮小丹之死</b>：全书的价值锚点——真正的“自在”是明知代价仍然去做，不计算得失。</li><li><b>读法提醒</b>：小说有强烈作者立场与“高人对弈”的爽感结构，容易让人误以为看懂了规律；把它当“文化属性的寓言”，别当操作手册。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>文化属性</b></td><td>决定群体命运的行为与认知模式</td></tr><tr><td><b>强势/弱势文化</b></td><td>按规律办事 vs 指望破格获取</td></tr><tr><td><b>认知差</b></td><td>信息与理解力的差距，是最难跨越的贫富差</td></tr><tr><td><b>自在</b></td><td>不被得失计算绑架的存在状态</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>分析一家企业时问：它靠“规律”（成本、技术、渠道效率）赚钱，还是靠“破格获取”（牌照、补贴、关系）？后者在规则变化时会被瞬间清零。</li><li>自省：我最近一次期待“有人来救我”是什么事？把它拆成“我能改变的部分”，然后动手。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"“文化属性”决定命运：强势文化按规律办事，弱势文化指望救世主。"</div><div class="quote">"强势文化 vs 弱势文化"</div><div class="quote">"“神即道，道法自然，如来”"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：与你汽车供应链金融的“规则 vs 资源”判断、以及城投估值的“政策依赖度”分析直接呼应。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：微信读书/京东读书有正版电子书；纸质版各大平台有售。电视剧《天道》可作辅助（有删改）。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="b27" data-theme="world">
+ <summary><span class="bid">b27</span>《活出生命的意义》 — 人可以被剥夺一切，除了“选择如何回应处境”的自由。</summary>
+ <div class="body">
+  <div class="meta">维克多·弗兰克尔 · 1946 年 · 心性 · 意义 · ★★★★ 前半薄、后半重</div>
+  <div class="lead">人可以被剥夺一切，除了“选择如何回应处境”的自由。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>意义疗法（logotherapy）</b>：人的核心驱动力不是快乐或权力，而是“意义”。能承受“为什么”，就几乎能承受任何“如何”。</li><li><b>三种意义来源</b>：① 创造（工作、作品）② 体验（爱、美、自然）③ 态度（对不可避免的苦难所采取的姿态）——第三种在集中营里救了很多人。</li><li><b>“意义”是具体的</b>：不存在抽象的人生意义，只有“此刻此境对我要求什么”。所以问题不是“我该追求什么”，而是“现在什么在等着我”。</li><li><b>苦难的意义有条件</b>：能避免的苦难应当避免；只有不可避免的苦难才谈“态度的价值”——这一点常被误读为“歌颂苦难”。</li><li><b>读法</b>：第一部分是集中营纪实（沉重但必要），第二部分是理论（较干）。建议先读第一部分，隔几天再读理论。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>意义意志</b></td><td>人最深的动机是寻找意义</td></tr><tr><td><b>三种价值</b></td><td>创造/体验/态度</td></tr><tr><td><b>态度的自由</b></td><td>处境不可选，回应方式可选</td></tr><tr><td><b>存在之空虚</b></td><td>缺乏意义感带来的空虚与成瘾</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>在丧亲、健康焦虑这类“不可改变”的处境上，用“态度价值”路径：我能选择以什么姿态面对它？（不是强迫自己积极，而是选择不被打碎）</li><li>每季度写一次“此刻什么在等着我”：列出 3 件“只有我能做、且值得做”的事，然后只做这 3 件。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"人可以被剥夺一切，除了“选择如何回应处境”的自由。"</div><div class="quote">"意义疗法（logotherapy）"</div><div class="quote">"三种意义来源"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：与你祖父离世后的哀伤处理、以及长期健康焦虑的自我安顿高度相关；也是“不给确定性结论”背后的职业意义感来源。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：微信读书/得到有中文版（华夏出版社经典版）；英文 Man&#x27;s Search for Meaning 各平台有售，篇幅短，一晚可读完。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="b28" data-theme="world">
+ <summary><span class="bid">b28</span>《君主论》 — 第一部把政治从道德里剥出来的书：看权力如何实际运作，而非应该如何运作。</summary>
+ <div class="body">
+  <div class="meta">尼科洛·马基雅维利 · 1532 年 · 权力 · 现实主义 · ★★★★ 薄书，需历史背景</div>
+  <div class="lead">第一部把政治从道德里剥出来的书：看权力如何实际运作，而非应该如何运作。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>现实主义方法</b>：“从事物的实际真相出发”，而非想象中应该的样子。这一转向使它成为现代政治学的起点。</li><li><b>德性（virtù）与命运（fortuna）</b>：virtù 不是道德美德，而是“能力、魄力、审时度势的行动力”；fortuna 是运气与环境。成功=在命运给的窗口里果断出手。</li><li><b>被畏惧还是被爱</b>：若能两者兼得最好；必须二选一时，选被畏惧（更可控），但绝不可被憎恨（不夺人财产、不辱人妻女）。</li><li><b>狮子与狐狸</b>：既要像狮子威慑狼，也要像狐狸识别陷阱。守信要看是否有利于己，但必须“看起来守信”。</li><li><b>雇佣军与自己的武装</b>：靠别人的力量必然受制于人——这条对今天的“外包核心能力/依赖单一客户”同样成立。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>virtù</b></td><td>能力与魄力，而非道德美德</td></tr><tr><td><b>fortuna</b></td><td>运气与环境，占成功的一半</td></tr><tr><td><b>被畏惧优于被爱</b></td><td>可控性优先，但避免被憎恨</td></tr><tr><td><b>狮狐并用</b></td><td>威慑与权谋并用</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>读合同时用“权力视角”复盘：这份合同里，谁掌握“被畏惧”的筹码（断供、诉讼、验收权）？我方有没有“自己的武装”（不可替代的能力）？</li><li>判断一个交易对手的 virtù：他过去的决策是“审时度势”还是“情绪驱动”？后者必在压力下违约。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"第一部把政治从道德里剥出来的书：看权力如何实际运作，而非应该如何运作。"</div><div class="quote">"现实主义方法"</div><div class="quote">"德性（virtù）与命运（fortuna）"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：与你的商务仲裁、委托生产谈判直接相关；也是理解“政策市”里规则制定者行为的古典注脚。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：公版书：中文免费全文见维基文库；英译见 Project Gutenberg（#1232）、Wikisource；纸质推荐潘汉典译本。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="b29" data-theme="world">
+ <summary><span class="bid">b29</span>《战争论》 — 战争是政治的延续；一切战略都受“摩擦、迷雾、重心”三件事支配。</summary>
+ <div class="body">
+  <div class="meta">卡尔·冯·克劳塞维茨 · 1832 年 · 结构化 · 战略 · ★★★★★ 极硬，读导读+第一卷</div>
+  <div class="lead">战争是政治的延续；一切战略都受“摩擦、迷雾、重心”三件事支配。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>战争是政治的延续</b>：军事手段服务于政治目的，目的决定手段的强度。脱离政治目标的“纯军事胜利”毫无意义。</li><li><b>摩擦（friction）</b>：计划与现实之间永远存在的阻力——信息延迟、执行偏差、士气、天气、意外。它让“简单的事在战争里变得极难”。</li><li><b>战争迷雾（fog of war）</b>：信息永远不完整，决策必须在不确定中做出。所以“指挥官的直觉判断”（coup d&#x27;œil）成为核心能力。</li><li><b>重心（center of gravity）</b>：找到对手力量的源泉（主力军、首都、同盟、民心、经济），集中打击这一点，而非平均用力。</li><li><b>防御是更强的形式</b>：防御具有地利与时机优势，但防御必须转入反攻才能决胜（“防御是等待中的进攻”）。</li><li><b>读法</b>：全书八卷极难，建议只读第一卷（论战争性质）+ 第六卷（防御）+ 导读（如彼得·帕雷特版）。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>政治延续</b></td><td>目的决定手段，军事从属于政治</td></tr><tr><td><b>摩擦</b></td><td>计划与执行之间的系统性阻力</td></tr><tr><td><b>战争迷雾</b></td><td>信息不完整下的决策常态</td></tr><tr><td><b>重心</b></td><td>对手力量的源泉，集中打击之</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>把“重心”用于商业竞争：对手的利润来自哪个大客户/哪条产品线/哪个牌照？攻击重心比全线价格战有效得多。</li><li>把“摩擦”用于项目管理：任何跨部门方案，先列出 5 个最可能产生摩擦的环节（审批、系统、口径、人手、时点），预先设计缓冲。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"战争是政治的延续；一切战略都受“摩擦、迷雾、重心”三件事支配。"</div><div class="quote">"战争是政治的延续"</div><div class="quote">"摩擦（friction）"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：与你“结构化拆解复杂合同”的思维同构；也解释了你自动化系统为何要做“双数据源+缺失跟进”（对抗摩擦与迷雾）。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：公版书：中文免费全文见维基文库（商务印书馆译本另有版权，注意区分）；英译见 Project Gutenberg、Wikisource。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+
+<details class="book" id="b30" data-theme="world">
+ <summary><span class="bid">b30</span>《百年孤独》 — 布恩迪亚家族七代人的循环：人注定孤独，而孤独可以被书写成史诗。</summary>
+ <div class="body">
+  <div class="meta">加西亚·马尔克斯 · 1967 年 · 审美 · 叙事 · ★★★☆ 小说，前 50 页是门槛</div>
+  <div class="lead">布恩迪亚家族七代人的循环：人注定孤独，而孤独可以被书写成史诗。</div>
+  <div class="lbl">一、核心框架 · 五件事</div>
+  <ul><li><b>循环时间观</b>：家族名字与命运不断重复（奥雷里亚诺们孤僻、何塞·阿尔卡蒂奥们冲动），时间不是直线前进，而是螺旋回到原点。这与现代人“线性进步”的默认假设形成强烈反差。</li><li><b>魔幻现实主义</b>：把奇迹当日常写（升天、下金币雨、失眠症），把日常当奇迹写。叙述者从不惊讶——这种“平静地讲述不可思议”正是它的力量。</li><li><b>孤独的普遍性</b>：每个角色都以自己的方式封闭（沉迷炼金、发动战争、反复做小金鱼），越是激烈地爱，越是走向孤独。</li><li><b>马孔多的隐喻</b>：拉丁美洲的百年历史（殖民、内战、香蕉公司、屠杀、遗忘）被压缩进一个小镇；集体失忆（失眠症）是最锋利的一刀。</li><li><b>读法</b>：前 50 页人物重名会让你放弃——建议边读边画人物树；读到中段会突然“通电”。范晔译本（南海出版公司）为授权中文版。</li></ul>
+  <div class="lbl">二、关键概念速查</div>
+  <table><tr><th style="width:26%">概念</th><th>一句话</th></tr><tr><td><b>循环时间</b></td><td>命运重复，时间螺旋</td></tr><tr><td><b>魔幻现实主义</b></td><td>奇迹日常化的叙述方式</td></tr><tr><td><b>孤独</b></td><td>每个人自我封闭的宿命</td></tr><tr><td><b>集体失忆</b></td><td>对历史屠杀的遗忘机制</td></tr></table>
+  <div class="lbl">三、可执行清单</div>
+  <ul><li>当作“叙事训练”：观察马尔克斯如何用一句话完成时间跳跃与视角切换——这是写投研长文/复盘叙事的最好教材。</li><li>给自己设一个“反孤独动作”：每周一次真实的长谈话（非微信），对抗独居生活里的自我封闭。</li></ul>
+  <div class="lbl">四、金句（核心观点短句提炼，非原文长段复制）</div>
+  <div class="quote">"布恩迪亚家族七代人的循环：人注定孤独，而孤独可以被书写成史诗。"</div><div class="quote">"循环时间观"</div><div class="quote">"魔幻现实主义"</div>
+  <div class="iface">🔗 <b>与你体系的接口</b>：与你偏好“历史文化 + 灾难影视 + 孤独感”的趣味一致；也是投研写作的语感来源（把复杂讲得有节奏）。</div>
+  <div class="src">📚 <b>正版电子渠道</b>：授权中文版：南海出版公司（范晔译），微信读书/京东读书有正版电子书；英文版各平台有售。</div>
+  <div class="mynote">✍️ 我的划线 / 疑问：<br>· <br>· </div>
+ </div>
+</details>
+<div class="section" id="wall"><span class="bar" style="background:#a86b1c"></span><h2>金句墙</h2><span class="desc">按书聚合，双击可复制</span><span class="ln"></span></div>
+<div class="wall">
+<div class="q" title="双击复制">"芒格的“多元思维模型”总装车间：不做预测，只做排除。"<b>——《穷查理宝典》 彼得·考夫曼 编（查理·芒格言论）</b></div>
+<div class="q" title="双击复制">"核心不是选股技巧，而是建立一个跨学科的格栅"<b>——《穷查理宝典》 彼得·考夫曼 编（查理·芒格言论）</b></div>
+<div class="q" title="双击复制">"财富不是钱，是“睡觉时仍在为你工作的资产”；致富靠专长、杠杆与长期主义。"<b>——《纳瓦尔宝典》 埃里克·乔根森 编（纳瓦尔·拉维坎特）</b></div>
+<div class="q" title="双击复制">"财富 ≠ 金钱"<b>——《纳瓦尔宝典》 埃里克·乔根森 编（纳瓦尔·拉维坎特）</b></div>
+<div class="q" title="双击复制">"理财的第一课不是收益率，是“先养鹅，再花蛋”。"<b>——《小狗钱钱》 博多·舍费尔</b></div>
+<div class="q" title="双击复制">"鹅与金蛋"<b>——《小狗钱钱》 博多·舍费尔</b></div>
+<div class="q" title="双击复制">"穷人为钱工作，富人让钱为自己工作；先分清资产与负债。"<b>——《富爸爸穷爸爸》 罗伯特·清崎</b></div>
+<div class="q" title="双击复制">"资产 vs 负债的定义重构"<b>——《富爸爸穷爸爸》 罗伯特·清崎</b></div>
+<div class="q" title="双击复制">"投资不是比谁知道得多，而是比谁“想得更深一层”，并管住风险。"<b>——《投资最重要的事》 霍华德·马克斯</b></div>
+<div class="q" title="双击复制">"第二层思维"<b>——《投资最重要的事》 霍华德·马克斯</b></div>
+<div class="q" title="双击复制">"大脑有两套系统：快的直觉（系统1）与慢的推理（系统2），几乎所有系统性错误都来自系统1越权。"<b>——《思考，快与慢》 丹尼尔·卡尼曼</b></div>
+<div class="q" title="双击复制">"系统1 / 系统2"<b>——《思考，快与慢》 丹尼尔·卡尼曼</b></div>
+<div class="q" title="双击复制">"单个模型必然错，多模型交叉才能逼近真相；聪明 = 模型的数量与调用能力。"<b>——《模型思维》 斯科特·佩奇</b></div>
+<div class="q" title="双击复制">"多模型思维（many-model thinking）"<b>——《模型思维》 斯科特·佩奇</b></div>
+<div class="q" title="双击复制">"世界比你以为的好得多；你的直觉被 10 种本能系统性带偏。"<b>——《事实》 汉斯·罗斯林</b></div>
+<div class="q" title="双击复制">"四个收入等级"<b>——《事实》 汉斯·罗斯林</b></div>
+<div class="q" title="双击复制">"智人赢在“能相信共同的虚构故事”，从而大规模协作。"<b>——《人类简史》 尤瓦尔·赫拉利</b></div>
+<div class="q" title="双击复制">"认知革命"<b>——《人类简史》 尤瓦尔·赫拉利</b></div>
+<div class="q" title="双击复制">"有限游戏为赢而玩，无限游戏为“继续玩下去”而玩。"<b>——《有限与无限的游戏》 詹姆斯·卡斯</b></div>
+<div class="q" title="双击复制">"两种游戏"<b>——《有限与无限的游戏》 詹姆斯·卡斯</b></div>
+<div class="q" title="双击复制">"把人生与组织变成一台“不断迭代的机器”，用原则替代临场反应。"<b>——《原则》 瑞·达利欧</b></div>
+<div class="q" title="双击复制">"极度求真 + 极度透明"<b>——《原则》 瑞·达利欧</b></div>
+<div class="q" title="双击复制">"行业结构决定利润池，战略的本质是“选择不做什么”。"<b>——《竞争战略》 迈克尔·波特</b></div>
+<div class="q" title="双击复制">"五力模型"<b>——《竞争战略》 迈克尔·波特</b></div>
+<div class="q" title="双击复制">"人不是被道理说服的，是被六种自动反应机制说服的。"<b>——《影响力》 罗伯特·西奥迪尼</b></div>
+<div class="q" title="双击复制">"六大原则"<b>——《影响力》 罗伯特·西奥迪尼</b></div>
+<div class="q" title="双击复制">"当“后果重大 + 意见分歧 + 情绪激烈”同时出现时，决定命运的是安全感。"<b>——《关键对话》 科里·帕特森 等</b></div>
+<div class="q" title="双击复制">"什么是关键对话"<b>——《关键对话》 科里·帕特森 等</b></div>
+<div class="q" title="双击复制">"把“评判”换成“观察+感受+需要+请求”，冲突就失去燃料。"<b>——《非暴力沟通》 马歇尔·卢森堡</b></div>
+<div class="q" title="双击复制">"四要素"<b>——《非暴力沟通》 马歇尔·卢森堡</b></div>
+<div class="q" title="双击复制">"每天改进 1%，一年是 37 倍；改变结果不如改变身份。"<b>——《原子习惯》 詹姆斯·克利尔</b></div>
+<div class="q" title="双击复制">"1% 复利"<b>——《原子习惯》 詹姆斯·克利尔</b></div>
+<div class="q" title="双击复制">"从依赖到独立再到互赖：品德 &gt; 技巧，原则 &gt; 权谋。"<b>——《高效能人士的七个习惯》 史蒂芬·柯维</b></div>
+<div class="q" title="双击复制">"成熟模式图"<b>——《高效能人士的七个习惯》 史蒂芬·柯维</b></div>
+<div class="q" title="双击复制">"在注意力稀缺的时代，能长时间专注的人获得全部溢价。"<b>——《深度工作》 卡尔·纽波特</b></div>
+<div class="q" title="双击复制">"深度工作 vs 浮浅工作"<b>——《深度工作》 卡尔·纽波特</b></div>
+<div class="q" title="双击复制">"拖延不是懒，是“用回避来保护自我价值感”的情绪调节策略。"<b>——《拖延心理学》 简·博克 / 莱诺拉·袁</b></div>
+<div class="q" title="双击复制">"拖延的根不是时间管理，是情绪管理"<b>——《拖延心理学》 简·博克 / 莱诺拉·袁</b></div>
+<div class="q" title="双击复制">"阿德勒心理学：一切烦恼都是人际关系的烦恼，自由就是被讨厌的勇气。"<b>——《被讨厌的勇气》 岸见一郎 / 古贺史健</b></div>
+<div class="q" title="双击复制">"目的论 vs 原因论"<b>——《被讨厌的勇气》 岸见一郎 / 古贺史健</b></div>
+<div class="q" title="双击复制">"阅读分四层：基础、检视、分析、主题；读得多不等于读得懂。"<b>——《如何阅读一本书》 莫提默·艾德勒 / 查尔斯·范多伦</b></div>
+<div class="q" title="双击复制">"四个层次（递进）"<b>——《如何阅读一本书》 莫提默·艾德勒 / 查尔斯·范多伦</b></div>
+<div class="q" title="双击复制">"不批评、真诚欣赏、记住名字、让对方多说——人际关系的低成本高回报操作。"<b>——《人性的弱点》 戴尔·卡耐基</b></div>
+<div class="q" title="双击复制">"三个不"<b>——《人性的弱点》 戴尔·卡耐基</b></div>
+<div class="q" title="双击复制">"人生本就艰难；心智成熟是一条少有人走的路，自律与爱是唯一的交通工具。"<b>——《少有人走的路》 M·斯科特·派克</b></div>
+<div class="q" title="双击复制">"“人生苦难重重”"<b>——《少有人走的路》 M·斯科特·派克</b></div>
+<div class="q" title="双击复制">"痛苦来自“心理时间”：对过去的反刍与对未来的投射；回到当下，痛苦之身失去供养。"<b>——《当下的力量》 埃克哈特·托利</b></div>
+<div class="q" title="双击复制">"“小我”（ego）"<b>——《当下的力量》 埃克哈特·托利</b></div>
+<div class="q" title="双击复制">"罗马皇帝的自我对话：只控制自己能控制的，其余交给自然。"<b>——《沉思录》 马可·奥勒留</b></div>
+<div class="q" title="双击复制">"控制二分法"<b>——《沉思录》 马可·奥勒留</b></div>
+<div class="q" title="双击复制">"“文化属性”决定命运：强势文化按规律办事，弱势文化指望救世主。"<b>——《遥远的救世主》 豆豆</b></div>
+<div class="q" title="双击复制">"强势文化 vs 弱势文化"<b>——《遥远的救世主》 豆豆</b></div>
+<div class="q" title="双击复制">"人可以被剥夺一切，除了“选择如何回应处境”的自由。"<b>——《活出生命的意义》 维克多·弗兰克尔</b></div>
+<div class="q" title="双击复制">"意义疗法（logotherapy）"<b>——《活出生命的意义》 维克多·弗兰克尔</b></div>
+<div class="q" title="双击复制">"第一部把政治从道德里剥出来的书：看权力如何实际运作，而非应该如何运作。"<b>——《君主论》 尼科洛·马基雅维利</b></div>
+<div class="q" title="双击复制">"现实主义方法"<b>——《君主论》 尼科洛·马基雅维利</b></div>
+<div class="q" title="双击复制">"战争是政治的延续；一切战略都受“摩擦、迷雾、重心”三件事支配。"<b>——《战争论》 卡尔·冯·克劳塞维茨</b></div>
+<div class="q" title="双击复制">"战争是政治的延续"<b>——《战争论》 卡尔·冯·克劳塞维茨</b></div>
+<div class="q" title="双击复制">"布恩迪亚家族七代人的循环：人注定孤独，而孤独可以被书写成史诗。"<b>——《百年孤独》 加西亚·马尔克斯</b></div>
+<div class="q" title="双击复制">"循环时间观"<b>——《百年孤独》 加西亚·马尔克斯</b></div>
+<div class="q" title="双击复制">"痛苦 + 反思 = 进步。逃避痛苦，就等于逃避进步。"<b>——《原则》 瑞·达利欧</b></div>
+<div class="q" title="双击复制">"做一个有原则的人，意味着你能在事件发生时，用一贯的方式应对。"<b>——《原则》 瑞·达利欧</b></div>
+<div class="q" title="双击复制">"我们或许永远不知道要去哪里，但最好搞清楚自己正站在哪里。"<b>——《周期》 霍华德·马克斯</b></div>
+<div class="q" title="双击复制">"最重要的不是买什么，而是买在周期的什么位置。"<b>——《周期》 霍华德·马克斯</b></div>
+<div class="q" title="双击复制">"投资操作是以深入分析为基础，确保本金安全并获得适当回报；不能满足这些要求的操作就是投机。"<b>——《聪明的投资者》 本杰明·格雷厄姆</b></div>
+<div class="q" title="双击复制">"市场先生是来服务你的，不是来指导你的。"<b>——《聪明的投资者》 本杰明·格雷厄姆</b></div>
+<div class="q" title="双击复制">"投机的事业中，最重要的不是你判断对了多少次，而是你判断对的时候赚了多少，判断错的时候亏了多少。"<b>——《专业投机原理》 维克托·斯波朗迪</b></div>
+<div class="q" title="双击复制">"市场的短期波动是噪音，长期趋势才是你的朋友。"<b>——《专业投机原理》 维克托·斯波朗迪</b></div>
+<div class="q" title="双击复制">"价格形态反映的是群体的恐惧与贪婪，而不是图表本身的魔法。"<b>——《日本蜡烛图技术》 史蒂夫·尼森</b></div>
+<div class="q" title="双击复制">"一根 K 线不重要，它所处的环境才重要。"<b>——《日本蜡烛图技术》 史蒂夫·尼森</b></div>
+<div class="q" title="双击复制">"市场有三种趋势：主要的、次要的、短暂的。只有主要趋势值得投资者关注。"<b>——《道氏理论》 查尔斯·道 奠基 / 多版本整理</b></div>
+<div class="q" title="双击复制">"指数必须相互印证，单一指数的信号不足以确认趋势。"<b>——《道氏理论》 查尔斯·道 奠基 / 多版本整理</b></div>
+<div class="q" title="双击复制">"市场只有一边，不是多头的一边，也不是空头的一边，而是正确的一边。"<b>——《股票大作手操盘术》 杰西·利弗莫尔</b></div>
+<div class="q" title="双击复制">"我从不因为价格高而卖出，也不因为价格低而买入。"<b>——《股票大作手操盘术》 杰西·利弗莫尔</b></div>
+<div class="q" title="双击复制">"我不是一个预测者，我是一个对自己的判断不断提出质疑的参与者。"<b>——《金融炼金术》 乔治·索罗斯</b></div>
+<div class="q" title="双击复制">"市场历史是一个由偏见与现实相互作用的反身性过程。"<b>——《金融炼金术》 乔治·索罗斯</b></div>
+<div class="q" title="双击复制">"市场只有一边，不是多头的一边，也不是空头的一边，而是正确的一边。"<b>——《股票大作手回忆录》 埃德温·勒菲弗（记杰西·利弗莫尔）</b></div>
+<div class="q" title="双击复制">"投机者最主要的敌人总是由投机者自身而生：希望与恐惧。"<b>——《股票大作手回忆录》 埃德温·勒菲弗（记杰西·利弗莫尔）</b></div>
+<div class="q" title="双击复制">"走势终完美。市场没有秘密，只有分类和应对。"<b>——《缠论》 缠中说禅</b></div>
+<div class="q" title="双击复制">"不要预测市场，要让市场告诉你它是什么走势。"<b>——《缠论》 缠中说禅</b></div>
+<div class="q" title="双击复制">"期货比的不是谁赚得多，而是比谁活得最长。"<b>——《股票大作手风云录》 逍遥刘强（刘强）</b></div>
+<div class="q" title="双击复制">"做投机是为了赚钱，赚钱是为了更好的生活，好的生活是为了让自己开心。做人和做期货一样，千万不要方向做反了。"<b>——《股票大作手风云录》 逍遥刘强（刘强）</b></div>
+<div class="q" title="双击复制">"债务是今天的消费、明天的负担：你向未来的自己借钱。"<b>——《债务危机》 瑞·达利欧</b></div>
+<div class="q" title="双击复制">"短期债务周期由央行主导，长期债务周期由人性主导。"<b>——《债务危机》 瑞·达利欧</b></div>
+<div class="q" title="双击复制">"买指数基金，本质是买整个国家的经济增长。"<b>——《指数基金投资从入门到精通》 （多版本，以封面为准）</b></div>
+<div class="q" title="双击复制">"费率是投资者唯一能完全控制的变量。"<b>——《指数基金投资从入门到精通》 （多版本，以封面为准）</b></div>
+<div class="q" title="双击复制">"市场按其自身的节律运动，这种节律反映了群体心理的周期性。"<b>——《艾略特波浪理论》 拉尔夫·艾略特 奠基 / 普莱切特 整理</b></div>
+<div class="q" title="双击复制">"当存在两种以上合理数法时，正确的做法是什么都不做。"<b>——《艾略特波浪理论》 拉尔夫·艾略特 奠基 / 普莱切特 整理</b></div>
+<div class="q" title="双击复制">"随机性之所以危险，是因为它伪装成技能。"<b>——《随机漫步的傻瓜》 纳西姆·塔勒布</b></div>
+<div class="q" title="双击复制">"你看到的只是幸存者，墓地里的交易员用的是同样的方法。"<b>——《随机漫步的傻瓜》 纳西姆·塔勒布</b></div>
+<div class="q" title="双击复制">"经济好的时候使劲吹业绩，经济差的时候玩命炒概念。"<b>——《飞上天的猪：玩转A股主题投资》 胡浩</b></div>
+<div class="q" title="双击复制">"只要站在风口，猪都能飞起来——但风停了，猪也会摔下来。"<b>——《飞上天的猪：玩转A股主题投资》 胡浩</b></div>
+<div class="q" title="双击复制">"期货交易的本质不是猜方向，而是判断供需存量的变化。"<b>——《期货多空逻辑》 Jerry Ma</b></div>
+<div class="q" title="双击复制">"库存拐点往往领先于价格拐点。"<b>——《期货多空逻辑》 Jerry Ma</b></div>
+<div class="q" title="双击复制">"你可以对市场有信心，但不能确定任何一笔交易的结果。"<b>——《交易心理分析》 马克·道格拉斯</b></div>
+<div class="q" title="双击复制">"优秀的交易者接受风险，失败的交易者希望风险消失。"<b>——《交易心理分析》 马克·道格拉斯</b></div>
+<div class="q" title="双击复制">"交易是一门生意，而不是一场赌博：要用经营企业的态度对待它。"<b>——《以交易为生（原书第2版）》 亚历山大·埃尔德</b></div>
+<div class="q" title="双击复制">"市场不会因为你亏损而怜悯你，也不会因为你盈利而奖励你。"<b>——《以交易为生（原书第2版）》 亚历山大·埃尔德</b></div>
+<div class="q" title="双击复制">"会买的是徒弟，会卖的是师傅。"<b>——《以交易为生 II：卖出的艺术》 亚历山大·埃尔德</b></div>
+<div class="q" title="双击复制">"出场规则必须在入场之前写好；临场决定的出场，几乎总是错的。"<b>——《以交易为生 II：卖出的艺术》 亚历山大·埃尔德</b></div>
+<div class="q" title="双击复制">"一个好的交易系统，应该是可以写在纸上交给陌生人执行的。"<b>——《海龟交易法则》 柯蒂斯·费思</b></div>
+<div class="q" title="双击复制">"不要问这个交易会不会赚钱，要问它是否符合系统。"<b>——《海龟交易法则》 柯蒂斯·费思</b></div>
+</div>
+<div class="section" id="path"><span class="bar" style="background:#185FA5"></span><h2>怎么用这一页</h2><span class="ln"></span></div>
+<div class="path"><h3>把书接进你的系统，才算读过</h3><ol>
+<li><b>先读「核心框架五件事」</b>：每本 5 条，是这个提炼页的主体。读完能复述这 5 条，这本书你就算有了。</li>
+<li><b>抄金句进卡片盒</b>：金句墙按书聚合，双击复制。摘抄不是为了背，是为了在需要时能被检索到。</li>
+<li><b>看「与你体系的接口」</b>：紫色框是这本书和你的投研 / 交易 / 谈判 / 心性框架的连接点——这是提炼相对原书最大的增量。</li>
+<li><b>用「可执行清单」落地</b>：每本 2 条动作，选本周能做的 1 条写进待办；不落地等于没读。</li>
+<li><b>写到一起</b>：右上角打印 / 导出 PDF，或手机端使用；搜索框支持书名、作者、概念、金句全文匹配。</li>
+</ol></div>
+<footer>原创结构化笔记 · 金句为核心观点短句提炼，非原文长段复制 · 受版权保护图书请通过正版渠道阅读 · 生成于读书核心提炼页</footer>
+</div>
+
+<script>
+(function(){
+  var q=document.getElementById('q'),cnt=document.getElementById('cnt');
+  var cards=[].slice.call(document.querySelectorAll('.grid .card'));
+  var books=[].slice.call(document.querySelectorAll('details.book'));
+  var secs=[].slice.call(document.querySelectorAll('.section[id^=th-]'));
+  var grids=[].slice.call(document.querySelectorAll('.grid'));
+  var btns=[].slice.call(document.querySelectorAll('.toolbar button'));
+  var t='all';
+  function apply(){
+    var k=(q.value||'').trim().toLowerCase(),shown=0;
+    cards.forEach(function(c){
+      var id=c.getAttribute('href').slice(1);
+      var bd=document.getElementById(id);
+      var txt=(c.textContent+' '+(bd?bd.textContent:'')).toLowerCase();
+      var ok=(t==='all'||c.getAttribute('data-theme')===t)&&(!k||txt.indexOf(k)>-1);
+      c.classList.toggle('hidden',!ok);
+      if(bd){bd.classList.toggle('hidden',!ok);if(k&&ok) bd.open=true;}
+      if(ok) shown++;
+    });
+    grids.forEach(function(g){
+      var any=[].slice.call(g.children).some(function(c){return !c.classList.contains('hidden');});
+      g.classList.toggle('hidden',!any);
+      var h=g.previousElementSibling;
+      if(h&&h.classList.contains('section')) h.classList.toggle('hidden',!any);
+    });
+    cnt.textContent=shown+' / '+cards.length;
+  }
+  btns.forEach(function(b){b.addEventListener('click',function(){
+    btns.forEach(function(x){x.classList.remove('on');});b.classList.add('on');t=b.getAttribute('data-t');apply();
+  });});
+  cards.forEach(function(c){c.addEventListener('click',function(){var d=document.getElementById(c.getAttribute('href').slice(1));if(d)d.open=true;});});
+  q.addEventListener('input',apply);
+  document.querySelectorAll('.wall .q').forEach(function(e){e.addEventListener('dblclick',function(){
+    var s=e.childNodes[0].textContent.trim();
+    if(navigator.clipboard) navigator.clipboard.writeText(s);
+  });});
+  apply();
+})();
+</script></body></html>
